@@ -1,5 +1,3 @@
-# Deep Reinforcment Learning Udemy Course
-
 ## Requirements
 
 pip install torch \

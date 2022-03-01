@@ -6,9 +6,9 @@ import torch as T
 
 
 class Agent():
-    def __init__(self, numActions, inputDim, learnRate,
-                 epsilonMax, epsilonMin, epsilonDec, replayMemoryBufferSize,
-                 replayMemoryBatchSize, discountFactor, targetNetworkUpdateInterval,
+    def __init__(self, numActions, inputDim,
+                 learnRate, epsilonMax, epsilonMin, epsilonDec, gamma,
+                 replayMemoryBufferSize, replayMemoryBatchSize, targetNetworkUpdateInterval,
                  networkSavePath, networkName, evaluationName, trainingPhase=True):
 
         # Save training flag. If training flag = True => epsilon greedy selection of action
@@ -18,14 +18,15 @@ class Agent():
         # Save agent parameters
         self.numActions = numActions
         self.inputDim = inputDim
+        # action space defined in OpenAI gym format
+        self.actionSpace = [i for i in range(numActions)]
         self.learnRate = learnRate
         self.epsilon = epsilonMax
         self.epsilonMin = epsilonMin
         self.epsilonDec = epsilonDec
+        self.gamma = gamma
         self.replayMemoryBatchSize = replayMemoryBatchSize
-        self.discountFactor = discountFactor
         self.targetNetworkUpdateInterval = targetNetworkUpdateInterval
-        self.actionSpace = [i for i in range(numActions)] # action space defined in OpenAI gym format
         self.learnIterations = 0
 
         # Initialize replay memory buffer
@@ -91,7 +92,7 @@ class Agent():
         # Compute target Q values
         nextQ = self.targetDQN.forward(newStates).max(dim=1)[0]  # .max() => [0] ... values,  [1] ... indices
         nextQ[isDones] = 0.0
-        targetQ = rewards + self.learnRate * nextQ
+        targetQ = rewards + self.gamma * nextQ
 
         # Compute loss
         loss = self.evaluationDQN.loss(targetQ, predictedQ).to(self.evaluationDQN.device)

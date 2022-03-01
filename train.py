@@ -2,20 +2,21 @@ from agent import Agent
 from preprocess import make_env
 from _plot import *
 
+# https://stackoverflow.com/questions/60987997/why-torch-cuda-is-available-returns-false-even-after-installing-pytorch-with
+# Demo game play
+# https://www.udemy.com/course/deep-q-learning-from-paper-to-code/learn/lecture/17009498#questions/10488006
+
 NUM_EPISODES = 500
 NETWORK_NAME = "DQN"
 EVALUATION = "Base"
 PLOTS_PATH = "plots/" + NETWORK_NAME + "_" + EVALUATION
 
-# https://stackoverflow.com/questions/60987997/why-torch-cuda-is-available-returns-false-even-after-installing-pytorch-with
-# Demo game play
-# https://www.udemy.com/course/deep-q-learning-from-paper-to-code/learn/lecture/17009498#questions/10488006
 if __name__ == "__main__":
     # Make environment
     env = make_env('PongNoFrameskip-v4')
 
     # Initialize agent
-    agent = Agent(discountFactor=0.99,
+    agent = Agent(gamma=0.99,
                   epsilonMax=1,
                   epsilonMin=0.1,
                   epsilonDec=1e-5,
@@ -26,7 +27,7 @@ if __name__ == "__main__":
                   replayMemoryBatchSize=32,
                   targetNetworkUpdateInterval=1000,
                   networkSavePath="models/",
-                  evaluationName = "base",
+                  evaluationName="base",
                   networkName="DQN",
                   trainingPhase=True
                   )
@@ -55,7 +56,12 @@ if __name__ == "__main__":
 
             # Learn
             if not loadModel:
-                agent.storeTransition(observation, action, reward, isDone, newObservation)
+                agent.storeTransition(state=observation,
+                                      action=action,
+                                      reward=reward,
+                                      isDone=isDone,
+                                      newState=newObservation
+                                      )
                 agent.learn()
 
             observation = newObservation

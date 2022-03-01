@@ -7,7 +7,7 @@ def plot_learning_curve(x, scores, epsilons, filename, lines=None):
     ax=fig.add_subplot(111, label="1")
     ax2=fig.add_subplot(111, label="2", frame_on=False)
 
-    ax.plot(x, epsilons, color="C0")
+    ax.plot(x, epsilons, color="C1")
     ax.set_xlabel("Training Steps", color="C1")
     ax.set_ylabel("Epsilon", color="C1")
     ax.tick_params(axis='x', colors="C1")
