@@ -2,31 +2,26 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
-def plot_learning_curve(x, scores, epsilons, filename, lines=None):
-    fig=plt.figure()
-    ax=fig.add_subplot(111, label="1")
-    ax2=fig.add_subplot(111, label="2", frame_on=False)
+def plot_learning_curve(episodes, scores, epsilons, filename, runningAvgInterval=100):
+    fig = plt.figure()
+    ax1 = fig.add_subplot(111, label="1")
+    ax2 = fig.add_subplot(111, label="2", frame_on=False)
 
-    ax.plot(x, epsilons, color="C1")
-    ax.set_xlabel("Training Steps", color="C1")
-    ax.set_ylabel("Epsilon", color="C1")
-    ax.tick_params(axis='x', colors="C1")
-    ax.tick_params(axis='y', colors="C1")
+    # Plot epsilon as a function of episodes
+    ax1.plot(episodes, epsilons, color="cornflowerblue")
+    ax1.set_xlabel("training steps")
+    ax1.set_ylabel("epsilon", color="cornflowerblue")
+    ax1.tick_params(axis="x", colors="black")
+    ax1.tick_params(axis="y", colors="black")
 
-    N = len(scores)
-    running_avg = np.empty(N)
-    for t in range(N):
-        running_avg[t] = np.mean(scores[max(0, t-20):(t+1)])
-
-    ax2.scatter(x, running_avg, color="C2")
+    runningAverageScores = [np.mean(scores[max(0, t - runningAvgInterval): (t + 1)]) for t in range(len(scores))]
+    ax2.plot(episodes, runningAverageScores, color="red")
     ax2.axes.get_xaxis().set_visible(False)
     ax2.yaxis.tick_right()
-    ax2.set_ylabel('Score', color="C2")
-    ax2.yaxis.set_label_position('right')
-    ax2.tick_params(axis='y', colors="C2")
+    ax2.set_ylabel("score", color="red")
+    ax2.yaxis.set_label_position("right")
+    ax1.tick_params(axis="y")
 
-    if lines is not None:
-        for line in lines:
-            plt.axvline(x=line)
-
+    plt.tight_layout()
     plt.savefig(filename)
+

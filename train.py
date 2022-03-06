@@ -6,7 +6,7 @@ from _plot import *
 # Demo game play
 # https://www.udemy.com/course/deep-q-learning-from-paper-to-code/learn/lecture/17009498#questions/10488006
 
-NUM_EPISODES = 500
+NUM_EPISODES = 500 # 500
 NETWORK_NAME = "DQN"
 EVALUATION = "Base"
 PLOTS_PATH = "plots/" + NETWORK_NAME + "_" + EVALUATION
