@@ -1,4 +1,5 @@
 from agent import Agent
+from ddqn_agent import DDQNAgent
 from preprocess import make_env
 from _plot import *
 
@@ -8,7 +9,7 @@ from _plot import *
 
 NUM_EPISODES = 500 # 500
 NETWORK_NAME = "DQN"
-EVALUATION = "Base"
+EVALUATION = "double"
 PLOTS_PATH = "plots/" + NETWORK_NAME + "_" + EVALUATION
 
 if __name__ == "__main__":
@@ -27,7 +28,7 @@ if __name__ == "__main__":
                   replayMemoryBatchSize=32,
                   targetNetworkUpdateInterval=1000,
                   networkSavePath="models/",
-                  evaluationName="base",
+                  evaluationName="dqnn",
                   networkName="DQN",
                   trainingPhase=True
                   )

@@ -4,11 +4,12 @@ import numpy as np
 import matplotlib.pyplot as plt
 import gym
 
+""" modified from:
+    https://github.com/PacktPublishing/Deep-Reinforcement-Learning-Hands-On/blob/master/Chapter06/lib/wrappers.py
+"""
 
 class RepeatActionAndMaxFrame(gym.Wrapper):
-    """ modified from:
-        https://github.com/PacktPublishing/Deep-Reinforcement-Learning-Hands-On/blob/master/Chapter06/lib/wrappers.py
-    """
+
     def __init__(self, env=None, repeat=4, clip_reward=False,
                  no_ops=0, fire_first=False):
         super(RepeatActionAndMaxFrame, self).__init__(env)
