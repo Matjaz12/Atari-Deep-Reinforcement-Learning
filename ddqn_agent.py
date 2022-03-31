@@ -4,7 +4,6 @@ from dqn import DQN
 from replay_memory_buffer import ReplayMemoryBuffer
 import torch as T
 
-
 class DDQNAgent():
     def __init__(self, numActions, inputDim,
                  learnRate, epsilonMax, epsilonMin, epsilonDec, gamma,
@@ -108,9 +107,6 @@ class DDQNAgent():
 
         # Up the lear iteration counter
         self.learnIterations += 1
-
-
-
 
     def storeTransition(self, state, action, reward, isDone, newState):
         self.replayMemoryBuffer.storeTransition(state, action, reward, isDone, newState)

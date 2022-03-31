@@ -1,103 +1,77 @@
-from agent import Agent
-from ddqn_agent import DDQNAgent
-from preprocess import make_env
-from _plot import *
+import numpy as np
 
-# https://stackoverflow.com/questions/60987997/why-torch-cuda-is-available-returns-false-even-after-installing-pytorch-with
-# Demo game play
-# https://www.udemy.com/course/deep-q-learning-from-paper-to-code/learn/lecture/17009498#questions/10488006
 
-NUM_EPISODES = 500 # 500
-NETWORK_NAME = "DQN"
-EVALUATION = "double"
-PLOTS_PATH = "plots/" + NETWORK_NAME + "_" + EVALUATION
+def trainAgent(agent,
+               env,
+               numEpisodes,
+               saveAgent=True,
+               trainMode=True,
+               verbose=True):
 
-if __name__ == "__main__":
-    # Make environment
-    env = make_env('PongNoFrameskip-v4')
-
-    # Initialize agent
-    agent = Agent(gamma=0.99,
-                  epsilonMax=1,
-                  epsilonMin=0.1,
-                  epsilonDec=1e-5,
-                  learnRate=0.0001,
-                  inputDim=(env.observation_space.shape),
-                  numActions=env.action_space.n,
-                  replayMemoryBufferSize=50000, # 50000 => takes about 13GB of RAM!
-                  replayMemoryBatchSize=32,
-                  targetNetworkUpdateInterval=1000,
-                  networkSavePath="models/",
-                  evaluationName="dqnn",
-                  networkName="DQN",
-                  trainingPhase=True
-                  )
-
-    loadModel = False
-    if loadModel:
-        agent.loadModel()
-
-    # Main training loop
     bestScore = -np.inf
     stepCounter = 0
-    scores, epsilons, steps = [], [], []
+    scoreList, epsilonList, stepList = [], [], []
 
-    for episodeCounter in range(NUM_EPISODES):
+    agent.setValueEstimatePeriod(period=numEpisodes / 5)
+
+    # Iterate over each episode
+    for episodeCounter in range(numEpisodes):
+        # Init episode score get initial observation
         episodeScore = 0
         observation = env.reset()
 
+        # Play until game over.
         isDone = False
         while not isDone:
+
             # Select action
             action = agent.selectAction(observation)
 
             # Execute action in emulator
             (newObservation, reward, isDone, info) = env.step(action)
+
+            # Update episode score
             episodeScore += reward
 
-            # Learn
-            if not loadModel:
+            if trainMode:
+                # Store current transition
                 agent.storeTransition(state=observation,
                                       action=action,
                                       reward=reward,
                                       isDone=isDone,
-                                      newState=newObservation
-                                      )
+                                      newState=newObservation)
+                # Train the agent
                 agent.learn()
 
+            # Update observation
             observation = newObservation
             stepCounter += 1
 
-        scores.append(episodeScore)
-        steps.append(stepCounter)
-        epsilons.append(agent.epsilon)
+        scoreList.append(episodeScore)
+        stepList.append(stepCounter)
+        epsilonList.append(agent.epsilon)
 
         # Compute score over the previous 100 number of games
-        averageScore = np.mean(scores[-100:])
-        print("episode: ", episodeCounter,
-              "score: ", episodeScore,
-              "average score:", averageScore,
-              "best score: ", bestScore,
-              "epsilon: ", agent.epsilon,
-              "steps: ", stepCounter)
+        averageScore = np.mean(scoreList[-100:])
 
-        # Save the model
+        if verbose:
+            print("episode: ", episodeCounter,
+                  "score: ", episodeScore,
+                  "average score:", averageScore,
+                  "best score: ", bestScore,
+                  "epsilon: ", agent.epsilon,
+                  "steps: ", stepCounter)
+
         if averageScore > bestScore:
-            if not loadModel:
-                # agent.saveModel()
-                pass
-
             bestScore = averageScore
 
-    # Plot scores as the function of learning steps taken
-    agent.saveModel()
-    plot_learning_curve(steps, scores, epsilons, filename=PLOTS_PATH)
+        if saveAgent and episodeCounter %  int(numEpisodes / 5) == 0:
+            agent.saveModel()
 
+    if saveAgent:
+        agent.saveModel()
 
-
-
-
-
+    return scoreList, epsilonList, stepList, agent.getValueEstimates()
 
 
 
