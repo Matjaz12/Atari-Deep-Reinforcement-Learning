@@ -12,7 +12,7 @@ DQN_AGENT = 1
 DDQN_AGENT = 2
 PLAY_MODE = 1
 TRAIN_MODE = 2
-ENVIRONMENT = "MsPacmanNoFrameskip-v4"
+ENVIRONMENT = "SkiingNoFrameskip-v4"
 
 # Agent Parameters
 GAMMA = 0.99
@@ -25,11 +25,11 @@ REPLAY_SAMPLE_SIZE = 32
 TARGET_NET_UPDATE_INTERVAL = 1000
 NETWORKS_PATH = "models/"
 PLOTS_PATH = "plots/"
-NUM_EPISODES = 1000
+NUM_EPISODES = 5000
 
 if __name__ == "__main__":
-    agent = 1 # int(sys.argv[1])
-    mode  = 2 # int(sys.argv[2])
+    agent = int(sys.argv[1])
+    mode  = int(sys.argv[2])
 
     if agent == DQN_AGENT:
         if mode == TRAIN_MODE:

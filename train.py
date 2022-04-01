@@ -65,7 +65,7 @@ def trainAgent(agent,
         if averageScore > bestScore:
             bestScore = averageScore
 
-        if saveAgent and episodeCounter %  int(numEpisodes / 5) == 0:
+        if saveAgent and episodeCounter % int(numEpisodes / 10) == 0:
             agent.saveModel()
 
     if saveAgent:

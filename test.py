@@ -1,5 +1,5 @@
 import gym
 
 
-env = gym.make("MsPacman-v0")
+env = gym.make("Skiing-v0")
 rg = 1
