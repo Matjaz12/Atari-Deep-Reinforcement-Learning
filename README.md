@@ -22,7 +22,7 @@ The project was developed for course: \
 
 ### Usage
 
-`python main.py <AGENT>` \
+`python main.py <AGENT> <MODE>` \
 `<DQN_AGENT> = <1>, <DDQN_AGENT> = <2>`   
 `<PLAY_MODE> = <1>, <TRAIN_MODE> = <2>`
 
