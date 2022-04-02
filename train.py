@@ -67,9 +67,6 @@ def trainAgent(agent,
             if saveAgent:
                 agent.saveModel()
 
-    if saveAgent:
-        agent.saveModel()
-
     return scoreList, epsilonList, stepList, agent.getValueEstimates()
 
 

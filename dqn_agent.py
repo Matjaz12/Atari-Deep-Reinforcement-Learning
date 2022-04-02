@@ -71,7 +71,9 @@ class DQNAgent():
 
             # compute current value estimate
             maxQValue = actions[0][action].item()
-            self.__computeValueEstimates(maxQValue)
+
+            # scratch this, takes to much ram
+            # self.__computeValueEstimates(maxQValue)
 
         return action
 
