@@ -12,7 +12,7 @@ DQN_AGENT = 1
 DDQN_AGENT = 2
 PLAY_MODE = 1
 TRAIN_MODE = 2
-ENVIRONMENT = "SkiingNoFrameskip-v4"
+ENVIRONMENT = "PongNoFrameskip-v4"
 
 # Agent Parameters
 GAMMA = 0.99
