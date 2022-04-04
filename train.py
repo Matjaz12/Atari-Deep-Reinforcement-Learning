@@ -1,12 +1,8 @@
 import numpy as np
 
 
-def trainAgent(agent,
-               env,
-               numEpisodes,
-               saveAgent=True,
-               trainMode=True,
-               verbose=True):
+def trainAgent(agent, env, numEpisodes,
+               saveAgent=True, trainMode=True, verbose=True):
 
     bestScore = -np.inf
     stepCounter = 0
@@ -47,9 +43,10 @@ def trainAgent(agent,
             observation = newObservation
             stepCounter += 1
 
-        scoreList.append(episodeScore)
-        stepList.append(stepCounter)
-        epsilonList.append(agent.epsilon)
+        # Todo: figure out if getting rid of lists decreses memory consuption
+        # scoreList.append(episodeScore)
+        # stepList.append(stepCounter)
+        # epsilonList.append(agent.epsilon)
 
         # Compute score over the previous 100 number of games
         averageScore = np.mean(scoreList[-100:])

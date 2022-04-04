@@ -41,11 +41,13 @@ class DQNAgent():
         self.targetDQN = DQN(numActions=self.numActions, inputDim=self.inputDim, learnRate=self.learnRate,
                              networkName=networkName + "_target_" + evaluationName, savePath=networkSavePath)
 
+        # Removed due to lack of available memory!
+
         # Add value estimate parameter -> used for statistics
-        self.valueEstimateList = []
-        self.currValueEstimate = 0
-        self.valueEstimatePeriod = 0
-        self.stepCounter = 0
+        # self.valueEstimateList = []
+        # self.currValueEstimate = 0
+        # self.valueEstimatePeriod = 0
+        # self.stepCounter = 0
 
     def selectAction(self, observation):
         '''
@@ -118,19 +120,21 @@ class DQNAgent():
     def storeTransition(self, state, action, reward, isDone, newState):
         self.replayMemoryBuffer.storeTransition(state, action, reward, isDone, newState)
 
-    def setValueEstimatePeriod(self, period):
-        self.valueEstimatePeriod = period
+    # Removed due to lack of available memory!
 
-    def getValueEstimates(self):
-        return self.valueEstimateList
+    #def setValueEstimatePeriod(self, period):
+    #    self.valueEstimatePeriod = period
 
-    def __computeValueEstimates(self, qvalue):
-        if self.stepCounter % self.valueEstimatePeriod == 0:
-            # Store current value estimate
-            self.valueEstimateList.append(self.currValueEstimate / self.valueEstimatePeriod)
+    #def getValueEstimates(self):
+    #    return self.valueEstimateList
 
-            # Reset value estimate
-            self.currValueEstimate = 0.0
+    #def __computeValueEstimates(self, qvalue):
+    #    if self.stepCounter % self.valueEstimatePeriod == 0:
+    #        # Store current value estimate
+    #        self.valueEstimateList.append(self.currValueEstimate / self.valueEstimatePeriod)
+    #
+    #        # Reset value estimate
+    #        self.currValueEstimate = 0.0
 
     def __sampleTransitions(self):
         (states, newStates, actions, rewards, isDones) = \

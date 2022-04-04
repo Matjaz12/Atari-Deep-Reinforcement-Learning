@@ -36,7 +36,7 @@ class DQN(nn.Module):
         self.device = T.device('cuda:0' if T.cuda.is_available() else 'cpu')
         self.to(self.device)
 
-        print("DEVICE = ", self.device)
+        print("device = ", self.device)
 
     def __calculateConvOutputDimension(self, inputDim):
         state = T.zeros(1, *inputDim)
