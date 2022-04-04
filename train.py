@@ -8,8 +8,6 @@ def trainAgent(agent, env, numEpisodes,
     stepCounter = 0
     scoreList, epsilonList, stepList = [], [], []
 
-    agent.setValueEstimatePeriod(period=numEpisodes / 5)
-
     # Iterate over each episode
     for episodeCounter in range(numEpisodes):
         # Init episode score get initial observation
@@ -43,10 +41,9 @@ def trainAgent(agent, env, numEpisodes,
             observation = newObservation
             stepCounter += 1
 
-        # Todo: figure out if getting rid of lists decreses memory consuption
-        # scoreList.append(episodeScore)
-        # stepList.append(stepCounter)
-        # epsilonList.append(agent.epsilon)
+        scoreList.append(episodeScore)
+        stepList.append(stepCounter)
+        epsilonList.append(agent.epsilon)
 
         # Compute score over the previous 100 number of games
         averageScore = np.mean(scoreList[-100:])

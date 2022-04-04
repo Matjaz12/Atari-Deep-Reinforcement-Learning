@@ -20,12 +20,12 @@ EPS_MAX = 1.00
 EPS_MIN = 0.1
 EPS_DEC = 1e-5
 LEARN_RATE = 0.0001
-REPLAY_MEM_SIZE = 50000
+REPLAY_MEM_SIZE = 45000  # can't afford 50000 :(
 REPLAY_SAMPLE_SIZE = 32
 TARGET_NET_UPDATE_INTERVAL = 1000
 NETWORKS_PATH = "models/"
 PLOTS_PATH = "plots/"
-NUM_EPISODES = 5000
+NUM_EPISODES = 500
 
 if __name__ == "__main__":
     agent = int(sys.argv[1])
