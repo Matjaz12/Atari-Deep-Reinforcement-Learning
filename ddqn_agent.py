@@ -5,10 +5,10 @@ from replay_memory_buffer import ReplayMemoryBuffer
 import torch as T
 
 class DDQNAgent():
-    def __init__(self, numActions, inputDim,
-                 learnRate, epsilonMax, epsilonMin, epsilonDec, gamma,
-                 replayMemoryBufferSize, replayMemoryBatchSize, targetNetworkUpdateInterval,
-                 networkSavePath, networkName, evaluationName, trainingPhase=True):
+    def __init__(self, numActions: object, inputDim: object,
+                 learnRate: object, epsilonMax: object, epsilonMin: object, epsilonDec: object, gamma: object,
+                 replayMemoryBufferSize: object, replayMemoryBatchSize: object, targetNetworkUpdateInterval: object,
+                 networkSavePath: object, networkName: object, evaluationName: object, trainingPhase: object = True) -> object:
 
         # Save training flag. If training flag = True => epsilon greedy selection of action
         # otherwise we use greedy selection.

@@ -8,8 +8,12 @@ class ReplayMemoryBuffer():
         self.indexPointer = 0
 
         # Init containers
+        # self.size ... number of rows
+        # *inputShape ... number of columns => size of observation space
         self.states = np.zeros((self.size, *inputShape), dtype=np.float32)
         self.newStates = np.zeros((self.size, *inputShape), dtype=np.float32)
+
+        # since these are just scalars: rows x cols => 1 x self.size
         self.actions = np.zeros(self.size, dtype=np.int64)
         self.rewards = np.zeros(self.size, dtype=np.float32)
         self.isDones = np.zeros(self.size, dtype=np.bool)
@@ -39,8 +43,12 @@ class ReplayMemoryBuffer():
         '''
 
         maxMem = min(self.indexPointer, self.size)
-        randomBatch = np.random.choice(maxMem, sampleSize, replace=False) # False => No repeating.
+        # maxMem => [0, 1, ... maxMem) : bucket from which we sample
+        # sampleSize => size of the sample (how many times we pull from above bucket)
+        # e.g np.random.choise(5,3) => e.g (4,0,2)
+        randomBatch = np.random.choice(maxMem, sampleSize, replace=False)  # False => No repeating.
 
+        # get values at index-es in randomBatch
         states = self.states[randomBatch]
         newStates = self.newStates[randomBatch]
         actions = self.actions[randomBatch]

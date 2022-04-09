@@ -1,150 +1,116 @@
-import sys
 from dqn_agent import DQNAgent
 from ddqn_agent import DDQNAgent
 from preprocess import make_env
-from plotting import *
 from gym import wrappers
 from train import *
-
-
-# Program Parameters
-DQN_AGENT = 1
-DDQN_AGENT = 2
-PLAY_MODE = 1
-TRAIN_MODE = 2
-ENVIRONMENT = "PongNoFrameskip-v4"
-
-# Agent Parameters
-GAMMA = 0.99
-EPS_MAX = 1.00
-EPS_MIN = 0.1
-EPS_DEC = 1e-5
-LEARN_RATE = 0.0001
-REPLAY_MEM_SIZE = 45000  # can't afford 50000 :(
-REPLAY_SAMPLE_SIZE = 32
-TARGET_NET_UPDATE_INTERVAL = 1000
-NETWORKS_PATH = "models/"
-PLOTS_PATH = "plots/"
-NUM_EPISODES = 500
+import argparse
+import os
 
 if __name__ == "__main__":
-    agent = int(sys.argv[1])
-    mode  = int(sys.argv[2])
+    parser = argparse.ArgumentParser()
 
-    if agent == DQN_AGENT:
-        if mode == TRAIN_MODE:
-            env = make_env(ENVIRONMENT)
-            agent = DQNAgent(gamma=GAMMA,
-                             epsilonMax=EPS_MAX,
-                             epsilonMin=EPS_MIN,
-                             epsilonDec=EPS_DEC,
-                             learnRate=LEARN_RATE,
+    parser.add_argument("-numEpisodes", type=int, default=500, help="Number of episodes to play.")
+    parser.add_argument("-learnRate", type=float, default=0.0001, help="Model learning rate.")
+    parser.add_argument("-epsMax", type=float, default=1.00, help="Maximum value of epsilon in epsilon greedy method.")
+    parser.add_argument("-epsMin", type=float, default=0.1, help="Minimum value of epsilon in epsilon greedy method.")
+    parser.add_argument("-epsDec", type=float, default=1e-5, help="Decrement value of epsilon in epsilon greedy method.")
+    parser.add_argument("-gamma", type=float, default=0.99, help="Discount factor for update Q equation.")
+    parser.add_argument("-memSize", type=int, default=50000, help="Replay memory buffer size.")
+    parser.add_argument("-batchSize", type=int, default=32, help="Replay memory sample batch size.")
+    parser.add_argument("-replaceInterval", type=int, default=1000, help="Target network replace weights interval.")
+    parser.add_argument("-env", type=float, default="PongNoFrameskip-v4", help="Atari environment.")
+    parser.add_argument("-loadModel", type=bool, default=False, help="Load model checkpoint.")
+
+    parser.add_argument("-path", type=str, default="models/", help="Path for model saving/loading.")
+    parser.add_argument('-gpu', type=str, default='0', help='GPU: 0 or 1')
+    parser.add_argument("-algo", type=str, default="DQN", help="DQN/DDQN")
+    parser.add_argument("-mode", type=str, default="train", help="train/eval")
+
+    args = parser.parse_args()
+    os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
+    os.environ['CUDA_VISIBLE_DEVICES'] = args.gpu
+
+    if args.algo == "DQN":
+        if args.mode == "train":
+            env = make_env(args.env)
+            agent = DQNAgent(gamma=args.gamma,
+                             epsilonMax=args.epsMax,
+                             epsilonMin=args.epsMin,
+                             epsilonDec=args.epsDec,
+                             learnRate=args.learnRate,
                              inputDim=env.observation_space.shape,
                              numActions=env.action_space.n,
-                             replayMemoryBufferSize=REPLAY_MEM_SIZE,
-                             replayMemoryBatchSize=REPLAY_SAMPLE_SIZE,
-                             targetNetworkUpdateInterval=TARGET_NET_UPDATE_INTERVAL,
-                             networkSavePath=NETWORKS_PATH,
+                             replayMemoryBufferSize=args.memSize,
+                             replayMemoryBatchSize=args.batchSize,
+                             targetNetworkUpdateInterval=args.replaceInterval,
+                             networkSavePath=args.path,
                              evaluationName="base",
                              networkName="DQN",
                              trainingPhase=True)
 
-            (scoreList, epsilonList, stepList, valueEstimates) = trainAgent(agent, env, NUM_EPISODES,
-                                                                            saveAgent=True, trainMode=True, verbose=True)
+            scoreList, epsilonList, stepList = trainAgent(agent, env, args.numEpisodes,
+                                                                            saveAgent=True, trainMode=True,verbose=True)
 
-            # Plotting
-            plotLearnCurve(stepList, scoreList, epsilonList, filename=PLOTS_PATH + "DQN")
-            plotValueEstimates(valueEstimates, title="Pong", filename=PLOTS_PATH + "VAL_ESTIMATE_DQN_TRAIN")
+        if args.mode == "eval":
+            env = make_env(args.env)
+            env = wrappers.Monitor(env, args.path + "tmp/dqn", video_callable=lambda episode_id: True, force=True)
 
-        if mode == PLAY_MODE:
-            env = make_env(ENVIRONMENT)
-            env = wrappers.Monitor(env, "tmp/dqn", video_callable=lambda episode_id: True, force=True)
-            agent = DQNAgent(gamma=GAMMA,
-                             epsilonMax=EPS_MAX,
-                             epsilonMin=EPS_MIN,
-                             epsilonDec=EPS_DEC,
-                             learnRate=LEARN_RATE,
+            agent = DQNAgent(gamma=args.gamma,
+                             epsilonMax=args.epsMax,
+                             epsilonMin=args.epsMin,
+                             epsilonDec=args.epsDec,
+                             learnRate=args.learnRate,
                              inputDim=env.observation_space.shape,
                              numActions=env.action_space.n,
-                             replayMemoryBufferSize=REPLAY_MEM_SIZE,
-                             replayMemoryBatchSize=REPLAY_SAMPLE_SIZE,
-                             targetNetworkUpdateInterval=TARGET_NET_UPDATE_INTERVAL,
-                             networkSavePath=NETWORKS_PATH,
+                             replayMemoryBufferSize=args.memSize,
+                             replayMemoryBatchSize=args.batchSize,
+                             targetNetworkUpdateInterval=args.replaceInterval,
+                             networkSavePath=args.path,
                              evaluationName="base",
                              networkName="DQN",
-                             trainingPhase=False)
+                             trainingPhase=True)
 
             agent.loadModel()
-            (scoreList, epsilonList, stepList, valueEstimates) = trainAgent(agent, env, NUM_EPISODES,
-                                                                            saveAgent=False, trainMode=False, verbose=True)
-            # Plotting
-            plotValueEstimates(valueEstimates, title="Pong", filename=PLOTS_PATH + "VAL_ESTIMATE_DQN_PLAY")
-
-        else:
-            print("Incorrect usage!")
-            print("main.py <AGENT> <MODE>")
-            print("<DQN_AGENT> = <1>, <DDQN_AGENT> = <2>")
-            print("<PLAY_MODE> = <1>, <TRAIN_MODE> = <2>")
-
-    if agent == DDQN_AGENT:
-        if mode == TRAIN_MODE:
-            env = make_env(ENVIRONMENT)
-            agent = DDQNAgent(gamma=GAMMA,
-                              epsilonMax=EPS_MAX,
-                              epsilonMin=EPS_MIN,
-                              epsilonDec=EPS_DEC,
-                              learnRate=LEARN_RATE,
+            scoreList, epsilonList, stepList = trainAgent(agent, env, args.numEpisodes,
+                                                          saveAgent=False, trainMode=False,verbose=True)
+    if args.algo == "DDQN":
+        if args.mode == "train":
+            env = make_env(args.env)
+            agent = DDQNAgent(gamma=args.gamma,
+                              epsilonMax=args.epsMax,
+                              epsilonMin=args.epsMin,
+                              epsilonDec=args.epsDec,
+                              learnRate=args.learnRate,
                               inputDim=env.observation_space.shape,
                               numActions=env.action_space.n,
-                              replayMemoryBufferSize=REPLAY_MEM_SIZE,
-                              replayMemoryBatchSize=REPLAY_SAMPLE_SIZE,
-                              targetNetworkUpdateInterval=TARGET_NET_UPDATE_INTERVAL,
-                              networkSavePath=NETWORKS_PATH,
+                              replayMemoryBufferSize=args.memSize,
+                              replayMemoryBatchSize=args.batchSize,
+                              targetNetworkUpdateInterval=args.replaceInterval,
+                              networkSavePath=args.path,
                               evaluationName="base",
-                              networkName="DQN",
+                              networkName="DDQN",
                               trainingPhase=True)
 
-            (scoreList, epsilonList, stepList, valueEstimates) = trainAgent(agent, env, NUM_EPISODES,
-                                                                            saveAgent=True, trainMode=True, verbose=True)
+            scoreList, epsilonList, stepList = trainAgent(agent, env, args.numEpisodes,
+                                                          saveAgent=True, trainMode=True,verbose=True)
 
-            # Plotting
-            plotLearnCurve(stepList, scoreList, epsilonList, filename=PLOTS_PATH + "DDQN")
-            plotValueEstimates(valueEstimates, title="Pong", filename=PLOTS_PATH + "VAL_ESTIMATE_DDQN_TRAIN")
-
-        if mode == PLAY_MODE:
-            env = make_env(ENVIRONMENT)
-            env = wrappers.Monitor(env, "tmp/dqn", video_callable=lambda episode_id: True, force=True)
-            agent = DDQNAgent(gamma=GAMMA,
-                              epsilonMax=EPS_MAX,
-                              epsilonMin=EPS_MIN,
-                              epsilonDec=EPS_DEC,
-                              learnRate=LEARN_RATE,
+        if args.mode == "eval":
+            env = make_env(args.env)
+            env = wrappers.Monitor(env, args.path + "tmp/ddqn", video_callable=lambda episode_id: True, force=True)
+            agent = DDQNAgent(gamma=args.gamma,
+                              epsilonMax=args.epsMax,
+                              epsilonMin=args.epsMin,
+                              epsilonDec=args.epsDec,
+                              learnRate=args.learnRate,
                               inputDim=env.observation_space.shape,
                               numActions=env.action_space.n,
-                              replayMemoryBufferSize=REPLAY_MEM_SIZE,
-                              replayMemoryBatchSize=REPLAY_SAMPLE_SIZE,
-                              targetNetworkUpdateInterval=TARGET_NET_UPDATE_INTERVAL,
-                              networkSavePath=NETWORKS_PATH,
+                              replayMemoryBufferSize=args.memSize,
+                              replayMemoryBatchSize=args.batchSize,
+                              targetNetworkUpdateInterval=args.replaceInterval,
+                              networkSavePath=args.path,
                               evaluationName="base",
-                              networkName="DQN",
-                              trainingPhase=False)
+                              networkName="DDQN",
+                              trainingPhase=True)
 
-            (scoreList, epsilonList, stepList, valueEstimates) = trainAgent(agent, env, NUM_EPISODES,
-                                                                            saveAgent=False, trainMode=False, verbose=True)
-
-            # Plotting
-            plotValueEstimates(valueEstimates, title="Pong", filename=PLOTS_PATH + "VAL_ESTIMATE_DDQN_PLAY")
-
-        else:
-            print("Incorrect usage!")
-            print("main.py <AGENT> <MODE>")
-            print("<DQN_AGENT> = <1>, <DDQN_AGENT> = <2>")
-            print("<PLAY_MODE> = <1>, <TRAIN_MODE> = <2>")
-
-    else:
-        print("Incorrect usage!")
-        print("main.py <AGENT> <MODE>")
-        print("<DQN_AGENT> = <1>, <DDQN_AGENT> = <2>")
-        print("<PLAY_MODE> = <1>, <TRAIN_MODE> = <2>")
-
-
+            scoreList, epsilonList, stepList = trainAgent(agent, env, args.numEpisodes,
+                                                          saveAgent=False, trainMode=False,verbose=True)

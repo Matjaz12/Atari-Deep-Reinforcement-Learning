@@ -1,14 +1,20 @@
 import numpy as np
+import logging
 
 
-def trainAgent(agent, env, numEpisodes,
-               saveAgent=True, trainMode=True, verbose=True):
-
+def trainAgent(agent, env, numEpisodes, saveAgent=True, trainMode=True, verbose=True):
     bestScore = -np.inf
     stepCounter = 0
     scoreList, epsilonList, stepList = [], [], []
 
-    # Iterate over each episode
+    if verbose:
+        logging.basicConfig(filename=agent.networkName + "_training.log",
+                            format='%(asctime)s %(message)s',
+                            filemode='w')
+        logger = logging.getLogger()
+        logger.setLevel(logging.INFO)
+
+        # Iterate over each episode
     for episodeCounter in range(numEpisodes):
         # Init episode score get initial observation
         episodeScore = 0
@@ -49,19 +55,15 @@ def trainAgent(agent, env, numEpisodes,
         averageScore = np.mean(scoreList[-100:])
 
         if verbose:
-            print("episode: ", episodeCounter,
-                  "score: ", episodeScore,
-                  "average score:", averageScore,
-                  "best score: ", bestScore,
-                  "epsilon: ", agent.epsilon,
-                  "steps: ", stepCounter)
+            logger.info(f"episode={episodeCounter} score={episodeScore} avgScore={averageScore},"
+                        f"bestScore={bestScore} epsilon={agent.epsilon}, step={stepCounter}")
 
         if averageScore > bestScore:
             bestScore = averageScore
             if saveAgent:
                 agent.saveModel()
 
-    return scoreList, epsilonList, stepList, agent.getValueEstimates()
+    return scoreList, epsilonList, stepList
 
 
 
