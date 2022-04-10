@@ -3,12 +3,12 @@ from datetime import datetime
 import numpy as np
 
 
-def trainAgent(agent, env, numEpisodes, saveAgent=True, trainMode=True, verbose=True):
+def trainAgent(agent, env, numEpisodes, saveAgent=True, trainMode=True, log=False):
     bestScore = -np.inf
     stepCounter = 0
     scoreList, epsilonList, stepList = [], [], []
 
-    if verbose:
+    if log:
         logging.basicConfig(filename="logs/" + agent.networkName + datetime.now().strftime("%H:%M:%S") + ".log",
                             format='%(asctime)s %(message)s',
                             filemode='w')
@@ -55,14 +55,19 @@ def trainAgent(agent, env, numEpisodes, saveAgent=True, trainMode=True, verbose=
         # Compute score over the previous 100 number of games
         averageScore = np.mean(scoreList[-100:])
 
-        if verbose:
+        if log:
             logger.info(f"episode={episodeCounter} score={episodeScore} avgScore={averageScore},"
+                        f"bestScore={bestScore} epsilon={agent.epsilon}, step={stepCounter}")
+
+        print(f"episode={episodeCounter} score={episodeScore} avgScore={averageScore},"
                         f"bestScore={bestScore} epsilon={agent.epsilon}, step={stepCounter}")
 
         if averageScore > bestScore:
             bestScore = averageScore
             if saveAgent:
                 agent.saveModel()
+
+    agent.saveModel()
 
     return scoreList, epsilonList, stepList
 

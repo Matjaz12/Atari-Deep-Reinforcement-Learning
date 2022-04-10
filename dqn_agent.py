@@ -76,9 +76,9 @@ class DQNAgent():
 
             # compute current value estimate
             #  actions[0][action] => tensor(scalar) => calling .item() => scalar
-            maxQValue = actions[0][action].item()
+            # maxQValue = actions[0][action].item()
 
-            # scratch this, takes to much ram
+            # scratch this, takes too much ram
             # self.__computeValueEstimates(maxQValue)
 
         return action

@@ -1,5 +1,6 @@
 from dqn_agent import DQNAgent
 from ddqn_agent import DDQNAgent
+from plotting import plotLearnCurve
 from preprocess import make_env
 from gym import wrappers
 from train import *
@@ -60,8 +61,8 @@ if __name__ == "__main__":
             if args.loadModel:
                 agent.loadModel()
 
-            scoreList, epsilonList, stepList = trainAgent(agent, env, args.numEpisodes,
-                                                                            saveAgent=True, trainMode=True,verbose=True)
+            scoreList, epsilonList, stepList = trainAgent(agent, env, args.numEpisodes, saveAgent=True, trainMode=True)
+            plotLearnCurve(episodes=args.numEpisodes, scores=scoreList, epsilons=epsilonList, filename="./plots/DQN" + args.evalName)
 
         if args.mode == "eval":
             env = make_env(args.env)
@@ -83,8 +84,8 @@ if __name__ == "__main__":
                              trainingPhase=True)
 
             agent.loadModel()
-            scoreList, epsilonList, stepList = trainAgent(agent, env, args.numEpisodes,
-                                                          saveAgent=False, trainMode=False,verbose=True)
+            scoreList, epsilonList, stepList = trainAgent(agent, env, args.numEpisodes, saveAgent=False, trainMode=False)
+
     if args.algo == "DDQN":
         if args.mode == "train":
             env = make_env(args.env)
@@ -106,8 +107,8 @@ if __name__ == "__main__":
             if args.loadModel:
                 agent.loadModel()
 
-            scoreList, epsilonList, stepList = trainAgent(agent, env, args.numEpisodes,
-                                                          saveAgent=True, trainMode=True,verbose=True)
+            scoreList, epsilonList, stepList = trainAgent(agent, env, args.numEpisodes, saveAgent=True, trainMode=True)
+            plotLearnCurve(episodes=args.numEpisodes, scores=scoreList, epsilons=epsilonList, filename="./plots/DDQN" + args.evalName)
 
         if args.mode == "eval":
             env = make_env(args.env)
@@ -127,5 +128,4 @@ if __name__ == "__main__":
                               networkName="DDQN",
                               trainingPhase=True)
 
-            scoreList, epsilonList, stepList = trainAgent(agent, env, args.numEpisodes,
-                                                          saveAgent=False, trainMode=False,verbose=True)
+            scoreList, epsilonList, stepList = trainAgent(agent, env, args.numEpisodes,saveAgent=False, trainMode=False)
