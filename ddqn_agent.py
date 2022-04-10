@@ -65,12 +65,10 @@ class DDQNAgent():
         return action
 
     def learn(self):
-        # Check if we have enough transition saved
-        # in memory buffer before we start learning
         if self.replayMemoryBuffer.indexPointer < self.replayMemoryBatchSize:
             return
 
-        # Zero out the gradients from previous iteration
+        # Zero out the network gradients from previous iteration
         self.evaluationDQN.optimizer.zero_grad()
 
         # Attempt to update the target network
@@ -79,20 +77,19 @@ class DDQNAgent():
         # Sample previous transitions from random memory buffer
         (states, newStates, actions, rewards, isDones) = self.__sampleTransitions()
 
+        # indices holds values [0, 1, 2, ..., self.replayMemoryBatchSize - 1]
         indices = np.arange(self.replayMemoryBatchSize)
 
-        # Predicted action values for random set of states
         predictedQ = self.evaluationDQN.forward(states)[indices, actions]
-        # Predicted action values using target net for random set of new states
         nextQ = self.targetDQN.forward(newStates)
-        # Predicted action values using evaluation net for random set of new states
         evalQ = self.evaluationDQN.forward(newStates)
 
         # Max actions for the new states according to the evaluation network
         maxActions = T.argmax(evalQ, dim=1)
         nextQ[isDones] = 0.0
 
-        # In Double Q-Learning we also use target neural net to compute nextQ but we select max action using evaluation dqn
+        # In Double Q-Learning we also use target neural net to compute nextQ
+        # but we select max action using evaluation dqn
         targetQ = rewards + self.gamma * nextQ[indices, maxActions]
 
         # Compute loss

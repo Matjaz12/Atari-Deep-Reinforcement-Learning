@@ -3,7 +3,10 @@ import numpy as np
 from dqn import DQN
 from replay_memory_buffer import ReplayMemoryBuffer
 import torch as T
+import numpy as np
 
+import matplotlib.pyplot as plt
+import matplotlib.animation as animation
 
 class DQNAgent():
     def __init__(self, numActions, inputDim,
@@ -81,42 +84,38 @@ class DQNAgent():
             # scratch this, takes too much ram
             # self.__computeValueEstimates(maxQValue)
 
+
         return action
 
     def learn(self):
-        # Check if we have enough transition saved
-        # in memory buffer before we start learning
+        # Check if we have enough transition saved before we start learning
         if self.replayMemoryBuffer.indexPointer < self.replayMemoryBatchSize:
             return
 
         # Zero out the gradients from previous iteration
-        # remember than pytorch doesn't do that for us
         self.evaluationDQN.optimizer.zero_grad()
 
         # Attempt to update the target network
-        # copy over the weights of the online network
-        # to prevent "chasing a moving target#
         self.__updateTargetDQN()
 
-        # Sample previous transitions from random memory buffer
+        # Sample random mini batch of transitions
         (states, newStates, actions, rewards, isDones) = self.__sampleTransitions()
 
         # Compute predicted Q values
-        # indices = [0, 1, 3, ..., replayMemoryBatchSize - 1]
-        indices = np.arange(self.replayMemoryBatchSize)
-        # pass the set of states through the network & get predictions
-        # self.evaluationDQN.forward(states) => q_values for numActions!
-        # self.evaluationDQN.forward(states)[indices, actions] => q values for selected set of actions!
+        indices = np.arange(self.replayMemoryBatchSize) # indices = [0, 1, 3, ..., replayMemoryBatchSize - 1]
 
-        # so these are q-values for randomly selected subset of action
+        # Pass states from mini batch through network & get predicted q values
+        # for the set of actions in the mini batch
         predictedQ = self.evaluationDQN.forward(states)[indices, actions]
 
         # Compute target Q values
         # self.targetDQN.forward(newStates).max(dim=1)[0] => predicted max q values for all newStates
         nextQ = self.targetDQN.forward(newStates).max(dim=1)[0]  # .max() => [0] ... values,  [1] ... indices
-        # the states that resulted in an end game (isDones = true) => set their q-value to zero
+
+        # Set nextQ to zero, for newStates that terminated.
         nextQ[isDones] = 0.0
-        # reward for performing actions plus discounted estimate of future reward
+
+        # Reward for performing actions plus discounted estimate of future reward
         targetQ = rewards + self.gamma * nextQ
 
         # Compute loss

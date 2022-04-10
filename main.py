@@ -67,9 +67,8 @@ if __name__ == "__main__":
         if args.mode == "eval":
             env = make_env(args.env)
             env = wrappers.Monitor(env, args.path + "tmp/dqn", video_callable=lambda episode_id: True, force=True)
-
             agent = DQNAgent(gamma=args.gamma,
-                             epsilonMax=args.epsMax,
+                             epsilonMax=0.1,
                              epsilonMin=args.epsMin,
                              epsilonDec=args.epsDec,
                              learnRate=args.learnRate,
@@ -79,7 +78,7 @@ if __name__ == "__main__":
                              replayMemoryBatchSize=args.batchSize,
                              targetNetworkUpdateInterval=args.replaceInterval,
                              networkSavePath=args.path,
-                             evaluationName="base",
+                             evaluationName="eval",
                              networkName="DQN",
                              trainingPhase=True)
 
@@ -100,7 +99,7 @@ if __name__ == "__main__":
                               replayMemoryBatchSize=args.batchSize,
                               targetNetworkUpdateInterval=args.replaceInterval,
                               networkSavePath=args.path,
-                              evaluationName="base",
+                              evaluationName="eval",
                               networkName="DDQN",
                               trainingPhase=True)
 
@@ -114,7 +113,7 @@ if __name__ == "__main__":
             env = make_env(args.env)
             env = wrappers.Monitor(env, args.path + "tmp/ddqn", video_callable=lambda episode_id: True, force=True)
             agent = DDQNAgent(gamma=args.gamma,
-                              epsilonMax=args.epsMax,
+                              epsilonMax=0.1,
                               epsilonMin=args.epsMin,
                               epsilonDec=args.epsDec,
                               learnRate=args.learnRate,
@@ -124,7 +123,7 @@ if __name__ == "__main__":
                               replayMemoryBatchSize=args.batchSize,
                               targetNetworkUpdateInterval=args.replaceInterval,
                               networkSavePath=args.path,
-                              evaluationName="base",
+                              evaluationName="eval",
                               networkName="DDQN",
                               trainingPhase=True)
 
