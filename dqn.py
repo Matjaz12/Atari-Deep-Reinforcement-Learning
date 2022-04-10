@@ -73,5 +73,6 @@ class DQN(nn.Module):
         '''
         Function loads the neural network from savePath.
         '''
+
         print('Loading: ' + self.networkName + " ...")
-        self.load_state_dict(T.load(self.savePath))
+        self.load_state_dict(T.load(self.path))

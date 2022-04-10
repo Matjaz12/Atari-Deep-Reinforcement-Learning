@@ -1,5 +1,6 @@
-import numpy as np
 import logging
+from datetime import datetime
+import numpy as np
 
 
 def trainAgent(agent, env, numEpisodes, saveAgent=True, trainMode=True, verbose=True):
@@ -8,13 +9,13 @@ def trainAgent(agent, env, numEpisodes, saveAgent=True, trainMode=True, verbose=
     scoreList, epsilonList, stepList = [], [], []
 
     if verbose:
-        logging.basicConfig(filename=agent.networkName + "_training.log",
+        logging.basicConfig(filename="logs/" + agent.networkName + datetime.now().strftime("%H:%M:%S") + ".log",
                             format='%(asctime)s %(message)s',
                             filemode='w')
         logger = logging.getLogger()
         logger.setLevel(logging.INFO)
 
-        # Iterate over each episode
+    # Iterate over each episode
     for episodeCounter in range(numEpisodes):
         # Init episode score get initial observation
         episodeScore = 0
@@ -48,8 +49,8 @@ def trainAgent(agent, env, numEpisodes, saveAgent=True, trainMode=True, verbose=
             stepCounter += 1
 
         scoreList.append(episodeScore)
-        stepList.append(stepCounter)
-        epsilonList.append(agent.epsilon)
+        # stepList.append(stepCounter)
+        # epsilonList.append(agent.epsilon)
 
         # Compute score over the previous 100 number of games
         averageScore = np.mean(scoreList[-100:])

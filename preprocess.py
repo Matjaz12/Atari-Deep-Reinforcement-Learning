@@ -4,20 +4,19 @@ import numpy as np
 import gym
 
 """ 
-    modified from:
+    source:
     https://github.com/PacktPublishing/Deep-Reinforcement-Learning-Hands-On/blob/master/Chapter06/lib/wrappers.py
 """
-
 
 class RepeatActionAndMaxFrame(gym.Wrapper):
 
     def __init__(self, env=None, repeat=4, clip_reward=False,
                  no_ops=0, fire_first=False):
+
         super(RepeatActionAndMaxFrame, self).__init__(env)
         self.repeat = repeat
         self.shape = env.observation_space.low.shape
         #self.frame_buffer = np.zeros_like((2,self.shape))
-        # Change feb 28, 10:26
         self.frame_buffer = np.zeros(shape=(2, *self.shape), dtype=np.uint8)
         self.clip_reward = clip_reward
         self.no_ops = 0
