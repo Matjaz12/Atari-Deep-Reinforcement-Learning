@@ -75,4 +75,4 @@ class DQN(nn.Module):
         '''
 
         print('Loading: ' + self.networkName + " ...")
-        self.load_state_dict(T.load(self.path))
+        self.load_state_dict(T.load(self.savePath))
