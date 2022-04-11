@@ -33,7 +33,8 @@ class DQN(nn.Module):
         self.loss = nn.MSELoss()
 
         # Find and send network to the available device
-        self.device = T.device('cuda:0' if T.cuda.is_available() else 'cpu')
+        #self.device = T.device('cuda:0' if T.cuda.is_available() else 'cpu')
+        self.device = T.device("cpu")
         self.to(self.device)
 
         print("device = ", self.device)
