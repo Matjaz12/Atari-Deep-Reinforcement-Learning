@@ -1,23 +1,15 @@
 import random
-import numpy as np
 from dqn import DQN
 from replay_memory_buffer import ReplayMemoryBuffer
 import torch as T
 import numpy as np
 
-import matplotlib.pyplot as plt
-import matplotlib.animation as animation
 
-class DQNAgent():
+class DQNAgent:
     def __init__(self, numActions, inputDim,
                  learnRate, epsilonMax, epsilonMin, epsilonDec, gamma,
                  replayMemoryBufferSize, replayMemoryBatchSize, targetNetworkUpdateInterval,
-                 networkSavePath, networkName, evaluationName, trainingPhase=True):
-
-        # Save training flag. If training flag = True => epsilon greedy selection of action
-        # otherwise we use greedy selection.
-        self.trainingPhase = trainingPhase
-
+                 networkSavePath, networkName, evaluationName, computeActionHist=False):
         # Save agent parameters
         self.numActions = numActions
         self.inputDim = inputDim
@@ -45,13 +37,12 @@ class DQNAgent():
         self.targetDQN = DQN(numActions=self.numActions, inputDim=self.inputDim, learnRate=self.learnRate,
                              networkName=networkName + "_target_" + evaluationName, savePath=networkSavePath)
 
-        # Removed due to lack of available memory!
-
-        # Add value estimate parameter -> used for statistics
-        # self.valueEstimateList = []
-        # self.currValueEstimate = 0
-        # self.valueEstimatePeriod = 0
-        # self.stepCounter = 0
+        self.computeActionHist = computeActionHist
+        # Create action histogram
+        if self.computeActionHist:
+            self.actionHist = dict()
+            for i in range(0, numActions):
+                self.actionHist[i] = 0
 
     def selectAction(self, observation):
         '''
@@ -60,7 +51,7 @@ class DQNAgent():
         or a greedy (predicted) action.
         '''
 
-        if self.trainingPhase is True and random.random() <= self.epsilon:
+        if random.random() <= self.epsilon:
             action = random.choice(self.actionSpace)
         else:
             # Convert observation to PyTorch tensor before it is loaded to the device.
@@ -77,13 +68,8 @@ class DQNAgent():
             # returns the index of the max action
             action = T.argmax(actions).item()
 
-            # compute current value estimate
-            #  actions[0][action] => tensor(scalar) => calling .item() => scalar
-            # maxQValue = actions[0][action].item()
-
-            # scratch this, takes too much ram
-            # self.__computeValueEstimates(maxQValue)
-
+            if self.computeActionHist:
+                self.actionHist[action] += 1
 
         return action
 
@@ -102,7 +88,7 @@ class DQNAgent():
         (states, newStates, actions, rewards, isDones) = self.__sampleTransitions()
 
         # Compute predicted Q values
-        indices = np.arange(self.replayMemoryBatchSize) # indices = [0, 1, 3, ..., replayMemoryBatchSize - 1]
+        indices = np.arange(self.replayMemoryBatchSize)  # indices = [0, 1, 3, ..., replayMemoryBatchSize - 1]
 
         # Pass states from mini batch through network & get predicted q values
         # for the set of actions in the mini batch
@@ -133,22 +119,6 @@ class DQNAgent():
 
     def storeTransition(self, state, action, reward, isDone, newState):
         self.replayMemoryBuffer.storeTransition(state, action, reward, isDone, newState)
-
-    # Removed due to lack of available memory!
-
-    #def setValueEstimatePeriod(self, period):
-    #    self.valueEstimatePeriod = period
-
-    #def getValueEstimates(self):
-    #    return self.valueEstimateList
-
-    #def __computeValueEstimates(self, qvalue):
-    #    if self.stepCounter % self.valueEstimatePeriod == 0:
-    #        # Store current value estimate
-    #        self.valueEstimateList.append(self.currValueEstimate / self.valueEstimatePeriod)
-    #
-    #        # Reset value estimate
-    #        self.currValueEstimate = 0.0
 
     def __sampleTransitions(self):
         (states, newStates, actions, rewards, isDones) = \

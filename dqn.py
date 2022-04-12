@@ -52,13 +52,12 @@ class DQN(nn.Module):
         through the network and returns a set of action values.
         actions = [Q(s,a) for each action a]
         '''
-
         conv1 = F.relu(self.conv1(stateList))
         conv2 = F.relu(self.conv2(conv1))
         conv3 = F.relu(self.conv3(conv2))
-        conv_state = conv3.view(conv3.size()[0], -1)
+        convState = conv3.view(conv3.size()[0], -1)
 
-        flat1 = F.relu(self.fc1(conv_state))
+        flat1 = F.relu(self.fc1(convState))
         actions = self.fc2(flat1)
 
         return actions

@@ -49,18 +49,18 @@ def trainAgent(agent, env, numEpisodes, saveAgent=True, trainMode=True, log=Fals
             stepCounter += 1
 
         scoreList.append(episodeScore)
-        # stepList.append(stepCounter)
-        # epsilonList.append(agent.epsilon)
+        stepList.append(stepCounter)
+        epsilonList.append(agent.epsilon)
 
         # Compute score over the previous 100 number of games
         averageScore = np.mean(scoreList[-100:])
 
         if log:
-            logger.info(f"episode={episodeCounter} score={episodeScore} avgScore={averageScore},"
-                        f"bestScore={bestScore} epsilon={agent.epsilon}, step={stepCounter}")
+            logger.info(f"episode={episodeCounter} score={episodeScore} avgScore={averageScore} "
+                        f"bestScore={bestScore} epsilon={agent.epsilon} step={stepCounter}")
 
-        print(f"episode={episodeCounter} score={episodeScore} avgScore={averageScore},"
-                        f"bestScore={bestScore} epsilon={agent.epsilon}, step={stepCounter}")
+        print(f"episode={episodeCounter} score={episodeScore} avgScore={averageScore} "
+              f"bestScore={bestScore} epsilon={agent.epsilon} step={stepCounter}")
 
         if averageScore > bestScore:
             bestScore = averageScore
@@ -70,7 +70,3 @@ def trainAgent(agent, env, numEpisodes, saveAgent=True, trainMode=True, log=Fals
     agent.saveModel()
 
     return scoreList, epsilonList, stepList
-
-
-
-

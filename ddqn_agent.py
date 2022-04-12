@@ -4,15 +4,12 @@ from dqn import DQN
 from replay_memory_buffer import ReplayMemoryBuffer
 import torch as T
 
-class DDQNAgent():
-    def __init__(self, numActions: object, inputDim: object,
-                 learnRate: object, epsilonMax: object, epsilonMin: object, epsilonDec: object, gamma: object,
-                 replayMemoryBufferSize: object, replayMemoryBatchSize: object, targetNetworkUpdateInterval: object,
-                 networkSavePath: object, networkName: object, evaluationName: object, trainingPhase: object = True) -> object:
 
-        # Save training flag. If training flag = True => epsilon greedy selection of action
-        # otherwise we use greedy selection.
-        self.trainingPhase = trainingPhase
+class DDQNAgent:
+    def __init__(self, numActions, inputDim,
+                 learnRate, epsilonMax, epsilonMin, epsilonDec, gamma,
+                 replayMemoryBufferSize, replayMemoryBatchSize, targetNetworkUpdateInterval,
+                 networkSavePath, networkName, evaluationName, computeActionHist=False):
 
         # Save agent parameters
         self.numActions = numActions
@@ -40,14 +37,15 @@ class DDQNAgent():
         self.targetDQN = DQN(numActions=self.numActions, inputDim=self.inputDim, learnRate=self.learnRate,
                              networkName=networkName + "_target_" + evaluationName, savePath=networkSavePath)
 
-    def selectAction(self, observation):
-        '''
-        Function takes the observation of the current state of environment as input and
-        returns either a random action (note that this happens only if Agent is in trainingPhase
-        or a greedy (predicted) action.
-        '''
+        self.computeActionHist = computeActionHist
+        # Create action histogram
+        if self.computeActionHist:
+            self.actionHist = dict()
+            for i in range(0, numActions):
+                self.actionHist[i] = 0
 
-        if self.trainingPhase is True and random.random() <= self.epsilon:
+    def selectAction(self, observation):
+        if random.random() <= self.epsilon:
             action = random.choice(self.actionSpace)
         else:
             # Convert observation to PyTorch tensor before it is loaded to the device.
@@ -61,6 +59,9 @@ class DDQNAgent():
 
             # Pick action with max Q(state, action).
             action = T.argmax(actions).item()
+
+            if self.computeActionHist:
+                self.actionHist[action] += 1
 
         return action
 

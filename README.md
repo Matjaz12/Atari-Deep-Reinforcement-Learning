@@ -21,6 +21,13 @@ The project was developed for course: \
 `pip install ale-py`
 
 ### Usage
-
+Evaluate pong agent & plot distribution of actions \
+`python -u main.py -memSize=50000 -mode=eval -loadModel=1 -path=models/ -actionHist=1 -numEpisodes=5 -env=PongNoFrameskip-v4` \
+Evaluate freeway agent & plot ditribution of actions \
+` python -u main.py -memSize=50000 -mode=eval -loadModel=1 -path=models/ -actionHist=1 -numEpisodes=5 -env=FreewayNoFrameskip-v4` \
+Train DDQN Agent on freeway \
+`python -u main.py -memSize=50000 -path=models/ -algo=DDQN -env=FreewayNoFrameskip-v4`
 ### Documentation
 Brief explanation of the project is available in `paper.pdf`.
+
+
