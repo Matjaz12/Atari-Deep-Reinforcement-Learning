@@ -24,6 +24,7 @@ class DDQNAgent:
         self.replayMemoryBatchSize = replayMemoryBatchSize
         self.targetNetworkUpdateInterval = targetNetworkUpdateInterval
         self.learnIterations = 0
+        self.networkName = networkName
 
         # Initialize replay memory buffer
         self.replayMemoryBuffer = ReplayMemoryBuffer(maxSize=replayMemoryBufferSize,
@@ -45,8 +46,8 @@ class DDQNAgent:
                 self.actionHist[i] = 0
 
     def selectAction(self, observation):
-        if random.random() <= self.epsilon:
-            action = random.choice(self.actionSpace)
+        if np.random.random() <= self.epsilon:
+            action = np.random.choice(self.actionSpace)
         else:
             # Convert observation to PyTorch tensor before it is loaded to the device.
             # Note that since DQN (which is a convolutional neural network under the hood)

@@ -31,6 +31,7 @@ if __name__ == "__main__":
     parser.add_argument("-algo", type=str, default="DQN", help="DQN/DDQN/RANDOM.")
     parser.add_argument("-mode", type=str, default="train", help="train/eval.")
     parser.add_argument("-actionHist", type=bool, default=False, help="Keep track of agents action selection.")
+    parser.add_argument("-logging", type=bool, default=False, help="Log performance into a file.")
 
     args = parser.parse_args()
 
@@ -39,6 +40,7 @@ if __name__ == "__main__":
     for arg in vars(args):
         print(f"{arg} = {getattr(args, arg)}")
     print("-----------------------------")
+
 
     # Enable/Disable GPU
     os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
@@ -64,7 +66,8 @@ if __name__ == "__main__":
             if args.loadModel:
                 agent.loadModel()
 
-            scoreList, epsilonList, stepList = trainAgent(agent, env, args.numEpisodes, saveAgent=True, trainMode=True)
+            scoreList, epsilonList, stepList = trainAgent(agent, env, args.numEpisodes,
+                                                          saveAgent=True, trainMode=True, log=args.logging)
             plotLearnCurve(episodes=args.numEpisodes, scores=scoreList, epsilons=epsilonList, filename="./plots/DQN" + args.evalName)
 
         if args.mode == "eval":
@@ -86,7 +89,8 @@ if __name__ == "__main__":
                              computeActionHist=args.actionHist)
 
             agent.loadModel()
-            scoreList, epsilonList, stepList = trainAgent(agent, env, args.numEpisodes, saveAgent=False, trainMode=False)
+            scoreList, epsilonList, stepList = trainAgent(agent, env, args.numEpisodes,
+                                                          saveAgent=False, trainMode=False,log=args.logging)
             plotActionHistogram(agent.actionHist, args.env)
 
     if args.algo == "DDQN":
@@ -104,13 +108,13 @@ if __name__ == "__main__":
                               targetNetworkUpdateInterval=args.replaceInterval,
                               networkSavePath=args.path,
                               evaluationName="eval",
-                              networkName="DDQN",
-                              computeActionHist=args.actionHist)
+                              networkName="DDQN")
 
             if args.loadModel:
                 agent.loadModel()
 
-            scoreList, epsilonList, stepList = trainAgent(agent, env, args.numEpisodes, saveAgent=True, trainMode=True)
+            scoreList, epsilonList, stepList = trainAgent(agent, env, args.numEpisodes,
+                                                          saveAgent=True, trainMode=True, log=args.logging)
             plotLearnCurve(episodes=args.numEpisodes, scores=scoreList, epsilons=epsilonList, filename="./plots/DDQN" + args.evalName)
 
         if args.mode == "eval":
@@ -128,9 +132,11 @@ if __name__ == "__main__":
                               targetNetworkUpdateInterval=args.replaceInterval,
                               networkSavePath=args.path,
                               evaluationName="eval",
-                              networkName="DDQN")
+                              networkName="DDQN",
+                              computeActionHist=args.actionHist)
 
-            scoreList, epsilonList, stepList = trainAgent(agent, env, args.numEpisodes,saveAgent=False, trainMode=False)
+            scoreList, epsilonList, stepList = trainAgent(agent, env, args.numEpisodes,
+                                                          saveAgent=False, trainMode=False, log=args.logging)
 
     # Random agent
     if args.algo == "RANDOM":
@@ -140,4 +146,5 @@ if __name__ == "__main__":
                             networkName="RANDOM",
                             computeActionHist=True)
 
-        scoreList, epsilonList, stepList = trainAgent(agent, env, args.numEpisodes, saveAgent=False, trainMode=False)
+        scoreList, epsilonList, stepList = trainAgent(agent, env, args.numEpisodes,
+                                                      saveAgent=False, trainMode=False, log=args.logging)

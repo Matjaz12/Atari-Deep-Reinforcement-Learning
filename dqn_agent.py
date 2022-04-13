@@ -10,6 +10,7 @@ class DQNAgent:
                  learnRate, epsilonMax, epsilonMin, epsilonDec, gamma,
                  replayMemoryBufferSize, replayMemoryBatchSize, targetNetworkUpdateInterval,
                  networkSavePath, networkName, evaluationName, computeActionHist=False):
+
         # Save agent parameters
         self.numActions = numActions
         self.inputDim = inputDim
@@ -51,8 +52,8 @@ class DQNAgent:
         or a greedy (predicted) action.
         '''
 
-        if random.random() <= self.epsilon:
-            action = random.choice(self.actionSpace)
+        if np.random.random() <= self.epsilon:
+            action = np.random.choice(self.actionSpace)
         else:
             # Convert observation to PyTorch tensor before it is loaded to the device.
             # Note that since DQN (which is a convolutional neural network under the hood)
@@ -61,11 +62,9 @@ class DQNAgent:
             state = T.tensor([observation], dtype=T.float).to(self.evaluationDQN.device)
 
             # Evaluate Q(state, action) for each action
-            # list of actions & their q values (support)
             actions = self.evaluationDQN.forward(state)
 
             # Pick action with max Q(state, action).
-            # returns the index of the max action
             action = T.argmax(actions).item()
 
             if self.computeActionHist:
@@ -124,7 +123,7 @@ class DQNAgent:
         (states, newStates, actions, rewards, isDones) = \
             self.replayMemoryBuffer.sampleTransitions(self.replayMemoryBatchSize)
 
-        # Convert np.array() to PyTorch tensor() & throw on the device
+        # Convert to PyTorch tensor
         statesT = T.tensor(states).to(self.evaluationDQN.device)
         newStatesT = T.tensor(newStates).to(self.evaluationDQN.device)
         actionsT = T.tensor(actions).to(self.evaluationDQN.device)
@@ -151,6 +150,7 @@ class DQNAgent:
     def loadModel(self):
         self.evaluationDQN.load()
         self.targetDQN.load()
+
 
 
 

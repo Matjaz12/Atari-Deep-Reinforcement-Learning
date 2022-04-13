@@ -9,6 +9,7 @@ def trainAgent(agent, env, numEpisodes, saveAgent=True, trainMode=True, log=Fals
     scoreList, epsilonList, stepList = [], [], []
 
     if log:
+        print("fgghhh")
         logging.basicConfig(filename="logs/" + agent.networkName + datetime.now().strftime("%H:%M:%S") + ".log",
                             format='%(asctime)s %(message)s',
                             filemode='w')
