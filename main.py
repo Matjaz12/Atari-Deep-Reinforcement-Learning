@@ -135,8 +135,11 @@ if __name__ == "__main__":
                               networkName="DDQN",
                               computeActionHist=args.actionHist)
 
+            agent.loadModel()
             scoreList, epsilonList, stepList = trainAgent(agent, env, args.numEpisodes,
                                                           saveAgent=False, trainMode=False, log=args.logging)
+
+            plotActionHistogram(agent.actionHist, args.env)
 
     # Random agent
     if args.algo == "RANDOM":
@@ -148,3 +151,5 @@ if __name__ == "__main__":
 
         scoreList, epsilonList, stepList = trainAgent(agent, env, args.numEpisodes,
                                                       saveAgent=False, trainMode=False, log=args.logging)
+
+

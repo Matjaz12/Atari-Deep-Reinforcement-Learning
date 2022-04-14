@@ -34,8 +34,8 @@ def plotLearnCurveFromLogs(folder, fileName):
         f.readline()
         for line in f:
             lineList = line.split(" ")
-            if "episode=" in lineList[0]:
-                for i in range(1, len(lineList)):
+            if "episode=" in lineList[2]:
+                for i in range(3, len(lineList)):
                     param = lineList[i].split("=")
                     name, value = param
                     if name == "step":
@@ -107,5 +107,4 @@ def plotActionHistogram(actionHist, envName):
     plt.show()
 
 
-plotLearnCurveFromLogs(folder="logs/", fileName="pong_ddqn")
 
