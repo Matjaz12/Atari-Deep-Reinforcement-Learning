@@ -107,4 +107,5 @@ def plotActionHistogram(actionHist, envName):
     plt.show()
 
 
-
+if __name__ == "__main__":
+    plotLearnCurveFromLogs(folder="./logs",fileName="freeway_dqn")

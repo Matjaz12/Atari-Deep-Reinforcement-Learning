@@ -1,788 +1,1000 @@
------------------------------
-numEpisodes = 500
-learnRate = 0.0001
-epsMax = 1.0
-epsMin = 0.1
-epsDec = 1e-05
-gamma = 0.99
-memSize = 50000
-batchSize = 32
-replaceInterval = 1000
-env = FreewayNoFrameskip-v4
-loadModel = False
-path = models/
-evalName = 01:47:26
-gpu = 0
-algo = DQN
-mode = train
------------------------------
-A.L.E: Arcade Learning Environment (version 0.7.4+069f8bd)
-[Powered by Stella]
-device =  cpu
-device =  cpu
-/home/mtz/Desktop/Mag/S2/AI/project/dqn_agent.py:70: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at  ../torch/csrc/utils/tensor_new.cpp:201.)
-  state = T.tensor([observation], dtype=T.float).to(self.evaluationDQN.device)
-episode=0 score=0.0 avgScore=0.0 bestScore=-inf epsilon=0.9798200000000918 step=2049
-
-
-episode=1 score=0.0 avgScore=0.0 bestScore=0.0 epsilon=0.9593300000001851 step=4098
-episode=2 score=0.0 avgScore=0.0 bestScore=0.0 epsilon=0.9388500000002783 step=6146
-episode=3 score=0.0 avgScore=0.0 bestScore=0.0 epsilon=0.9183600000003715 step=8195
-episode=4 score=0.0 avgScore=0.0 bestScore=0.0 epsilon=0.8978700000004648 step=10244
-episode=5 score=0.0 avgScore=0.0 bestScore=0.0 epsilon=0.877380000000558 step=12293
-episode=6 score=0.0 avgScore=0.0 bestScore=0.0 epsilon=0.8568900000006513 step=14342
-episode=7 score=0.0 avgScore=0.0 bestScore=0.0 epsilon=0.8364000000007445 step=16391
-episode=8 score=0.0 avgScore=0.0 bestScore=0.0 epsilon=0.8159100000008378 step=18440
-episode=9 score=0.0 avgScore=0.0 bestScore=0.0 epsilon=0.795420000000931 step=20489
-episode=10 score=0.0 avgScore=0.0 bestScore=0.0 epsilon=0.7749300000010243 step=22538
-episode=11 score=0.0 avgScore=0.0 bestScore=0.0 epsilon=0.7544400000011175 step=24587
-episode=12 score=0.0 avgScore=0.0 bestScore=0.0 epsilon=0.7339600000012108 step=26635
-episode=13 score=0.0 avgScore=0.0 bestScore=0.0 epsilon=0.713470000001304 step=28684
-episode=14 score=0.0 avgScore=0.0 bestScore=0.0 epsilon=0.6929800000013973 step=30733
-episode=15 score=0.0 avgScore=0.0 bestScore=0.0 epsilon=0.6724900000014905 step=32782
-episode=16 score=1.0 avgScore=0.058823529411764705 bestScore=0.0 epsilon=0.6520100000015837 step=34830
-
-
-episode=17 score=0.0 avgScore=0.05555555555555555 bestScore=0.058823529411764705 epsilon=0.631520000001677 step=36879
-episode=18 score=1.0 avgScore=0.10526315789473684 bestScore=0.058823529411764705 epsilon=0.6110300000017702 step=38928
-
-
-episode=19 score=1.0 avgScore=0.15 bestScore=0.10526315789473684 epsilon=0.5905400000018635 step=40977
-
-
-episode=20 score=0.0 avgScore=0.14285714285714285 bestScore=0.15 epsilon=0.5700500000019567 step=43026
-episode=21 score=2.0 avgScore=0.22727272727272727 bestScore=0.15 epsilon=0.54956000000205 step=45075
-
-
-episode=22 score=3.0 avgScore=0.34782608695652173 bestScore=0.22727272727272727 epsilon=0.5290700000021432 step=47124
-
-
-episode=23 score=4.0 avgScore=0.5 bestScore=0.34782608695652173 epsilon=0.5085900000022364 step=49172
-
-
-episode=24 score=8.0 avgScore=0.8 bestScore=0.5 epsilon=0.4881000000022636 step=51221
-
-
-episode=25 score=9.0 avgScore=1.1153846153846154 bestScore=0.8 epsilon=0.4676100000022431 step=53270
-
-
-episode=26 score=11.0 avgScore=1.4814814814814814 bestScore=1.1153846153846154 epsilon=0.44712000000222263 step=55319
-
-
-episode=27 score=16.0 avgScore=2.0 bestScore=1.4814814814814814 epsilon=0.42663000000220214 step=57368
-
-
-episode=28 score=13.0 avgScore=2.3793103448275863 bestScore=2.0 epsilon=0.40615000000218165 step=59416
-
-
-episode=29 score=13.0 avgScore=2.7333333333333334 bestScore=2.3793103448275863 epsilon=0.38566000000216116 step=61465
-
-
-episode=30 score=14.0 avgScore=3.096774193548387 bestScore=2.7333333333333334 epsilon=0.36517000000214067 step=63514
-
-
-episode=31 score=16.0 avgScore=3.5 bestScore=3.096774193548387 epsilon=0.3446900000021202 step=65562
-
-
-episode=32 score=19.0 avgScore=3.9696969696969697 bestScore=3.5 epsilon=0.3242000000020997 step=67611
-
-
-episode=33 score=16.0 avgScore=4.323529411764706 bestScore=3.9696969696969697 epsilon=0.3037100000020792 step=69660
-
-
-episode=34 score=16.0 avgScore=4.6571428571428575 bestScore=4.323529411764706 epsilon=0.2832200000020587 step=71709
-
-
-episode=35 score=16.0 avgScore=4.972222222222222 bestScore=4.6571428571428575 epsilon=0.2627300000020382 step=73758
-
-
-episode=36 score=15.0 avgScore=5.243243243243243 bestScore=4.972222222222222 epsilon=0.24224000000201773 step=75807
-
-
-episode=37 score=19.0 avgScore=5.605263157894737 bestScore=5.243243243243243 epsilon=0.22175000000199724 step=77856
-
-
-episode=38 score=21.0 avgScore=6.0 bestScore=5.605263157894737 epsilon=0.20126000000197675 step=79905
-
-
-episode=39 score=19.0 avgScore=6.325 bestScore=6.0 epsilon=0.18077000000195625 step=81954
-
-
-episode=40 score=19.0 avgScore=6.634146341463414 bestScore=6.325 epsilon=0.16028000000193576 step=84003
-
-
-episode=41 score=22.0 avgScore=7.0 bestScore=6.634146341463414 epsilon=0.13980000000191528 step=86051
-
-
-episode=42 score=22.0 avgScore=7.348837209302325 bestScore=7.0 epsilon=0.11931000000190269 step=88100
-
-
-episode=43 score=21.0 avgScore=7.659090909090909 bestScore=7.348837209302325 epsilon=0.09999000000191018 step=90149
-
-
-episode=44 score=21.0 avgScore=7.955555555555556 bestScore=7.659090909090909 epsilon=0.09999000000191018 step=92198
-
-
-episode=45 score=20.0 avgScore=8.217391304347826 bestScore=7.955555555555556 epsilon=0.09999000000191018 step=94246
-
-
-episode=46 score=23.0 avgScore=8.53191489361702 bestScore=8.217391304347826 epsilon=0.09999000000191018 step=96295
-
-
-episode=47 score=19.0 avgScore=8.75 bestScore=8.53191489361702 epsilon=0.09999000000191018 step=98344
-
-
-episode=48 score=23.0 avgScore=9.040816326530612 bestScore=8.75 epsilon=0.09999000000191018 step=100393
-
-
-episode=49 score=21.0 avgScore=9.28 bestScore=9.040816326530612 epsilon=0.09999000000191018 step=102442
-
-
-episode=50 score=22.0 avgScore=9.529411764705882 bestScore=9.28 epsilon=0.09999000000191018 step=104491
-
-
-episode=51 score=18.0 avgScore=9.692307692307692 bestScore=9.529411764705882 epsilon=0.09999000000191018 step=106539
-
-
-episode=52 score=21.0 avgScore=9.90566037735849 bestScore=9.692307692307692 epsilon=0.09999000000191018 step=108588
-
-
-episode=53 score=23.0 avgScore=10.148148148148149 bestScore=9.90566037735849 epsilon=0.09999000000191018 step=110637
-
-
-episode=54 score=20.0 avgScore=10.327272727272728 bestScore=10.148148148148149 epsilon=0.09999000000191018 step=112685
-
-
-episode=55 score=17.0 avgScore=10.446428571428571 bestScore=10.327272727272728 epsilon=0.09999000000191018 step=114733
-
-
-episode=56 score=22.0 avgScore=10.649122807017545 bestScore=10.446428571428571 epsilon=0.09999000000191018 step=116782
-
-
-episode=57 score=23.0 avgScore=10.862068965517242 bestScore=10.649122807017545 epsilon=0.09999000000191018 step=118830
-
-
-episode=58 score=21.0 avgScore=11.033898305084746 bestScore=10.862068965517242 epsilon=0.09999000000191018 step=120879
-
-
-episode=59 score=21.0 avgScore=11.2 bestScore=11.033898305084746 epsilon=0.09999000000191018 step=122928
-
-
-episode=60 score=21.0 avgScore=11.360655737704919 bestScore=11.2 epsilon=0.09999000000191018 step=124976
-
-
-episode=61 score=21.0 avgScore=11.516129032258064 bestScore=11.360655737704919 epsilon=0.09999000000191018 step=127024
-
-
-episode=62 score=19.0 avgScore=11.634920634920634 bestScore=11.516129032258064 epsilon=0.09999000000191018 step=129073
-
-
-episode=63 score=21.0 avgScore=11.78125 bestScore=11.634920634920634 epsilon=0.09999000000191018 step=131122
-
-
-episode=64 score=19.0 avgScore=11.892307692307693 bestScore=11.78125 epsilon=0.09999000000191018 step=133171
-
-
-episode=65 score=20.0 avgScore=12.015151515151516 bestScore=11.892307692307693 epsilon=0.09999000000191018 step=135220
-
-
-episode=66 score=21.0 avgScore=12.149253731343284 bestScore=12.015151515151516 epsilon=0.09999000000191018 step=137269
-
-
-episode=67 score=20.0 avgScore=12.264705882352942 bestScore=12.149253731343284 epsilon=0.09999000000191018 step=139317
-
-
-episode=68 score=23.0 avgScore=12.420289855072463 bestScore=12.264705882352942 epsilon=0.09999000000191018 step=141365
-
-
-episode=69 score=20.0 avgScore=12.528571428571428 bestScore=12.420289855072463 epsilon=0.09999000000191018 step=143413
-
-
-episode=70 score=20.0 avgScore=12.633802816901408 bestScore=12.528571428571428 epsilon=0.09999000000191018 step=145462
-
-
-episode=71 score=19.0 avgScore=12.722222222222221 bestScore=12.633802816901408 epsilon=0.09999000000191018 step=147511
-
-
-episode=72 score=24.0 avgScore=12.876712328767123 bestScore=12.722222222222221 epsilon=0.09999000000191018 step=149560
-
-
-episode=73 score=24.0 avgScore=13.027027027027026 bestScore=12.876712328767123 epsilon=0.09999000000191018 step=151609
-
-
-episode=74 score=21.0 avgScore=13.133333333333333 bestScore=13.027027027027026 epsilon=0.09999000000191018 step=153657
-
-
-episode=75 score=20.0 avgScore=13.223684210526315 bestScore=13.133333333333333 epsilon=0.09999000000191018 step=155705
-
-
-episode=76 score=18.0 avgScore=13.285714285714286 bestScore=13.223684210526315 epsilon=0.09999000000191018 step=157754
-
-
-episode=77 score=20.0 avgScore=13.371794871794872 bestScore=13.285714285714286 epsilon=0.09999000000191018 step=159802
-
-
-episode=78 score=19.0 avgScore=13.443037974683545 bestScore=13.371794871794872 epsilon=0.09999000000191018 step=161850
-
-
-episode=79 score=21.0 avgScore=13.5375 bestScore=13.443037974683545 epsilon=0.09999000000191018 step=163898
-
-
-episode=80 score=21.0 avgScore=13.62962962962963 bestScore=13.5375 epsilon=0.09999000000191018 step=165946
-
-
-episode=81 score=20.0 avgScore=13.707317073170731 bestScore=13.62962962962963 epsilon=0.09999000000191018 step=167995
-
-
-episode=82 score=20.0 avgScore=13.783132530120483 bestScore=13.707317073170731 epsilon=0.09999000000191018 step=170044
-
-
-episode=83 score=19.0 avgScore=13.845238095238095 bestScore=13.783132530120483 epsilon=0.09999000000191018 step=172093
-
-
-episode=84 score=20.0 avgScore=13.91764705882353 bestScore=13.845238095238095 epsilon=0.09999000000191018 step=174142
-
-
-episode=85 score=22.0 avgScore=14.011627906976743 bestScore=13.91764705882353 epsilon=0.09999000000191018 step=176191
-
-
-episode=86 score=20.0 avgScore=14.080459770114942 bestScore=14.011627906976743 epsilon=0.09999000000191018 step=178240
-
-
-episode=87 score=20.0 avgScore=14.147727272727273 bestScore=14.080459770114942 epsilon=0.09999000000191018 step=180289
-
-
-episode=88 score=22.0 avgScore=14.235955056179776 bestScore=14.147727272727273 epsilon=0.09999000000191018 step=182337
-
-
-episode=89 score=22.0 avgScore=14.322222222222223 bestScore=14.235955056179776 epsilon=0.09999000000191018 step=184385
-
-
-episode=90 score=22.0 avgScore=14.406593406593407 bestScore=14.322222222222223 epsilon=0.09999000000191018 step=186434
-
-
-episode=91 score=22.0 avgScore=14.48913043478261 bestScore=14.406593406593407 epsilon=0.09999000000191018 step=188483
-
-
-episode=92 score=21.0 avgScore=14.559139784946236 bestScore=14.48913043478261 epsilon=0.09999000000191018 step=190532
-
-
-episode=93 score=18.0 avgScore=14.595744680851064 bestScore=14.559139784946236 epsilon=0.09999000000191018 step=192581
-
-
-episode=94 score=22.0 avgScore=14.673684210526316 bestScore=14.595744680851064 epsilon=0.09999000000191018 step=194630
-
-
-episode=95 score=19.0 avgScore=14.71875 bestScore=14.673684210526316 epsilon=0.09999000000191018 step=196678
-
-
-episode=96 score=19.0 avgScore=14.762886597938145 bestScore=14.71875 epsilon=0.09999000000191018 step=198727
-
-
-episode=97 score=21.0 avgScore=14.826530612244898 bestScore=14.762886597938145 epsilon=0.09999000000191018 step=200776
-
-
-episode=98 score=17.0 avgScore=14.848484848484848 bestScore=14.826530612244898 epsilon=0.09999000000191018 step=202825
-
-
-episode=99 score=20.0 avgScore=14.9 bestScore=14.848484848484848 epsilon=0.09999000000191018 step=204874
-
-
-episode=100 score=21.0 avgScore=15.11 bestScore=14.9 epsilon=0.09999000000191018 step=206922
-
-
-episode=101 score=23.0 avgScore=15.34 bestScore=15.11 epsilon=0.09999000000191018 step=208971
-
-
-episode=102 score=20.0 avgScore=15.54 bestScore=15.34 epsilon=0.09999000000191018 step=211020
-
-
-episode=103 score=19.0 avgScore=15.73 bestScore=15.54 epsilon=0.09999000000191018 step=213069
-
-
-episode=104 score=21.0 avgScore=15.94 bestScore=15.73 epsilon=0.09999000000191018 step=215118
-
-
-episode=105 score=20.0 avgScore=16.14 bestScore=15.94 epsilon=0.09999000000191018 step=217166
-
-
-episode=106 score=25.0 avgScore=16.39 bestScore=16.14 epsilon=0.09999000000191018 step=219215
-
-
-episode=107 score=20.0 avgScore=16.59 bestScore=16.39 epsilon=0.09999000000191018 step=221263
-
-
-episode=108 score=20.0 avgScore=16.79 bestScore=16.59 epsilon=0.09999000000191018 step=223312
-
-
-episode=109 score=20.0 avgScore=16.99 bestScore=16.79 epsilon=0.09999000000191018 step=225361
-
-
-episode=110 score=22.0 avgScore=17.21 bestScore=16.99 epsilon=0.09999000000191018 step=227410
-
-
-episode=111 score=21.0 avgScore=17.42 bestScore=17.21 epsilon=0.09999000000191018 step=229459
-
-
-episode=112 score=18.0 avgScore=17.6 bestScore=17.42 epsilon=0.09999000000191018 step=231507
-
-
-episode=113 score=21.0 avgScore=17.81 bestScore=17.6 epsilon=0.09999000000191018 step=233556
-
-
-episode=114 score=22.0 avgScore=18.03 bestScore=17.81 epsilon=0.09999000000191018 step=235605
-
-
-episode=115 score=19.0 avgScore=18.22 bestScore=18.03 epsilon=0.09999000000191018 step=237654
-
-
-episode=116 score=21.0 avgScore=18.42 bestScore=18.22 epsilon=0.09999000000191018 step=239703
-
-
-episode=117 score=21.0 avgScore=18.63 bestScore=18.42 epsilon=0.09999000000191018 step=241752
-
-
-episode=118 score=20.0 avgScore=18.82 bestScore=18.63 epsilon=0.09999000000191018 step=243801
-
-
-episode=119 score=22.0 avgScore=19.03 bestScore=18.82 epsilon=0.09999000000191018 step=245850
-
-
-episode=120 score=22.0 avgScore=19.25 bestScore=19.03 epsilon=0.09999000000191018 step=247899
-
-
-episode=121 score=21.0 avgScore=19.44 bestScore=19.25 epsilon=0.09999000000191018 step=249947
-
-
-episode=122 score=23.0 avgScore=19.64 bestScore=19.44 epsilon=0.09999000000191018 step=251995
-
-
-episode=123 score=23.0 avgScore=19.83 bestScore=19.64 epsilon=0.09999000000191018 step=254043
-
-
-episode=124 score=22.0 avgScore=19.97 bestScore=19.83 epsilon=0.09999000000191018 step=256091
-
-
-episode=125 score=21.0 avgScore=20.09 bestScore=19.97 epsilon=0.09999000000191018 step=258140
-
-
-episode=126 score=21.0 avgScore=20.19 bestScore=20.09 epsilon=0.09999000000191018 step=260188
-
-
-episode=127 score=23.0 avgScore=20.26 bestScore=20.19 epsilon=0.09999000000191018 step=262236
-
-
-episode=128 score=21.0 avgScore=20.34 bestScore=20.26 epsilon=0.09999000000191018 step=264285
-
-
-episode=129 score=21.0 avgScore=20.42 bestScore=20.34 epsilon=0.09999000000191018 step=266334
-
-
-episode=130 score=19.0 avgScore=20.47 bestScore=20.42 epsilon=0.09999000000191018 step=268383
-
-
-episode=131 score=19.0 avgScore=20.5 bestScore=20.47 epsilon=0.09999000000191018 step=270432
-
-
-episode=132 score=22.0 avgScore=20.53 bestScore=20.5 epsilon=0.09999000000191018 step=272481
-
-
-episode=133 score=19.0 avgScore=20.56 bestScore=20.53 epsilon=0.09999000000191018 step=274530
-
-
-episode=134 score=20.0 avgScore=20.6 bestScore=20.56 epsilon=0.09999000000191018 step=276579
-
-
-episode=135 score=21.0 avgScore=20.65 bestScore=20.6 epsilon=0.09999000000191018 step=278628
-
-
-episode=136 score=21.0 avgScore=20.71 bestScore=20.65 epsilon=0.09999000000191018 step=280676
-
-
-episode=137 score=23.0 avgScore=20.75 bestScore=20.71 epsilon=0.09999000000191018 step=282724
-
-
-episode=138 score=21.0 avgScore=20.75 bestScore=20.75 epsilon=0.09999000000191018 step=284772
-episode=139 score=21.0 avgScore=20.77 bestScore=20.75 epsilon=0.09999000000191018 step=286821
-
-
-episode=140 score=18.0 avgScore=20.76 bestScore=20.77 epsilon=0.09999000000191018 step=288870
-episode=141 score=19.0 avgScore=20.73 bestScore=20.77 epsilon=0.09999000000191018 step=290919
-episode=142 score=20.0 avgScore=20.71 bestScore=20.77 epsilon=0.09999000000191018 step=292968
-episode=143 score=22.0 avgScore=20.72 bestScore=20.77 epsilon=0.09999000000191018 step=295017
-episode=144 score=21.0 avgScore=20.72 bestScore=20.77 epsilon=0.09999000000191018 step=297066
-episode=145 score=21.0 avgScore=20.73 bestScore=20.77 epsilon=0.09999000000191018 step=299115
-episode=146 score=19.0 avgScore=20.69 bestScore=20.77 epsilon=0.09999000000191018 step=301164
-episode=147 score=20.0 avgScore=20.7 bestScore=20.77 epsilon=0.09999000000191018 step=303213
-episode=148 score=22.0 avgScore=20.69 bestScore=20.77 epsilon=0.09999000000191018 step=305262
-episode=149 score=20.0 avgScore=20.68 bestScore=20.77 epsilon=0.09999000000191018 step=307311
-episode=150 score=21.0 avgScore=20.67 bestScore=20.77 epsilon=0.09999000000191018 step=309360
-episode=151 score=20.0 avgScore=20.69 bestScore=20.77 epsilon=0.09999000000191018 step=311409
-episode=152 score=21.0 avgScore=20.69 bestScore=20.77 epsilon=0.09999000000191018 step=313458
-episode=153 score=23.0 avgScore=20.69 bestScore=20.77 epsilon=0.09999000000191018 step=315506
-episode=154 score=21.0 avgScore=20.7 bestScore=20.77 epsilon=0.09999000000191018 step=317555
-episode=155 score=22.0 avgScore=20.75 bestScore=20.77 epsilon=0.09999000000191018 step=319604
-episode=156 score=23.0 avgScore=20.76 bestScore=20.77 epsilon=0.09999000000191018 step=321653
-episode=157 score=20.0 avgScore=20.73 bestScore=20.77 epsilon=0.09999000000191018 step=323701
-episode=158 score=24.0 avgScore=20.76 bestScore=20.77 epsilon=0.09999000000191018 step=325750
-episode=159 score=19.0 avgScore=20.74 bestScore=20.77 epsilon=0.09999000000191018 step=327799
-episode=160 score=19.0 avgScore=20.72 bestScore=20.77 epsilon=0.09999000000191018 step=329847
-episode=161 score=20.0 avgScore=20.71 bestScore=20.77 epsilon=0.09999000000191018 step=331896
-episode=162 score=20.0 avgScore=20.72 bestScore=20.77 epsilon=0.09999000000191018 step=333945
-episode=163 score=23.0 avgScore=20.74 bestScore=20.77 epsilon=0.09999000000191018 step=335994
-episode=164 score=19.0 avgScore=20.74 bestScore=20.77 epsilon=0.09999000000191018 step=338043
-episode=165 score=23.0 avgScore=20.77 bestScore=20.77 epsilon=0.09999000000191018 step=340092
-episode=166 score=21.0 avgScore=20.77 bestScore=20.77 epsilon=0.09999000000191018 step=342141
-episode=167 score=20.0 avgScore=20.77 bestScore=20.77 epsilon=0.09999000000191018 step=344190
-episode=168 score=22.0 avgScore=20.76 bestScore=20.77 epsilon=0.09999000000191018 step=346239
-episode=169 score=22.0 avgScore=20.78 bestScore=20.77 epsilon=0.09999000000191018 step=348288
-
-
-episode=170 score=22.0 avgScore=20.8 bestScore=20.78 epsilon=0.09999000000191018 step=350336
-
-
-episode=171 score=22.0 avgScore=20.83 bestScore=20.8 epsilon=0.09999000000191018 step=352385
-
-
-episode=172 score=21.0 avgScore=20.8 bestScore=20.83 epsilon=0.09999000000191018 step=354434
-episode=173 score=22.0 avgScore=20.78 bestScore=20.83 epsilon=0.09999000000191018 step=356483
-episode=174 score=20.0 avgScore=20.77 bestScore=20.83 epsilon=0.09999000000191018 step=358531
-episode=175 score=21.0 avgScore=20.78 bestScore=20.83 epsilon=0.09999000000191018 step=360580
-episode=176 score=20.0 avgScore=20.8 bestScore=20.83 epsilon=0.09999000000191018 step=362629
-episode=177 score=23.0 avgScore=20.83 bestScore=20.83 epsilon=0.09999000000191018 step=364678
-episode=178 score=24.0 avgScore=20.88 bestScore=20.83 epsilon=0.09999000000191018 step=366726
-
-
-episode=179 score=20.0 avgScore=20.87 bestScore=20.88 epsilon=0.09999000000191018 step=368775
-episode=180 score=20.0 avgScore=20.86 bestScore=20.88 epsilon=0.09999000000191018 step=370823
-episode=181 score=19.0 avgScore=20.85 bestScore=20.88 epsilon=0.09999000000191018 step=372872
-episode=182 score=21.0 avgScore=20.86 bestScore=20.88 epsilon=0.09999000000191018 step=374920
-episode=183 score=20.0 avgScore=20.87 bestScore=20.88 epsilon=0.09999000000191018 step=376969
-episode=184 score=20.0 avgScore=20.87 bestScore=20.88 epsilon=0.09999000000191018 step=379018
-episode=185 score=22.0 avgScore=20.87 bestScore=20.88 epsilon=0.09999000000191018 step=381067
-episode=186 score=22.0 avgScore=20.89 bestScore=20.88 epsilon=0.09999000000191018 step=383116
-
-
-episode=187 score=23.0 avgScore=20.92 bestScore=20.89 epsilon=0.09999000000191018 step=385165
-
-
-episode=188 score=19.0 avgScore=20.89 bestScore=20.92 epsilon=0.09999000000191018 step=387214
-episode=189 score=22.0 avgScore=20.89 bestScore=20.92 epsilon=0.09999000000191018 step=389263
-episode=190 score=22.0 avgScore=20.89 bestScore=20.92 epsilon=0.09999000000191018 step=391312
-episode=191 score=18.0 avgScore=20.85 bestScore=20.92 epsilon=0.09999000000191018 step=393361
-episode=192 score=19.0 avgScore=20.83 bestScore=20.92 epsilon=0.09999000000191018 step=395410
-episode=193 score=20.0 avgScore=20.85 bestScore=20.92 epsilon=0.09999000000191018 step=397459
-episode=194 score=17.0 avgScore=20.8 bestScore=20.92 epsilon=0.09999000000191018 step=399508
-episode=195 score=23.0 avgScore=20.84 bestScore=20.92 epsilon=0.09999000000191018 step=401557
-episode=196 score=21.0 avgScore=20.86 bestScore=20.92 epsilon=0.09999000000191018 step=403606
-episode=197 score=22.0 avgScore=20.87 bestScore=20.92 epsilon=0.09999000000191018 step=405655
-episode=198 score=18.0 avgScore=20.88 bestScore=20.92 epsilon=0.09999000000191018 step=407704
-episode=199 score=23.0 avgScore=20.91 bestScore=20.92 epsilon=0.09999000000191018 step=409753
-episode=200 score=22.0 avgScore=20.92 bestScore=20.92 epsilon=0.09999000000191018 step=411802
-episode=201 score=19.0 avgScore=20.88 bestScore=20.92 epsilon=0.09999000000191018 step=413851
-episode=202 score=20.0 avgScore=20.88 bestScore=20.92 epsilon=0.09999000000191018 step=415900
-episode=203 score=22.0 avgScore=20.91 bestScore=20.92 epsilon=0.09999000000191018 step=417949
-episode=204 score=19.0 avgScore=20.89 bestScore=20.92 epsilon=0.09999000000191018 step=419997
-episode=205 score=20.0 avgScore=20.89 bestScore=20.92 epsilon=0.09999000000191018 step=422046
-episode=206 score=20.0 avgScore=20.84 bestScore=20.92 epsilon=0.09999000000191018 step=424095
-episode=207 score=21.0 avgScore=20.85 bestScore=20.92 epsilon=0.09999000000191018 step=426144
-episode=208 score=20.0 avgScore=20.85 bestScore=20.92 epsilon=0.09999000000191018 step=428193
-episode=209 score=22.0 avgScore=20.87 bestScore=20.92 epsilon=0.09999000000191018 step=430242
-episode=210 score=20.0 avgScore=20.85 bestScore=20.92 epsilon=0.09999000000191018 step=432291
-episode=211 score=19.0 avgScore=20.83 bestScore=20.92 epsilon=0.09999000000191018 step=434340
-episode=212 score=19.0 avgScore=20.84 bestScore=20.92 epsilon=0.09999000000191018 step=436389
-episode=213 score=23.0 avgScore=20.86 bestScore=20.92 epsilon=0.09999000000191018 step=438438
-episode=214 score=20.0 avgScore=20.84 bestScore=20.92 epsilon=0.09999000000191018 step=440487
-episode=215 score=22.0 avgScore=20.87 bestScore=20.92 epsilon=0.09999000000191018 step=442536
-episode=216 score=18.0 avgScore=20.84 bestScore=20.92 epsilon=0.09999000000191018 step=444585
-episode=217 score=21.0 avgScore=20.84 bestScore=20.92 epsilon=0.09999000000191018 step=446633
-episode=218 score=19.0 avgScore=20.83 bestScore=20.92 epsilon=0.09999000000191018 step=448682
-episode=219 score=21.0 avgScore=20.82 bestScore=20.92 epsilon=0.09999000000191018 step=450731
-episode=220 score=21.0 avgScore=20.81 bestScore=20.92 epsilon=0.09999000000191018 step=452780
-episode=221 score=21.0 avgScore=20.81 bestScore=20.92 epsilon=0.09999000000191018 step=454829
-episode=222 score=20.0 avgScore=20.78 bestScore=20.92 epsilon=0.09999000000191018 step=456877
-episode=223 score=19.0 avgScore=20.74 bestScore=20.92 epsilon=0.09999000000191018 step=458926
-episode=224 score=19.0 avgScore=20.71 bestScore=20.92 epsilon=0.09999000000191018 step=460975
-episode=225 score=23.0 avgScore=20.73 bestScore=20.92 epsilon=0.09999000000191018 step=463024
-episode=226 score=20.0 avgScore=20.72 bestScore=20.92 epsilon=0.09999000000191018 step=465073
-episode=227 score=20.0 avgScore=20.69 bestScore=20.92 epsilon=0.09999000000191018 step=467122
-episode=228 score=21.0 avgScore=20.69 bestScore=20.92 epsilon=0.09999000000191018 step=469170
-episode=229 score=18.0 avgScore=20.66 bestScore=20.92 epsilon=0.09999000000191018 step=471218
-episode=230 score=22.0 avgScore=20.69 bestScore=20.92 epsilon=0.09999000000191018 step=473267
-episode=231 score=23.0 avgScore=20.73 bestScore=20.92 epsilon=0.09999000000191018 step=475316
-episode=232 score=18.0 avgScore=20.69 bestScore=20.92 epsilon=0.09999000000191018 step=477365
-episode=233 score=19.0 avgScore=20.69 bestScore=20.92 epsilon=0.09999000000191018 step=479413
-episode=234 score=19.0 avgScore=20.68 bestScore=20.92 epsilon=0.09999000000191018 step=481462
-episode=235 score=19.0 avgScore=20.66 bestScore=20.92 epsilon=0.09999000000191018 step=483511
-episode=236 score=22.0 avgScore=20.67 bestScore=20.92 epsilon=0.09999000000191018 step=485559
-episode=237 score=18.0 avgScore=20.62 bestScore=20.92 epsilon=0.09999000000191018 step=487608
-episode=238 score=19.0 avgScore=20.6 bestScore=20.92 epsilon=0.09999000000191018 step=489657
-episode=239 score=20.0 avgScore=20.59 bestScore=20.92 epsilon=0.09999000000191018 step=491705
-episode=240 score=22.0 avgScore=20.63 bestScore=20.92 epsilon=0.09999000000191018 step=493754
-episode=241 score=22.0 avgScore=20.66 bestScore=20.92 epsilon=0.09999000000191018 step=495803
-episode=242 score=19.0 avgScore=20.65 bestScore=20.92 epsilon=0.09999000000191018 step=497852
-episode=243 score=20.0 avgScore=20.63 bestScore=20.92 epsilon=0.09999000000191018 step=499900
-episode=244 score=21.0 avgScore=20.63 bestScore=20.92 epsilon=0.09999000000191018 step=501949
-episode=245 score=20.0 avgScore=20.62 bestScore=20.92 epsilon=0.09999000000191018 step=503997
-episode=246 score=21.0 avgScore=20.64 bestScore=20.92 epsilon=0.09999000000191018 step=506046
-episode=247 score=19.0 avgScore=20.63 bestScore=20.92 epsilon=0.09999000000191018 step=508094
-episode=248 score=20.0 avgScore=20.61 bestScore=20.92 epsilon=0.09999000000191018 step=510143
-episode=249 score=22.0 avgScore=20.63 bestScore=20.92 epsilon=0.09999000000191018 step=512192
-episode=250 score=21.0 avgScore=20.63 bestScore=20.92 epsilon=0.09999000000191018 step=514241
-episode=251 score=20.0 avgScore=20.63 bestScore=20.92 epsilon=0.09999000000191018 step=516290
-episode=252 score=20.0 avgScore=20.62 bestScore=20.92 epsilon=0.09999000000191018 step=518338
-episode=253 score=21.0 avgScore=20.6 bestScore=20.92 epsilon=0.09999000000191018 step=520386
-episode=254 score=18.0 avgScore=20.57 bestScore=20.92 epsilon=0.09999000000191018 step=522435
-episode=255 score=20.0 avgScore=20.55 bestScore=20.92 epsilon=0.09999000000191018 step=524484
-episode=256 score=20.0 avgScore=20.52 bestScore=20.92 epsilon=0.09999000000191018 step=526532
-episode=257 score=19.0 avgScore=20.51 bestScore=20.92 epsilon=0.09999000000191018 step=528581
-episode=258 score=21.0 avgScore=20.48 bestScore=20.92 epsilon=0.09999000000191018 step=530630
-episode=259 score=21.0 avgScore=20.5 bestScore=20.92 epsilon=0.09999000000191018 step=532678
-episode=260 score=19.0 avgScore=20.5 bestScore=20.92 epsilon=0.09999000000191018 step=534727
-episode=261 score=19.0 avgScore=20.49 bestScore=20.92 epsilon=0.09999000000191018 step=536776
-episode=262 score=21.0 avgScore=20.5 bestScore=20.92 epsilon=0.09999000000191018 step=538825
-episode=263 score=19.0 avgScore=20.46 bestScore=20.92 epsilon=0.09999000000191018 step=540873
-episode=264 score=23.0 avgScore=20.5 bestScore=20.92 epsilon=0.09999000000191018 step=542922
-episode=265 score=20.0 avgScore=20.47 bestScore=20.92 epsilon=0.09999000000191018 step=544971
-episode=266 score=21.0 avgScore=20.47 bestScore=20.92 epsilon=0.09999000000191018 step=547020
-episode=267 score=21.0 avgScore=20.48 bestScore=20.92 epsilon=0.09999000000191018 step=549069
-episode=268 score=20.0 avgScore=20.46 bestScore=20.92 epsilon=0.09999000000191018 step=551117
-episode=269 score=18.0 avgScore=20.42 bestScore=20.92 epsilon=0.09999000000191018 step=553166
-episode=270 score=21.0 avgScore=20.41 bestScore=20.92 epsilon=0.09999000000191018 step=555214
-episode=271 score=22.0 avgScore=20.41 bestScore=20.92 epsilon=0.09999000000191018 step=557263
-episode=272 score=20.0 avgScore=20.4 bestScore=20.92 epsilon=0.09999000000191018 step=559312
-episode=273 score=22.0 avgScore=20.4 bestScore=20.92 epsilon=0.09999000000191018 step=561361
-episode=274 score=23.0 avgScore=20.43 bestScore=20.92 epsilon=0.09999000000191018 step=563410
-episode=275 score=19.0 avgScore=20.41 bestScore=20.92 epsilon=0.09999000000191018 step=565459
-episode=276 score=21.0 avgScore=20.42 bestScore=20.92 epsilon=0.09999000000191018 step=567508
-episode=277 score=21.0 avgScore=20.4 bestScore=20.92 epsilon=0.09999000000191018 step=569557
-episode=278 score=21.0 avgScore=20.37 bestScore=20.92 epsilon=0.09999000000191018 step=571606
-episode=279 score=20.0 avgScore=20.37 bestScore=20.92 epsilon=0.09999000000191018 step=573655
-episode=280 score=20.0 avgScore=20.37 bestScore=20.92 epsilon=0.09999000000191018 step=575704
-episode=281 score=22.0 avgScore=20.4 bestScore=20.92 epsilon=0.09999000000191018 step=577753
-episode=282 score=21.0 avgScore=20.4 bestScore=20.92 epsilon=0.09999000000191018 step=579802
-episode=283 score=22.0 avgScore=20.42 bestScore=20.92 epsilon=0.09999000000191018 step=581851
-episode=284 score=22.0 avgScore=20.44 bestScore=20.92 epsilon=0.09999000000191018 step=583900
-episode=285 score=21.0 avgScore=20.43 bestScore=20.92 epsilon=0.09999000000191018 step=585949
-episode=286 score=22.0 avgScore=20.43 bestScore=20.92 epsilon=0.09999000000191018 step=587997
-episode=287 score=20.0 avgScore=20.4 bestScore=20.92 epsilon=0.09999000000191018 step=590046
-episode=288 score=21.0 avgScore=20.42 bestScore=20.92 epsilon=0.09999000000191018 step=592095
-episode=289 score=21.0 avgScore=20.41 bestScore=20.92 epsilon=0.09999000000191018 step=594143
-episode=290 score=21.0 avgScore=20.4 bestScore=20.92 epsilon=0.09999000000191018 step=596192
-episode=291 score=17.0 avgScore=20.39 bestScore=20.92 epsilon=0.09999000000191018 step=598241
-episode=292 score=20.0 avgScore=20.4 bestScore=20.92 epsilon=0.09999000000191018 step=600290
-episode=293 score=22.0 avgScore=20.42 bestScore=20.92 epsilon=0.09999000000191018 step=602339
-episode=294 score=18.0 avgScore=20.43 bestScore=20.92 epsilon=0.09999000000191018 step=604388
-episode=295 score=23.0 avgScore=20.43 bestScore=20.92 epsilon=0.09999000000191018 step=606437
-episode=296 score=22.0 avgScore=20.44 bestScore=20.92 epsilon=0.09999000000191018 step=608486
-episode=297 score=22.0 avgScore=20.44 bestScore=20.92 epsilon=0.09999000000191018 step=610535
-episode=298 score=23.0 avgScore=20.49 bestScore=20.92 epsilon=0.09999000000191018 step=612584
-episode=299 score=21.0 avgScore=20.47 bestScore=20.92 epsilon=0.09999000000191018 step=614633
-episode=300 score=21.0 avgScore=20.46 bestScore=20.92 epsilon=0.09999000000191018 step=616682
-episode=301 score=21.0 avgScore=20.48 bestScore=20.92 epsilon=0.09999000000191018 step=618731
-episode=302 score=20.0 avgScore=20.48 bestScore=20.92 epsilon=0.09999000000191018 step=620780
-episode=303 score=21.0 avgScore=20.47 bestScore=20.92 epsilon=0.09999000000191018 step=622829
-episode=304 score=21.0 avgScore=20.49 bestScore=20.92 epsilon=0.09999000000191018 step=624878
-episode=305 score=23.0 avgScore=20.52 bestScore=20.92 epsilon=0.09999000000191018 step=626927
-episode=306 score=20.0 avgScore=20.52 bestScore=20.92 epsilon=0.09999000000191018 step=628976
-episode=307 score=19.0 avgScore=20.5 bestScore=20.92 epsilon=0.09999000000191018 step=631025
-episode=308 score=19.0 avgScore=20.49 bestScore=20.92 epsilon=0.09999000000191018 step=633074
-episode=309 score=22.0 avgScore=20.49 bestScore=20.92 epsilon=0.09999000000191018 step=635122
-episode=310 score=22.0 avgScore=20.51 bestScore=20.92 epsilon=0.09999000000191018 step=637171
-episode=311 score=21.0 avgScore=20.53 bestScore=20.92 epsilon=0.09999000000191018 step=639220
-episode=312 score=22.0 avgScore=20.56 bestScore=20.92 epsilon=0.09999000000191018 step=641269
-episode=313 score=21.0 avgScore=20.54 bestScore=20.92 epsilon=0.09999000000191018 step=643318
-episode=314 score=22.0 avgScore=20.56 bestScore=20.92 epsilon=0.09999000000191018 step=645367
-episode=315 score=16.0 avgScore=20.5 bestScore=20.92 epsilon=0.09999000000191018 step=647416
-episode=316 score=22.0 avgScore=20.54 bestScore=20.92 epsilon=0.09999000000191018 step=649465
-episode=317 score=20.0 avgScore=20.53 bestScore=20.92 epsilon=0.09999000000191018 step=651514
-episode=318 score=21.0 avgScore=20.55 bestScore=20.92 epsilon=0.09999000000191018 step=653562
-episode=319 score=22.0 avgScore=20.56 bestScore=20.92 epsilon=0.09999000000191018 step=655611
-episode=320 score=21.0 avgScore=20.56 bestScore=20.92 epsilon=0.09999000000191018 step=657659
-episode=321 score=21.0 avgScore=20.56 bestScore=20.92 epsilon=0.09999000000191018 step=659707
-episode=322 score=20.0 avgScore=20.56 bestScore=20.92 epsilon=0.09999000000191018 step=661756
-episode=323 score=18.0 avgScore=20.55 bestScore=20.92 epsilon=0.09999000000191018 step=663805
-episode=324 score=22.0 avgScore=20.58 bestScore=20.92 epsilon=0.09999000000191018 step=665853
-episode=325 score=21.0 avgScore=20.56 bestScore=20.92 epsilon=0.09999000000191018 step=667902
-episode=326 score=19.0 avgScore=20.55 bestScore=20.92 epsilon=0.09999000000191018 step=669951
-episode=327 score=17.0 avgScore=20.52 bestScore=20.92 epsilon=0.09999000000191018 step=671999
-episode=328 score=20.0 avgScore=20.51 bestScore=20.92 epsilon=0.09999000000191018 step=674048
-episode=329 score=22.0 avgScore=20.55 bestScore=20.92 epsilon=0.09999000000191018 step=676097
-episode=330 score=17.0 avgScore=20.5 bestScore=20.92 epsilon=0.09999000000191018 step=678146
-episode=331 score=20.0 avgScore=20.47 bestScore=20.92 epsilon=0.09999000000191018 step=680194
-episode=332 score=19.0 avgScore=20.48 bestScore=20.92 epsilon=0.09999000000191018 step=682243
-episode=333 score=20.0 avgScore=20.49 bestScore=20.92 epsilon=0.09999000000191018 step=684292
-episode=334 score=23.0 avgScore=20.53 bestScore=20.92 epsilon=0.09999000000191018 step=686341
-episode=335 score=20.0 avgScore=20.54 bestScore=20.92 epsilon=0.09999000000191018 step=688390
-episode=336 score=20.0 avgScore=20.52 bestScore=20.92 epsilon=0.09999000000191018 step=690438
-episode=337 score=24.0 avgScore=20.58 bestScore=20.92 epsilon=0.09999000000191018 step=692487
-episode=338 score=19.0 avgScore=20.58 bestScore=20.92 epsilon=0.09999000000191018 step=694536
-episode=339 score=23.0 avgScore=20.61 bestScore=20.92 epsilon=0.09999000000191018 step=696585
-episode=340 score=22.0 avgScore=20.61 bestScore=20.92 epsilon=0.09999000000191018 step=698634
-episode=341 score=19.0 avgScore=20.58 bestScore=20.92 epsilon=0.09999000000191018 step=700683
-episode=342 score=20.0 avgScore=20.59 bestScore=20.92 epsilon=0.09999000000191018 step=702732
-episode=343 score=21.0 avgScore=20.6 bestScore=20.92 epsilon=0.09999000000191018 step=704780
-episode=344 score=23.0 avgScore=20.62 bestScore=20.92 epsilon=0.09999000000191018 step=706829
-episode=345 score=21.0 avgScore=20.63 bestScore=20.92 epsilon=0.09999000000191018 step=708877
-episode=346 score=22.0 avgScore=20.64 bestScore=20.92 epsilon=0.09999000000191018 step=710926
-episode=347 score=19.0 avgScore=20.64 bestScore=20.92 epsilon=0.09999000000191018 step=712975
-episode=348 score=21.0 avgScore=20.65 bestScore=20.92 epsilon=0.09999000000191018 step=715024
-episode=349 score=19.0 avgScore=20.62 bestScore=20.92 epsilon=0.09999000000191018 step=717073
-episode=350 score=18.0 avgScore=20.59 bestScore=20.92 epsilon=0.09999000000191018 step=719122
-episode=351 score=20.0 avgScore=20.59 bestScore=20.92 epsilon=0.09999000000191018 step=721171
-episode=352 score=18.0 avgScore=20.57 bestScore=20.92 epsilon=0.09999000000191018 step=723220
-episode=353 score=20.0 avgScore=20.56 bestScore=20.92 epsilon=0.09999000000191018 step=725269
-episode=354 score=22.0 avgScore=20.6 bestScore=20.92 epsilon=0.09999000000191018 step=727318
-episode=355 score=21.0 avgScore=20.61 bestScore=20.92 epsilon=0.09999000000191018 step=729367
-episode=356 score=20.0 avgScore=20.61 bestScore=20.92 epsilon=0.09999000000191018 step=731416
-episode=357 score=19.0 avgScore=20.61 bestScore=20.92 epsilon=0.09999000000191018 step=733465
-episode=358 score=22.0 avgScore=20.62 bestScore=20.92 epsilon=0.09999000000191018 step=735514
-episode=359 score=19.0 avgScore=20.6 bestScore=20.92 epsilon=0.09999000000191018 step=737563
-episode=360 score=22.0 avgScore=20.63 bestScore=20.92 epsilon=0.09999000000191018 step=739612
-episode=361 score=20.0 avgScore=20.64 bestScore=20.92 epsilon=0.09999000000191018 step=741661
-episode=362 score=20.0 avgScore=20.63 bestScore=20.92 epsilon=0.09999000000191018 step=743710
-episode=363 score=21.0 avgScore=20.65 bestScore=20.92 epsilon=0.09999000000191018 step=745759
-episode=364 score=20.0 avgScore=20.62 bestScore=20.92 epsilon=0.09999000000191018 step=747808
-episode=365 score=21.0 avgScore=20.63 bestScore=20.92 epsilon=0.09999000000191018 step=749857
-episode=366 score=20.0 avgScore=20.62 bestScore=20.92 epsilon=0.09999000000191018 step=751906
-episode=367 score=20.0 avgScore=20.61 bestScore=20.92 epsilon=0.09999000000191018 step=753955
-episode=368 score=22.0 avgScore=20.63 bestScore=20.92 epsilon=0.09999000000191018 step=756004
-episode=369 score=21.0 avgScore=20.66 bestScore=20.92 epsilon=0.09999000000191018 step=758053
-episode=370 score=23.0 avgScore=20.68 bestScore=20.92 epsilon=0.09999000000191018 step=760101
-episode=371 score=21.0 avgScore=20.67 bestScore=20.92 epsilon=0.09999000000191018 step=762150
-episode=372 score=20.0 avgScore=20.67 bestScore=20.92 epsilon=0.09999000000191018 step=764199
-episode=373 score=21.0 avgScore=20.66 bestScore=20.92 epsilon=0.09999000000191018 step=766247
-episode=374 score=20.0 avgScore=20.63 bestScore=20.92 epsilon=0.09999000000191018 step=768296
-episode=375 score=23.0 avgScore=20.67 bestScore=20.92 epsilon=0.09999000000191018 step=770344
-episode=376 score=21.0 avgScore=20.67 bestScore=20.92 epsilon=0.09999000000191018 step=772393
-episode=377 score=23.0 avgScore=20.69 bestScore=20.92 epsilon=0.09999000000191018 step=774442
-episode=378 score=21.0 avgScore=20.69 bestScore=20.92 epsilon=0.09999000000191018 step=776491
-episode=379 score=21.0 avgScore=20.7 bestScore=20.92 epsilon=0.09999000000191018 step=778540
-episode=380 score=22.0 avgScore=20.72 bestScore=20.92 epsilon=0.09999000000191018 step=780589
-episode=381 score=20.0 avgScore=20.7 bestScore=20.92 epsilon=0.09999000000191018 step=782638
-episode=382 score=21.0 avgScore=20.7 bestScore=20.92 epsilon=0.09999000000191018 step=784687
-episode=383 score=20.0 avgScore=20.68 bestScore=20.92 epsilon=0.09999000000191018 step=786735
-episode=384 score=22.0 avgScore=20.68 bestScore=20.92 epsilon=0.09999000000191018 step=788784
-episode=385 score=21.0 avgScore=20.68 bestScore=20.92 epsilon=0.09999000000191018 step=790833
-episode=386 score=21.0 avgScore=20.67 bestScore=20.92 epsilon=0.09999000000191018 step=792882
-episode=387 score=22.0 avgScore=20.69 bestScore=20.92 epsilon=0.09999000000191018 step=794931
-episode=388 score=20.0 avgScore=20.68 bestScore=20.92 epsilon=0.09999000000191018 step=796980
-episode=389 score=20.0 avgScore=20.67 bestScore=20.92 epsilon=0.09999000000191018 step=799029
-episode=390 score=19.0 avgScore=20.65 bestScore=20.92 epsilon=0.09999000000191018 step=801078
-episode=391 score=24.0 avgScore=20.72 bestScore=20.92 epsilon=0.09999000000191018 step=803127
-episode=392 score=19.0 avgScore=20.71 bestScore=20.92 epsilon=0.09999000000191018 step=805175
-episode=393 score=23.0 avgScore=20.72 bestScore=20.92 epsilon=0.09999000000191018 step=807224
-episode=394 score=21.0 avgScore=20.75 bestScore=20.92 epsilon=0.09999000000191018 step=809273
-episode=395 score=21.0 avgScore=20.73 bestScore=20.92 epsilon=0.09999000000191018 step=811322
-episode=396 score=20.0 avgScore=20.71 bestScore=20.92 epsilon=0.09999000000191018 step=813370
-episode=397 score=19.0 avgScore=20.68 bestScore=20.92 epsilon=0.09999000000191018 step=815419
-episode=398 score=20.0 avgScore=20.65 bestScore=20.92 epsilon=0.09999000000191018 step=817468
-episode=399 score=22.0 avgScore=20.66 bestScore=20.92 epsilon=0.09999000000191018 step=819517
-episode=400 score=19.0 avgScore=20.64 bestScore=20.92 epsilon=0.09999000000191018 step=821566
-episode=401 score=22.0 avgScore=20.65 bestScore=20.92 epsilon=0.09999000000191018 step=823615
-episode=402 score=20.0 avgScore=20.65 bestScore=20.92 epsilon=0.09999000000191018 step=825664
-episode=403 score=21.0 avgScore=20.65 bestScore=20.92 epsilon=0.09999000000191018 step=827713
-episode=404 score=19.0 avgScore=20.63 bestScore=20.92 epsilon=0.09999000000191018 step=829762
-episode=405 score=21.0 avgScore=20.61 bestScore=20.92 epsilon=0.09999000000191018 step=831811
-episode=406 score=23.0 avgScore=20.64 bestScore=20.92 epsilon=0.09999000000191018 step=833860
-episode=407 score=19.0 avgScore=20.64 bestScore=20.92 epsilon=0.09999000000191018 step=835908
-episode=408 score=19.0 avgScore=20.64 bestScore=20.92 epsilon=0.09999000000191018 step=837957
-episode=409 score=23.0 avgScore=20.65 bestScore=20.92 epsilon=0.09999000000191018 step=840005
-episode=410 score=22.0 avgScore=20.65 bestScore=20.92 epsilon=0.09999000000191018 step=842054
-episode=411 score=21.0 avgScore=20.65 bestScore=20.92 epsilon=0.09999000000191018 step=844103
-episode=412 score=21.0 avgScore=20.64 bestScore=20.92 epsilon=0.09999000000191018 step=846152
-episode=413 score=20.0 avgScore=20.63 bestScore=20.92 epsilon=0.09999000000191018 step=848201
-episode=414 score=23.0 avgScore=20.64 bestScore=20.92 epsilon=0.09999000000191018 step=850249
-episode=415 score=20.0 avgScore=20.68 bestScore=20.92 epsilon=0.09999000000191018 step=852297
-episode=416 score=20.0 avgScore=20.66 bestScore=20.92 epsilon=0.09999000000191018 step=854345
-episode=417 score=22.0 avgScore=20.68 bestScore=20.92 epsilon=0.09999000000191018 step=856394
-episode=418 score=20.0 avgScore=20.67 bestScore=20.92 epsilon=0.09999000000191018 step=858443
-episode=419 score=20.0 avgScore=20.65 bestScore=20.92 epsilon=0.09999000000191018 step=860492
-episode=420 score=21.0 avgScore=20.65 bestScore=20.92 epsilon=0.09999000000191018 step=862541
-episode=421 score=22.0 avgScore=20.66 bestScore=20.92 epsilon=0.09999000000191018 step=864590
-episode=422 score=23.0 avgScore=20.69 bestScore=20.92 epsilon=0.09999000000191018 step=866639
-episode=423 score=20.0 avgScore=20.71 bestScore=20.92 epsilon=0.09999000000191018 step=868687
-episode=424 score=20.0 avgScore=20.69 bestScore=20.92 epsilon=0.09999000000191018 step=870736
-episode=425 score=24.0 avgScore=20.72 bestScore=20.92 epsilon=0.09999000000191018 step=872785
-episode=426 score=19.0 avgScore=20.72 bestScore=20.92 epsilon=0.09999000000191018 step=874833
-episode=427 score=19.0 avgScore=20.74 bestScore=20.92 epsilon=0.09999000000191018 step=876881
-episode=428 score=19.0 avgScore=20.73 bestScore=20.92 epsilon=0.09999000000191018 step=878930
-episode=429 score=24.0 avgScore=20.75 bestScore=20.92 epsilon=0.09999000000191018 step=880978
-episode=430 score=23.0 avgScore=20.81 bestScore=20.92 epsilon=0.09999000000191018 step=883027
-episode=431 score=22.0 avgScore=20.83 bestScore=20.92 epsilon=0.09999000000191018 step=885076
-episode=432 score=20.0 avgScore=20.84 bestScore=20.92 epsilon=0.09999000000191018 step=887125
-episode=433 score=23.0 avgScore=20.87 bestScore=20.92 epsilon=0.09999000000191018 step=889174
-episode=434 score=22.0 avgScore=20.86 bestScore=20.92 epsilon=0.09999000000191018 step=891222
-episode=435 score=20.0 avgScore=20.86 bestScore=20.92 epsilon=0.09999000000191018 step=893271
-episode=436 score=22.0 avgScore=20.88 bestScore=20.92 epsilon=0.09999000000191018 step=895319
-episode=437 score=21.0 avgScore=20.85 bestScore=20.92 epsilon=0.09999000000191018 step=897368
-episode=438 score=20.0 avgScore=20.86 bestScore=20.92 epsilon=0.09999000000191018 step=899417
-episode=439 score=20.0 avgScore=20.83 bestScore=20.92 epsilon=0.09999000000191018 step=901466
-episode=440 score=19.0 avgScore=20.8 bestScore=20.92 epsilon=0.09999000000191018 step=903515
-episode=441 score=20.0 avgScore=20.81 bestScore=20.92 epsilon=0.09999000000191018 step=905564
-episode=442 score=20.0 avgScore=20.81 bestScore=20.92 epsilon=0.09999000000191018 step=907613
-episode=443 score=19.0 avgScore=20.79 bestScore=20.92 epsilon=0.09999000000191018 step=909662
-episode=444 score=21.0 avgScore=20.77 bestScore=20.92 epsilon=0.09999000000191018 step=911711
-episode=445 score=21.0 avgScore=20.77 bestScore=20.92 epsilon=0.09999000000191018 step=913760
-episode=446 score=22.0 avgScore=20.77 bestScore=20.92 epsilon=0.09999000000191018 step=915808
-episode=447 score=21.0 avgScore=20.79 bestScore=20.92 epsilon=0.09999000000191018 step=917857
-episode=448 score=22.0 avgScore=20.8 bestScore=20.92 epsilon=0.09999000000191018 step=919906
-episode=449 score=23.0 avgScore=20.84 bestScore=20.92 epsilon=0.09999000000191018 step=921955
-episode=450 score=22.0 avgScore=20.88 bestScore=20.92 epsilon=0.09999000000191018 step=924004
-episode=451 score=20.0 avgScore=20.88 bestScore=20.92 epsilon=0.09999000000191018 step=926053
-episode=452 score=24.0 avgScore=20.94 bestScore=20.92 epsilon=0.09999000000191018 step=928102
-
-
-episode=453 score=22.0 avgScore=20.96 bestScore=20.94 epsilon=0.09999000000191018 step=930151
-
-
-episode=454 score=18.0 avgScore=20.92 bestScore=20.96 epsilon=0.09999000000191018 step=932200
-episode=455 score=22.0 avgScore=20.93 bestScore=20.96 epsilon=0.09999000000191018 step=934249
-episode=456 score=21.0 avgScore=20.94 bestScore=20.96 epsilon=0.09999000000191018 step=936298
-episode=457 score=22.0 avgScore=20.97 bestScore=20.96 epsilon=0.09999000000191018 step=938347
-
-
-episode=458 score=22.0 avgScore=20.97 bestScore=20.97 epsilon=0.09999000000191018 step=940396
-episode=459 score=20.0 avgScore=20.98 bestScore=20.97 epsilon=0.09999000000191018 step=942444
-
-
-episode=460 score=19.0 avgScore=20.95 bestScore=20.98 epsilon=0.09999000000191018 step=944493
-episode=461 score=17.0 avgScore=20.92 bestScore=20.98 epsilon=0.09999000000191018 step=946542
-episode=462 score=21.0 avgScore=20.93 bestScore=20.98 epsilon=0.09999000000191018 step=948591
-episode=463 score=19.0 avgScore=20.91 bestScore=20.98 epsilon=0.09999000000191018 step=950639
-episode=464 score=21.0 avgScore=20.92 bestScore=20.98 epsilon=0.09999000000191018 step=952687
-episode=465 score=23.0 avgScore=20.94 bestScore=20.98 epsilon=0.09999000000191018 step=954736
-episode=466 score=18.0 avgScore=20.92 bestScore=20.98 epsilon=0.09999000000191018 step=956785
-episode=467 score=21.0 avgScore=20.93 bestScore=20.98 epsilon=0.09999000000191018 step=958834
-episode=468 score=20.0 avgScore=20.91 bestScore=20.98 epsilon=0.09999000000191018 step=960883
-episode=469 score=21.0 avgScore=20.91 bestScore=20.98 epsilon=0.09999000000191018 step=962931
-episode=470 score=23.0 avgScore=20.91 bestScore=20.98 epsilon=0.09999000000191018 step=964980
-episode=471 score=21.0 avgScore=20.91 bestScore=20.98 epsilon=0.09999000000191018 step=967028
-episode=472 score=22.0 avgScore=20.93 bestScore=20.98 epsilon=0.09999000000191018 step=969077
-episode=473 score=20.0 avgScore=20.92 bestScore=20.98 epsilon=0.09999000000191018 step=971126
-episode=474 score=21.0 avgScore=20.93 bestScore=20.98 epsilon=0.09999000000191018 step=973174
-episode=475 score=19.0 avgScore=20.89 bestScore=20.98 epsilon=0.09999000000191018 step=975223
-episode=476 score=20.0 avgScore=20.88 bestScore=20.98 epsilon=0.09999000000191018 step=977272
-episode=477 score=20.0 avgScore=20.85 bestScore=20.98 epsilon=0.09999000000191018 step=979321
-episode=478 score=18.0 avgScore=20.82 bestScore=20.98 epsilon=0.09999000000191018 step=981370
-episode=479 score=22.0 avgScore=20.83 bestScore=20.98 epsilon=0.09999000000191018 step=983419
-episode=480 score=19.0 avgScore=20.8 bestScore=20.98 epsilon=0.09999000000191018 step=985468
-episode=481 score=23.0 avgScore=20.83 bestScore=20.98 epsilon=0.09999000000191018 step=987516
-episode=482 score=20.0 avgScore=20.82 bestScore=20.98 epsilon=0.09999000000191018 step=989565
-episode=483 score=19.0 avgScore=20.81 bestScore=20.98 epsilon=0.09999000000191018 step=991614
-episode=484 score=22.0 avgScore=20.81 bestScore=20.98 epsilon=0.09999000000191018 step=993663
-episode=485 score=24.0 avgScore=20.84 bestScore=20.98 epsilon=0.09999000000191018 step=995712
-episode=486 score=20.0 avgScore=20.83 bestScore=20.98 epsilon=0.09999000000191018 step=997761
-episode=487 score=23.0 avgScore=20.84 bestScore=20.98 epsilon=0.09999000000191018 step=999810
-episode=488 score=19.0 avgScore=20.83 bestScore=20.98 epsilon=0.09999000000191018 step=1001859
-episode=489 score=19.0 avgScore=20.82 bestScore=20.98 epsilon=0.09999000000191018 step=1003908
-episode=490 score=20.0 avgScore=20.83 bestScore=20.98 epsilon=0.09999000000191018 step=1005957
-episode=491 score=19.0 avgScore=20.78 bestScore=20.98 epsilon=0.09999000000191018 step=1008006
-episode=492 score=21.0 avgScore=20.8 bestScore=20.98 epsilon=0.09999000000191018 step=1010054
-episode=493 score=21.0 avgScore=20.78 bestScore=20.98 epsilon=0.09999000000191018 step=1012103
-episode=494 score=20.0 avgScore=20.77 bestScore=20.98 epsilon=0.09999000000191018 step=1014152
-episode=495 score=18.0 avgScore=20.74 bestScore=20.98 epsilon=0.09999000000191018 step=1016201
-episode=496 score=22.0 avgScore=20.76 bestScore=20.98 epsilon=0.09999000000191018 step=1018250
-episode=497 score=20.0 avgScore=20.77 bestScore=20.98 epsilon=0.09999000000191018 step=1020299
-episode=498 score=21.0 avgScore=20.78 bestScore=20.98 epsilon=0.09999000000191018 step=1022348
-episode=499 score=24.0 avgScore=20.8 bestScore=20.98 epsilon=0.09999000000191018 step=1024396
+2022-04-14 10:48:58,811 episode=0 score=0.0 avgScore=0.0 bestScore=-inf epsilon=0.9798200000000918 step=2049
+2022-04-14 10:49:51,914 episode=1 score=0.0 avgScore=0.0 bestScore=0.0 epsilon=0.9593300000001851 step=4098
+2022-04-14 10:50:46,648 episode=2 score=0.0 avgScore=0.0 bestScore=0.0 epsilon=0.9388500000002783 step=6146
+2022-04-14 10:51:47,267 episode=3 score=0.0 avgScore=0.0 bestScore=0.0 epsilon=0.9183600000003715 step=8195
+2022-04-14 10:52:49,783 episode=4 score=0.0 avgScore=0.0 bestScore=0.0 epsilon=0.8978700000004648 step=10244
+2022-04-14 10:53:51,802 episode=5 score=0.0 avgScore=0.0 bestScore=0.0 epsilon=0.877380000000558 step=12293
+2022-04-14 10:54:54,656 episode=6 score=0.0 avgScore=0.0 bestScore=0.0 epsilon=0.8568900000006513 step=14342
+2022-04-14 10:55:56,777 episode=7 score=0.0 avgScore=0.0 bestScore=0.0 epsilon=0.8364000000007445 step=16391
+2022-04-14 10:56:59,293 episode=8 score=0.0 avgScore=0.0 bestScore=0.0 epsilon=0.8159100000008378 step=18440
+2022-04-14 10:58:02,285 episode=9 score=0.0 avgScore=0.0 bestScore=0.0 epsilon=0.795420000000931 step=20489
+2022-04-14 10:59:05,412 episode=10 score=0.0 avgScore=0.0 bestScore=0.0 epsilon=0.7749300000010243 step=22538
+2022-04-14 11:00:08,466 episode=11 score=0.0 avgScore=0.0 bestScore=0.0 epsilon=0.7544400000011175 step=24587
+2022-04-14 11:01:12,291 episode=12 score=0.0 avgScore=0.0 bestScore=0.0 epsilon=0.7339600000012108 step=26635
+2022-04-14 11:02:16,418 episode=13 score=0.0 avgScore=0.0 bestScore=0.0 epsilon=0.713470000001304 step=28684
+2022-04-14 11:03:20,756 episode=14 score=0.0 avgScore=0.0 bestScore=0.0 epsilon=0.6929800000013973 step=30733
+2022-04-14 11:04:25,250 episode=15 score=0.0 avgScore=0.0 bestScore=0.0 epsilon=0.6724900000014905 step=32782
+2022-04-14 11:05:29,802 episode=16 score=0.0 avgScore=0.0 bestScore=0.0 epsilon=0.6520100000015837 step=34830
+2022-04-14 11:06:34,377 episode=17 score=0.0 avgScore=0.0 bestScore=0.0 epsilon=0.631520000001677 step=36879
+2022-04-14 11:07:39,056 episode=18 score=0.0 avgScore=0.0 bestScore=0.0 epsilon=0.6110300000017702 step=38928
+2022-04-14 11:08:43,883 episode=19 score=0.0 avgScore=0.0 bestScore=0.0 epsilon=0.5905400000018635 step=40977
+2022-04-14 11:09:48,877 episode=20 score=0.0 avgScore=0.0 bestScore=0.0 epsilon=0.5700500000019567 step=43026
+2022-04-14 11:10:53,656 episode=21 score=0.0 avgScore=0.0 bestScore=0.0 epsilon=0.54956000000205 step=45075
+2022-04-14 11:11:59,053 episode=22 score=0.0 avgScore=0.0 bestScore=0.0 epsilon=0.5290700000021432 step=47124
+2022-04-14 11:13:04,485 episode=23 score=3.0 avgScore=0.125 bestScore=0.0 epsilon=0.5085900000022364 step=49172
+2022-04-14 11:14:09,321 episode=24 score=3.0 avgScore=0.24 bestScore=0.125 epsilon=0.4881000000022636 step=51221
+2022-04-14 11:15:14,533 episode=25 score=2.0 avgScore=0.3076923076923077 bestScore=0.24 epsilon=0.4676100000022431 step=53270
+2022-04-14 11:16:19,749 episode=26 score=5.0 avgScore=0.48148148148148145 bestScore=0.3076923076923077 epsilon=0.44712000000222263 step=55319
+2022-04-14 11:17:24,848 episode=27 score=8.0 avgScore=0.75 bestScore=0.48148148148148145 epsilon=0.42663000000220214 step=57368
+2022-04-14 11:18:30,199 episode=28 score=12.0 avgScore=1.1379310344827587 bestScore=0.75 epsilon=0.40615000000218165 step=59416
+2022-04-14 11:19:35,750 episode=29 score=12.0 avgScore=1.5 bestScore=1.1379310344827587 epsilon=0.38566000000216116 step=61465
+2022-04-14 11:20:41,448 episode=30 score=13.0 avgScore=1.8709677419354838 bestScore=1.5 epsilon=0.36517000000214067 step=63514
+2022-04-14 11:21:47,260 episode=31 score=15.0 avgScore=2.28125 bestScore=1.8709677419354838 epsilon=0.3446900000021202 step=65562
+2022-04-14 11:22:53,081 episode=32 score=15.0 avgScore=2.6666666666666665 bestScore=2.28125 epsilon=0.3242000000020997 step=67611
+2022-04-14 11:23:59,420 episode=33 score=15.0 avgScore=3.0294117647058822 bestScore=2.6666666666666665 epsilon=0.3037100000020792 step=69660
+2022-04-14 11:25:06,064 episode=34 score=17.0 avgScore=3.4285714285714284 bestScore=3.0294117647058822 epsilon=0.2832200000020587 step=71709
+2022-04-14 11:26:12,770 episode=35 score=20.0 avgScore=3.888888888888889 bestScore=3.4285714285714284 epsilon=0.2627300000020382 step=73758
+2022-04-14 11:27:19,483 episode=36 score=19.0 avgScore=4.297297297297297 bestScore=3.888888888888889 epsilon=0.24224000000201773 step=75807
+2022-04-14 11:28:26,095 episode=37 score=17.0 avgScore=4.631578947368421 bestScore=4.297297297297297 epsilon=0.22175000000199724 step=77856
+2022-04-14 11:29:33,595 episode=38 score=20.0 avgScore=5.0256410256410255 bestScore=4.631578947368421 epsilon=0.20126000000197675 step=79905
+2022-04-14 11:30:40,946 episode=39 score=19.0 avgScore=5.375 bestScore=5.0256410256410255 epsilon=0.18077000000195625 step=81954
+2022-04-14 11:31:48,527 episode=40 score=18.0 avgScore=5.682926829268292 bestScore=5.375 epsilon=0.16028000000193576 step=84003
+2022-04-14 11:32:56,657 episode=41 score=20.0 avgScore=6.023809523809524 bestScore=5.682926829268292 epsilon=0.13980000000191528 step=86051
+2022-04-14 11:34:05,949 episode=42 score=22.0 avgScore=6.395348837209302 bestScore=6.023809523809524 epsilon=0.11931000000190269 step=88100
+2022-04-14 11:35:15,940 episode=43 score=19.0 avgScore=6.681818181818182 bestScore=6.395348837209302 epsilon=0.09999000000191018 step=90149
+2022-04-14 11:36:24,825 episode=44 score=20.0 avgScore=6.977777777777778 bestScore=6.681818181818182 epsilon=0.09999000000191018 step=92198
+2022-04-14 11:37:33,778 episode=45 score=21.0 avgScore=7.282608695652174 bestScore=6.977777777777778 epsilon=0.09999000000191018 step=94246
+2022-04-14 11:38:42,201 episode=46 score=20.0 avgScore=7.553191489361702 bestScore=7.282608695652174 epsilon=0.09999000000191018 step=96295
+2022-04-14 11:39:49,771 episode=47 score=21.0 avgScore=7.833333333333333 bestScore=7.553191489361702 epsilon=0.09999000000191018 step=98344
+2022-04-14 11:40:57,751 episode=48 score=20.0 avgScore=8.081632653061224 bestScore=7.833333333333333 epsilon=0.09999000000191018 step=100393
+2022-04-14 11:42:06,121 episode=49 score=21.0 avgScore=8.34 bestScore=8.081632653061224 epsilon=0.09999000000191018 step=102442
+2022-04-14 11:43:14,743 episode=50 score=20.0 avgScore=8.568627450980392 bestScore=8.34 epsilon=0.09999000000191018 step=104491
+2022-04-14 11:44:23,313 episode=51 score=23.0 avgScore=8.846153846153847 bestScore=8.568627450980392 epsilon=0.09999000000191018 step=106539
+2022-04-14 11:45:31,986 episode=52 score=22.0 avgScore=9.09433962264151 bestScore=8.846153846153847 epsilon=0.09999000000191018 step=108588
+2022-04-14 11:46:40,666 episode=53 score=20.0 avgScore=9.296296296296296 bestScore=9.09433962264151 epsilon=0.09999000000191018 step=110637
+2022-04-14 11:47:48,458 episode=54 score=24.0 avgScore=9.563636363636364 bestScore=9.296296296296296 epsilon=0.09999000000191018 step=112685
+2022-04-14 11:48:56,154 episode=55 score=19.0 avgScore=9.732142857142858 bestScore=9.563636363636364 epsilon=0.09999000000191018 step=114733
+2022-04-14 11:50:03,753 episode=56 score=25.0 avgScore=10.0 bestScore=9.732142857142858 epsilon=0.09999000000191018 step=116782
+2022-04-14 11:51:11,157 episode=57 score=22.0 avgScore=10.206896551724139 bestScore=10.0 epsilon=0.09999000000191018 step=118830
+2022-04-14 11:52:18,778 episode=58 score=19.0 avgScore=10.35593220338983 bestScore=10.206896551724139 epsilon=0.09999000000191018 step=120879
+2022-04-14 11:53:26,332 episode=59 score=22.0 avgScore=10.55 bestScore=10.35593220338983 epsilon=0.09999000000191018 step=122928
+2022-04-14 11:54:33,786 episode=60 score=19.0 avgScore=10.688524590163935 bestScore=10.55 epsilon=0.09999000000191018 step=124976
+2022-04-14 11:55:41,181 episode=61 score=20.0 avgScore=10.838709677419354 bestScore=10.688524590163935 epsilon=0.09999000000191018 step=127024
+2022-04-14 11:56:48,704 episode=62 score=20.0 avgScore=10.984126984126984 bestScore=10.838709677419354 epsilon=0.09999000000191018 step=129073
+2022-04-14 11:57:56,482 episode=63 score=21.0 avgScore=11.140625 bestScore=10.984126984126984 epsilon=0.09999000000191018 step=131122
+2022-04-14 11:59:04,216 episode=64 score=21.0 avgScore=11.292307692307693 bestScore=11.140625 epsilon=0.09999000000191018 step=133171
+2022-04-14 12:00:11,721 episode=65 score=19.0 avgScore=11.409090909090908 bestScore=11.292307692307693 epsilon=0.09999000000191018 step=135220
+2022-04-14 12:01:19,588 episode=66 score=19.0 avgScore=11.522388059701493 bestScore=11.409090909090908 epsilon=0.09999000000191018 step=137269
+2022-04-14 12:02:27,126 episode=67 score=19.0 avgScore=11.632352941176471 bestScore=11.522388059701493 epsilon=0.09999000000191018 step=139317
+2022-04-14 12:03:34,937 episode=68 score=20.0 avgScore=11.753623188405797 bestScore=11.632352941176471 epsilon=0.09999000000191018 step=141365
+2022-04-14 12:04:42,439 episode=69 score=23.0 avgScore=11.914285714285715 bestScore=11.753623188405797 epsilon=0.09999000000191018 step=143413
+2022-04-14 12:05:49,918 episode=70 score=20.0 avgScore=12.028169014084508 bestScore=11.914285714285715 epsilon=0.09999000000191018 step=145462
+2022-04-14 12:06:57,319 episode=71 score=21.0 avgScore=12.152777777777779 bestScore=12.028169014084508 epsilon=0.09999000000191018 step=147511
+2022-04-14 12:08:04,743 episode=72 score=20.0 avgScore=12.26027397260274 bestScore=12.152777777777779 epsilon=0.09999000000191018 step=149560
+2022-04-14 12:09:12,138 episode=73 score=20.0 avgScore=12.364864864864865 bestScore=12.26027397260274 epsilon=0.09999000000191018 step=151609
+2022-04-14 12:10:19,722 episode=74 score=22.0 avgScore=12.493333333333334 bestScore=12.364864864864865 epsilon=0.09999000000191018 step=153657
+2022-04-14 12:11:27,387 episode=75 score=22.0 avgScore=12.618421052631579 bestScore=12.493333333333334 epsilon=0.09999000000191018 step=155705
+2022-04-14 12:12:34,963 episode=76 score=20.0 avgScore=12.714285714285714 bestScore=12.618421052631579 epsilon=0.09999000000191018 step=157754
+2022-04-14 12:13:42,243 episode=77 score=23.0 avgScore=12.846153846153847 bestScore=12.714285714285714 epsilon=0.09999000000191018 step=159802
+2022-04-14 12:14:49,431 episode=78 score=19.0 avgScore=12.924050632911392 bestScore=12.846153846153847 epsilon=0.09999000000191018 step=161850
+2022-04-14 12:15:56,712 episode=79 score=22.0 avgScore=13.0375 bestScore=12.924050632911392 epsilon=0.09999000000191018 step=163898
+2022-04-14 12:17:04,095 episode=80 score=20.0 avgScore=13.123456790123457 bestScore=13.0375 epsilon=0.09999000000191018 step=165946
+2022-04-14 12:18:11,579 episode=81 score=22.0 avgScore=13.231707317073171 bestScore=13.123456790123457 epsilon=0.09999000000191018 step=167995
+2022-04-14 12:19:19,046 episode=82 score=19.0 avgScore=13.301204819277109 bestScore=13.231707317073171 epsilon=0.09999000000191018 step=170044
+2022-04-14 12:20:26,457 episode=83 score=19.0 avgScore=13.369047619047619 bestScore=13.301204819277109 epsilon=0.09999000000191018 step=172093
+2022-04-14 12:21:33,989 episode=84 score=18.0 avgScore=13.423529411764706 bestScore=13.369047619047619 epsilon=0.09999000000191018 step=174142
+2022-04-14 12:22:41,656 episode=85 score=19.0 avgScore=13.488372093023257 bestScore=13.423529411764706 epsilon=0.09999000000191018 step=176191
+2022-04-14 12:23:49,423 episode=86 score=20.0 avgScore=13.563218390804598 bestScore=13.488372093023257 epsilon=0.09999000000191018 step=178240
+2022-04-14 12:24:56,952 episode=87 score=22.0 avgScore=13.659090909090908 bestScore=13.563218390804598 epsilon=0.09999000000191018 step=180289
+2022-04-14 12:26:04,400 episode=88 score=19.0 avgScore=13.719101123595506 bestScore=13.659090909090908 epsilon=0.09999000000191018 step=182337
+2022-04-14 12:27:11,810 episode=89 score=22.0 avgScore=13.811111111111112 bestScore=13.719101123595506 epsilon=0.09999000000191018 step=184385
+2022-04-14 12:28:19,475 episode=90 score=20.0 avgScore=13.87912087912088 bestScore=13.811111111111112 epsilon=0.09999000000191018 step=186434
+2022-04-14 12:29:26,901 episode=91 score=20.0 avgScore=13.945652173913043 bestScore=13.87912087912088 epsilon=0.09999000000191018 step=188483
+2022-04-14 12:30:34,440 episode=92 score=20.0 avgScore=14.010752688172044 bestScore=13.945652173913043 epsilon=0.09999000000191018 step=190532
+2022-04-14 12:31:42,672 episode=93 score=21.0 avgScore=14.085106382978724 bestScore=14.010752688172044 epsilon=0.09999000000191018 step=192581
+2022-04-14 12:32:51,338 episode=94 score=20.0 avgScore=14.147368421052631 bestScore=14.085106382978724 epsilon=0.09999000000191018 step=194630
+2022-04-14 12:33:59,793 episode=95 score=23.0 avgScore=14.239583333333334 bestScore=14.147368421052631 epsilon=0.09999000000191018 step=196678
+2022-04-14 12:35:07,967 episode=96 score=22.0 avgScore=14.31958762886598 bestScore=14.239583333333334 epsilon=0.09999000000191018 step=198727
+2022-04-14 12:36:16,039 episode=97 score=18.0 avgScore=14.357142857142858 bestScore=14.31958762886598 epsilon=0.09999000000191018 step=200776
+2022-04-14 12:37:24,665 episode=98 score=21.0 avgScore=14.424242424242424 bestScore=14.357142857142858 epsilon=0.09999000000191018 step=202825
+2022-04-14 12:38:33,123 episode=99 score=20.0 avgScore=14.48 bestScore=14.424242424242424 epsilon=0.09999000000191018 step=204874
+2022-04-14 12:39:41,779 episode=100 score=20.0 avgScore=14.68 bestScore=14.48 epsilon=0.09999000000191018 step=206922
+2022-04-14 12:40:50,516 episode=101 score=20.0 avgScore=14.88 bestScore=14.68 epsilon=0.09999000000191018 step=208971
+2022-04-14 12:41:59,218 episode=102 score=19.0 avgScore=15.07 bestScore=14.88 epsilon=0.09999000000191018 step=211020
+2022-04-14 12:43:06,931 episode=103 score=19.0 avgScore=15.26 bestScore=15.07 epsilon=0.09999000000191018 step=213069
+2022-04-14 12:44:14,572 episode=104 score=20.0 avgScore=15.46 bestScore=15.26 epsilon=0.09999000000191018 step=215118
+2022-04-14 12:45:22,890 episode=105 score=21.0 avgScore=15.67 bestScore=15.46 epsilon=0.09999000000191018 step=217166
+2022-04-14 12:46:31,138 episode=106 score=19.0 avgScore=15.86 bestScore=15.67 epsilon=0.09999000000191018 step=219215
+2022-04-14 12:47:39,083 episode=107 score=21.0 avgScore=16.07 bestScore=15.86 epsilon=0.09999000000191018 step=221263
+2022-04-14 12:48:46,540 episode=108 score=20.0 avgScore=16.27 bestScore=16.07 epsilon=0.09999000000191018 step=223312
+2022-04-14 12:49:54,654 episode=109 score=21.0 avgScore=16.48 bestScore=16.27 epsilon=0.09999000000191018 step=225361
+2022-04-14 12:51:03,365 episode=110 score=19.0 avgScore=16.67 bestScore=16.48 epsilon=0.09999000000191018 step=227410
+2022-04-14 12:52:11,714 episode=111 score=20.0 avgScore=16.87 bestScore=16.67 epsilon=0.09999000000191018 step=229459
+2022-04-14 12:53:19,676 episode=112 score=22.0 avgScore=17.09 bestScore=16.87 epsilon=0.09999000000191018 step=231507
+2022-04-14 12:54:28,195 episode=113 score=22.0 avgScore=17.31 bestScore=17.09 epsilon=0.09999000000191018 step=233556
+2022-04-14 12:55:37,182 episode=114 score=18.0 avgScore=17.49 bestScore=17.31 epsilon=0.09999000000191018 step=235605
+2022-04-14 12:56:46,078 episode=115 score=22.0 avgScore=17.71 bestScore=17.49 epsilon=0.09999000000191018 step=237654
+2022-04-14 12:57:54,614 episode=116 score=21.0 avgScore=17.92 bestScore=17.71 epsilon=0.09999000000191018 step=239703
+2022-04-14 12:59:02,538 episode=117 score=19.0 avgScore=18.11 bestScore=17.92 epsilon=0.09999000000191018 step=241752
+2022-04-14 13:00:10,659 episode=118 score=21.0 avgScore=18.32 bestScore=18.11 epsilon=0.09999000000191018 step=243801
+2022-04-14 13:01:18,331 episode=119 score=21.0 avgScore=18.53 bestScore=18.32 epsilon=0.09999000000191018 step=245850
+2022-04-14 13:02:26,307 episode=120 score=23.0 avgScore=18.76 bestScore=18.53 epsilon=0.09999000000191018 step=247899
+2022-04-14 13:03:34,093 episode=121 score=20.0 avgScore=18.96 bestScore=18.76 epsilon=0.09999000000191018 step=249947
+2022-04-14 13:04:41,750 episode=122 score=20.0 avgScore=19.16 bestScore=18.96 epsilon=0.09999000000191018 step=251995
+2022-04-14 13:05:49,182 episode=123 score=21.0 avgScore=19.34 bestScore=19.16 epsilon=0.09999000000191018 step=254043
+2022-04-14 13:06:56,699 episode=124 score=24.0 avgScore=19.55 bestScore=19.34 epsilon=0.09999000000191018 step=256091
+2022-04-14 13:08:04,195 episode=125 score=21.0 avgScore=19.74 bestScore=19.55 epsilon=0.09999000000191018 step=258140
+2022-04-14 13:09:11,592 episode=126 score=19.0 avgScore=19.88 bestScore=19.74 epsilon=0.09999000000191018 step=260188
+2022-04-14 13:10:19,079 episode=127 score=21.0 avgScore=20.01 bestScore=19.88 epsilon=0.09999000000191018 step=262236
+2022-04-14 13:11:26,670 episode=128 score=18.0 avgScore=20.07 bestScore=20.01 epsilon=0.09999000000191018 step=264285
+2022-04-14 13:12:34,343 episode=129 score=19.0 avgScore=20.14 bestScore=20.07 epsilon=0.09999000000191018 step=266334
+2022-04-14 13:13:42,182 episode=130 score=19.0 avgScore=20.2 bestScore=20.14 epsilon=0.09999000000191018 step=268383
+2022-04-14 13:14:49,913 episode=131 score=19.0 avgScore=20.24 bestScore=20.2 epsilon=0.09999000000191018 step=270432
+2022-04-14 13:15:57,882 episode=132 score=20.0 avgScore=20.29 bestScore=20.24 epsilon=0.09999000000191018 step=272481
+2022-04-14 13:17:05,395 episode=133 score=16.0 avgScore=20.3 bestScore=20.29 epsilon=0.09999000000191018 step=274530
+2022-04-14 13:18:13,085 episode=134 score=19.0 avgScore=20.32 bestScore=20.3 epsilon=0.09999000000191018 step=276579
+2022-04-14 13:19:20,618 episode=135 score=23.0 avgScore=20.35 bestScore=20.32 epsilon=0.09999000000191018 step=278628
+2022-04-14 13:20:28,139 episode=136 score=17.0 avgScore=20.33 bestScore=20.35 epsilon=0.09999000000191018 step=280676
+2022-04-14 13:21:35,515 episode=137 score=20.0 avgScore=20.36 bestScore=20.35 epsilon=0.09999000000191018 step=282724
+2022-04-14 13:22:43,030 episode=138 score=20.0 avgScore=20.36 bestScore=20.36 epsilon=0.09999000000191018 step=284772
+2022-04-14 13:23:50,466 episode=139 score=19.0 avgScore=20.36 bestScore=20.36 epsilon=0.09999000000191018 step=286821
+2022-04-14 13:24:57,981 episode=140 score=19.0 avgScore=20.37 bestScore=20.36 epsilon=0.09999000000191018 step=288870
+2022-04-14 13:26:06,390 episode=141 score=21.0 avgScore=20.38 bestScore=20.37 epsilon=0.09999000000191018 step=290919
+2022-04-14 13:27:14,966 episode=142 score=18.0 avgScore=20.34 bestScore=20.38 epsilon=0.09999000000191018 step=292968
+2022-04-14 13:28:23,142 episode=143 score=20.0 avgScore=20.35 bestScore=20.38 epsilon=0.09999000000191018 step=295017
+2022-04-14 13:29:31,822 episode=144 score=23.0 avgScore=20.38 bestScore=20.38 epsilon=0.09999000000191018 step=297066
+2022-04-14 13:30:41,123 episode=145 score=23.0 avgScore=20.4 bestScore=20.38 epsilon=0.09999000000191018 step=299115
+2022-04-14 13:31:49,842 episode=146 score=19.0 avgScore=20.39 bestScore=20.4 epsilon=0.09999000000191018 step=301164
+2022-04-14 13:32:58,461 episode=147 score=22.0 avgScore=20.4 bestScore=20.4 epsilon=0.09999000000191018 step=303213
+2022-04-14 13:34:07,106 episode=148 score=21.0 avgScore=20.41 bestScore=20.4 epsilon=0.09999000000191018 step=305262
+2022-04-14 13:35:15,275 episode=149 score=17.0 avgScore=20.37 bestScore=20.41 epsilon=0.09999000000191018 step=307311
+2022-04-14 13:36:23,088 episode=150 score=22.0 avgScore=20.39 bestScore=20.41 epsilon=0.09999000000191018 step=309360
+2022-04-14 13:37:31,660 episode=151 score=20.0 avgScore=20.36 bestScore=20.41 epsilon=0.09999000000191018 step=311409
+2022-04-14 13:38:40,286 episode=152 score=22.0 avgScore=20.36 bestScore=20.41 epsilon=0.09999000000191018 step=313458
+2022-04-14 13:39:48,782 episode=153 score=21.0 avgScore=20.37 bestScore=20.41 epsilon=0.09999000000191018 step=315506
+2022-04-14 13:40:57,211 episode=154 score=18.0 avgScore=20.31 bestScore=20.41 epsilon=0.09999000000191018 step=317555
+2022-04-14 13:42:05,806 episode=155 score=20.0 avgScore=20.32 bestScore=20.41 epsilon=0.09999000000191018 step=319604
+2022-04-14 13:43:14,433 episode=156 score=22.0 avgScore=20.29 bestScore=20.41 epsilon=0.09999000000191018 step=321653
+2022-04-14 13:44:22,700 episode=157 score=21.0 avgScore=20.28 bestScore=20.41 epsilon=0.09999000000191018 step=323701
+2022-04-14 13:45:30,295 episode=158 score=22.0 avgScore=20.31 bestScore=20.41 epsilon=0.09999000000191018 step=325750
+2022-04-14 13:46:37,779 episode=159 score=18.0 avgScore=20.27 bestScore=20.41 epsilon=0.09999000000191018 step=327799
+2022-04-14 13:47:45,209 episode=160 score=20.0 avgScore=20.28 bestScore=20.41 epsilon=0.09999000000191018 step=329847
+2022-04-14 13:48:52,563 episode=161 score=18.0 avgScore=20.26 bestScore=20.41 epsilon=0.09999000000191018 step=331896
+2022-04-14 13:50:00,017 episode=162 score=21.0 avgScore=20.27 bestScore=20.41 epsilon=0.09999000000191018 step=333945
+2022-04-14 13:51:07,381 episode=163 score=19.0 avgScore=20.25 bestScore=20.41 epsilon=0.09999000000191018 step=335994
+2022-04-14 13:52:14,883 episode=164 score=18.0 avgScore=20.22 bestScore=20.41 epsilon=0.09999000000191018 step=338043
+2022-04-14 13:53:22,284 episode=165 score=20.0 avgScore=20.23 bestScore=20.41 epsilon=0.09999000000191018 step=340092
+2022-04-14 13:54:29,853 episode=166 score=18.0 avgScore=20.22 bestScore=20.41 epsilon=0.09999000000191018 step=342141
+2022-04-14 13:55:37,329 episode=167 score=21.0 avgScore=20.24 bestScore=20.41 epsilon=0.09999000000191018 step=344190
+2022-04-14 13:56:37,051 episode=168 score=19.0 avgScore=20.23 bestScore=20.41 epsilon=0.09999000000191018 step=346239
+2022-04-14 13:57:36,738 episode=169 score=23.0 avgScore=20.23 bestScore=20.41 epsilon=0.09999000000191018 step=348288
+2022-04-14 13:58:36,441 episode=170 score=18.0 avgScore=20.21 bestScore=20.41 epsilon=0.09999000000191018 step=350336
+2022-04-14 13:59:36,059 episode=171 score=19.0 avgScore=20.19 bestScore=20.41 epsilon=0.09999000000191018 step=352385
+2022-04-14 14:00:35,774 episode=172 score=24.0 avgScore=20.23 bestScore=20.41 epsilon=0.09999000000191018 step=354434
+2022-04-14 14:01:35,497 episode=173 score=20.0 avgScore=20.23 bestScore=20.41 epsilon=0.09999000000191018 step=356483
+2022-04-14 14:02:35,040 episode=174 score=20.0 avgScore=20.21 bestScore=20.41 epsilon=0.09999000000191018 step=358531
+2022-04-14 14:03:34,660 episode=175 score=20.0 avgScore=20.19 bestScore=20.41 epsilon=0.09999000000191018 step=360580
+2022-04-14 14:04:34,432 episode=176 score=19.0 avgScore=20.18 bestScore=20.41 epsilon=0.09999000000191018 step=362629
+2022-04-14 14:05:41,788 episode=177 score=20.0 avgScore=20.15 bestScore=20.41 epsilon=0.09999000000191018 step=364678
+2022-04-14 14:06:49,257 episode=178 score=23.0 avgScore=20.19 bestScore=20.41 epsilon=0.09999000000191018 step=366726
+2022-04-14 14:07:56,483 episode=179 score=18.0 avgScore=20.15 bestScore=20.41 epsilon=0.09999000000191018 step=368775
+2022-04-14 14:09:03,857 episode=180 score=20.0 avgScore=20.15 bestScore=20.41 epsilon=0.09999000000191018 step=370823
+2022-04-14 14:10:11,142 episode=181 score=22.0 avgScore=20.15 bestScore=20.41 epsilon=0.09999000000191018 step=372872
+2022-04-14 14:11:18,679 episode=182 score=18.0 avgScore=20.14 bestScore=20.41 epsilon=0.09999000000191018 step=374920
+2022-04-14 14:12:26,210 episode=183 score=22.0 avgScore=20.17 bestScore=20.41 epsilon=0.09999000000191018 step=376969
+2022-04-14 14:13:33,873 episode=184 score=22.0 avgScore=20.21 bestScore=20.41 epsilon=0.09999000000191018 step=379018
+2022-04-14 14:14:41,387 episode=185 score=19.0 avgScore=20.21 bestScore=20.41 epsilon=0.09999000000191018 step=381067
+2022-04-14 14:15:49,124 episode=186 score=23.0 avgScore=20.24 bestScore=20.41 epsilon=0.09999000000191018 step=383116
+2022-04-14 14:16:56,849 episode=187 score=20.0 avgScore=20.22 bestScore=20.41 epsilon=0.09999000000191018 step=385165
+2022-04-14 14:18:04,619 episode=188 score=22.0 avgScore=20.25 bestScore=20.41 epsilon=0.09999000000191018 step=387214
+2022-04-14 14:19:12,279 episode=189 score=23.0 avgScore=20.26 bestScore=20.41 epsilon=0.09999000000191018 step=389263
+2022-04-14 14:20:19,774 episode=190 score=18.0 avgScore=20.24 bestScore=20.41 epsilon=0.09999000000191018 step=391312
+2022-04-14 14:21:27,110 episode=191 score=18.0 avgScore=20.22 bestScore=20.41 epsilon=0.09999000000191018 step=393361
+2022-04-14 14:22:34,511 episode=192 score=21.0 avgScore=20.23 bestScore=20.41 epsilon=0.09999000000191018 step=395410
+2022-04-14 14:23:41,819 episode=193 score=17.0 avgScore=20.19 bestScore=20.41 epsilon=0.09999000000191018 step=397459
+2022-04-14 14:24:49,186 episode=194 score=19.0 avgScore=20.18 bestScore=20.41 epsilon=0.09999000000191018 step=399508
+2022-04-14 14:25:56,582 episode=195 score=20.0 avgScore=20.15 bestScore=20.41 epsilon=0.09999000000191018 step=401557
+2022-04-14 14:27:04,067 episode=196 score=19.0 avgScore=20.12 bestScore=20.41 epsilon=0.09999000000191018 step=403606
+2022-04-14 14:28:11,486 episode=197 score=23.0 avgScore=20.17 bestScore=20.41 epsilon=0.09999000000191018 step=405655
+2022-04-14 14:29:19,717 episode=198 score=20.0 avgScore=20.16 bestScore=20.41 epsilon=0.09999000000191018 step=407704
+2022-04-14 14:30:28,223 episode=199 score=22.0 avgScore=20.18 bestScore=20.41 epsilon=0.09999000000191018 step=409753
+2022-04-14 14:31:36,795 episode=200 score=20.0 avgScore=20.18 bestScore=20.41 epsilon=0.09999000000191018 step=411802
+2022-04-14 14:32:45,357 episode=201 score=20.0 avgScore=20.18 bestScore=20.41 epsilon=0.09999000000191018 step=413851
+2022-04-14 14:33:53,904 episode=202 score=18.0 avgScore=20.17 bestScore=20.41 epsilon=0.09999000000191018 step=415900
+2022-04-14 14:35:02,377 episode=203 score=20.0 avgScore=20.18 bestScore=20.41 epsilon=0.09999000000191018 step=417949
+2022-04-14 14:36:10,841 episode=204 score=19.0 avgScore=20.17 bestScore=20.41 epsilon=0.09999000000191018 step=419997
+2022-04-14 14:37:19,279 episode=205 score=22.0 avgScore=20.18 bestScore=20.41 epsilon=0.09999000000191018 step=422046
+2022-04-14 14:38:27,855 episode=206 score=19.0 avgScore=20.18 bestScore=20.41 epsilon=0.09999000000191018 step=424095
+2022-04-14 14:39:36,172 episode=207 score=22.0 avgScore=20.19 bestScore=20.41 epsilon=0.09999000000191018 step=426144
+2022-04-14 14:40:44,087 episode=208 score=20.0 avgScore=20.19 bestScore=20.41 epsilon=0.09999000000191018 step=428193
+2022-04-14 14:41:52,239 episode=209 score=21.0 avgScore=20.19 bestScore=20.41 epsilon=0.09999000000191018 step=430242
+2022-04-14 14:43:00,530 episode=210 score=22.0 avgScore=20.22 bestScore=20.41 epsilon=0.09999000000191018 step=432291
+2022-04-14 14:44:08,880 episode=211 score=21.0 avgScore=20.23 bestScore=20.41 epsilon=0.09999000000191018 step=434340
+2022-04-14 14:45:17,021 episode=212 score=19.0 avgScore=20.2 bestScore=20.41 epsilon=0.09999000000191018 step=436389
+2022-04-14 14:46:25,617 episode=213 score=18.0 avgScore=20.16 bestScore=20.41 epsilon=0.09999000000191018 step=438438
+2022-04-14 14:47:34,215 episode=214 score=19.0 avgScore=20.17 bestScore=20.41 epsilon=0.09999000000191018 step=440487
+2022-04-14 14:48:42,774 episode=215 score=21.0 avgScore=20.16 bestScore=20.41 epsilon=0.09999000000191018 step=442536
+2022-04-14 14:49:51,395 episode=216 score=21.0 avgScore=20.16 bestScore=20.41 epsilon=0.09999000000191018 step=444585
+2022-04-14 14:50:59,693 episode=217 score=22.0 avgScore=20.19 bestScore=20.41 epsilon=0.09999000000191018 step=446633
+2022-04-14 14:52:07,369 episode=218 score=18.0 avgScore=20.16 bestScore=20.41 epsilon=0.09999000000191018 step=448682
+2022-04-14 14:53:14,905 episode=219 score=20.0 avgScore=20.15 bestScore=20.41 epsilon=0.09999000000191018 step=450731
+2022-04-14 14:54:22,263 episode=220 score=19.0 avgScore=20.11 bestScore=20.41 epsilon=0.09999000000191018 step=452780
+2022-04-14 14:55:29,614 episode=221 score=19.0 avgScore=20.1 bestScore=20.41 epsilon=0.09999000000191018 step=454829
+2022-04-14 14:56:37,132 episode=222 score=19.0 avgScore=20.09 bestScore=20.41 epsilon=0.09999000000191018 step=456877
+2022-04-14 14:57:45,147 episode=223 score=21.0 avgScore=20.09 bestScore=20.41 epsilon=0.09999000000191018 step=458926
+2022-04-14 14:58:53,089 episode=224 score=21.0 avgScore=20.06 bestScore=20.41 epsilon=0.09999000000191018 step=460975
+2022-04-14 15:00:00,953 episode=225 score=19.0 avgScore=20.04 bestScore=20.41 epsilon=0.09999000000191018 step=463024
+2022-04-14 15:01:08,819 episode=226 score=22.0 avgScore=20.07 bestScore=20.41 epsilon=0.09999000000191018 step=465073
+2022-04-14 15:02:16,676 episode=227 score=19.0 avgScore=20.05 bestScore=20.41 epsilon=0.09999000000191018 step=467122
+2022-04-14 15:03:24,648 episode=228 score=18.0 avgScore=20.05 bestScore=20.41 epsilon=0.09999000000191018 step=469170
+2022-04-14 15:04:32,383 episode=229 score=19.0 avgScore=20.05 bestScore=20.41 epsilon=0.09999000000191018 step=471218
+2022-04-14 15:05:40,254 episode=230 score=20.0 avgScore=20.06 bestScore=20.41 epsilon=0.09999000000191018 step=473267
+2022-04-14 15:06:47,993 episode=231 score=21.0 avgScore=20.08 bestScore=20.41 epsilon=0.09999000000191018 step=475316
+2022-04-14 15:07:56,130 episode=232 score=22.0 avgScore=20.1 bestScore=20.41 epsilon=0.09999000000191018 step=477365
+2022-04-14 15:09:03,989 episode=233 score=23.0 avgScore=20.17 bestScore=20.41 epsilon=0.09999000000191018 step=479413
+2022-04-14 15:10:12,146 episode=234 score=18.0 avgScore=20.16 bestScore=20.41 epsilon=0.09999000000191018 step=481462
+2022-04-14 15:11:20,132 episode=235 score=20.0 avgScore=20.13 bestScore=20.41 epsilon=0.09999000000191018 step=483511
+2022-04-14 15:12:28,109 episode=236 score=21.0 avgScore=20.17 bestScore=20.41 epsilon=0.09999000000191018 step=485559
+2022-04-14 15:13:36,053 episode=237 score=18.0 avgScore=20.15 bestScore=20.41 epsilon=0.09999000000191018 step=487608
+2022-04-14 15:14:43,964 episode=238 score=19.0 avgScore=20.14 bestScore=20.41 epsilon=0.09999000000191018 step=489657
+2022-04-14 15:15:51,741 episode=239 score=21.0 avgScore=20.16 bestScore=20.41 epsilon=0.09999000000191018 step=491705
+2022-04-14 15:16:59,455 episode=240 score=19.0 avgScore=20.16 bestScore=20.41 epsilon=0.09999000000191018 step=493754
+2022-04-14 15:18:07,356 episode=241 score=20.0 avgScore=20.15 bestScore=20.41 epsilon=0.09999000000191018 step=495803
+2022-04-14 15:19:15,367 episode=242 score=18.0 avgScore=20.15 bestScore=20.41 epsilon=0.09999000000191018 step=497852
+2022-04-14 15:20:23,283 episode=243 score=22.0 avgScore=20.17 bestScore=20.41 epsilon=0.09999000000191018 step=499900
+2022-04-14 15:21:31,464 episode=244 score=20.0 avgScore=20.14 bestScore=20.41 epsilon=0.09999000000191018 step=501949
+2022-04-14 15:22:39,272 episode=245 score=19.0 avgScore=20.1 bestScore=20.41 epsilon=0.09999000000191018 step=503997
+2022-04-14 15:23:47,335 episode=246 score=19.0 avgScore=20.1 bestScore=20.41 epsilon=0.09999000000191018 step=506046
+2022-04-14 15:24:55,227 episode=247 score=19.0 avgScore=20.07 bestScore=20.41 epsilon=0.09999000000191018 step=508094
+2022-04-14 15:26:03,065 episode=248 score=21.0 avgScore=20.07 bestScore=20.41 epsilon=0.09999000000191018 step=510143
+2022-04-14 15:27:10,854 episode=249 score=20.0 avgScore=20.1 bestScore=20.41 epsilon=0.09999000000191018 step=512192
+2022-04-14 15:28:18,978 episode=250 score=22.0 avgScore=20.1 bestScore=20.41 epsilon=0.09999000000191018 step=514241
+2022-04-14 15:29:26,690 episode=251 score=20.0 avgScore=20.1 bestScore=20.41 epsilon=0.09999000000191018 step=516290
+2022-04-14 15:30:34,867 episode=252 score=26.0 avgScore=20.14 bestScore=20.41 epsilon=0.09999000000191018 step=518338
+2022-04-14 15:31:42,950 episode=253 score=19.0 avgScore=20.12 bestScore=20.41 epsilon=0.09999000000191018 step=520386
+2022-04-14 15:32:51,272 episode=254 score=21.0 avgScore=20.15 bestScore=20.41 epsilon=0.09999000000191018 step=522435
+2022-04-14 15:33:59,335 episode=255 score=19.0 avgScore=20.14 bestScore=20.41 epsilon=0.09999000000191018 step=524484
+2022-04-14 15:35:07,371 episode=256 score=22.0 avgScore=20.14 bestScore=20.41 epsilon=0.09999000000191018 step=526532
+2022-04-14 15:36:15,127 episode=257 score=21.0 avgScore=20.14 bestScore=20.41 epsilon=0.09999000000191018 step=528581
+2022-04-14 15:37:23,140 episode=258 score=23.0 avgScore=20.15 bestScore=20.41 epsilon=0.09999000000191018 step=530630
+2022-04-14 15:38:31,069 episode=259 score=23.0 avgScore=20.2 bestScore=20.41 epsilon=0.09999000000191018 step=532678
+2022-04-14 15:39:38,899 episode=260 score=19.0 avgScore=20.19 bestScore=20.41 epsilon=0.09999000000191018 step=534727
+2022-04-14 15:40:46,688 episode=261 score=21.0 avgScore=20.22 bestScore=20.41 epsilon=0.09999000000191018 step=536776
+2022-04-14 15:41:54,564 episode=262 score=22.0 avgScore=20.23 bestScore=20.41 epsilon=0.09999000000191018 step=538825
+2022-04-14 15:43:02,519 episode=263 score=19.0 avgScore=20.23 bestScore=20.41 epsilon=0.09999000000191018 step=540873
+2022-04-14 15:44:10,566 episode=264 score=22.0 avgScore=20.27 bestScore=20.41 epsilon=0.09999000000191018 step=542922
+2022-04-14 15:45:18,601 episode=265 score=20.0 avgScore=20.27 bestScore=20.41 epsilon=0.09999000000191018 step=544971
+2022-04-14 15:46:26,623 episode=266 score=19.0 avgScore=20.28 bestScore=20.41 epsilon=0.09999000000191018 step=547020
+2022-04-14 15:47:34,610 episode=267 score=22.0 avgScore=20.29 bestScore=20.41 epsilon=0.09999000000191018 step=549069
+2022-04-14 15:48:42,620 episode=268 score=20.0 avgScore=20.3 bestScore=20.41 epsilon=0.09999000000191018 step=551117
+2022-04-14 15:49:50,486 episode=269 score=19.0 avgScore=20.26 bestScore=20.41 epsilon=0.09999000000191018 step=553166
+2022-04-14 15:50:58,380 episode=270 score=20.0 avgScore=20.28 bestScore=20.41 epsilon=0.09999000000191018 step=555214
+2022-04-14 15:52:06,216 episode=271 score=20.0 avgScore=20.29 bestScore=20.41 epsilon=0.09999000000191018 step=557263
+2022-04-14 15:53:13,991 episode=272 score=20.0 avgScore=20.25 bestScore=20.41 epsilon=0.09999000000191018 step=559312
+2022-04-14 15:54:21,925 episode=273 score=18.0 avgScore=20.23 bestScore=20.41 epsilon=0.09999000000191018 step=561361
+2022-04-14 15:55:29,966 episode=274 score=19.0 avgScore=20.22 bestScore=20.41 epsilon=0.09999000000191018 step=563410
+2022-04-14 15:56:37,664 episode=275 score=20.0 avgScore=20.22 bestScore=20.41 epsilon=0.09999000000191018 step=565459
+2022-04-14 15:57:45,544 episode=276 score=19.0 avgScore=20.22 bestScore=20.41 epsilon=0.09999000000191018 step=567508
+2022-04-14 15:58:53,330 episode=277 score=22.0 avgScore=20.24 bestScore=20.41 epsilon=0.09999000000191018 step=569557
+2022-04-14 16:00:01,323 episode=278 score=21.0 avgScore=20.22 bestScore=20.41 epsilon=0.09999000000191018 step=571606
+2022-04-14 16:01:09,453 episode=279 score=22.0 avgScore=20.26 bestScore=20.41 epsilon=0.09999000000191018 step=573655
+2022-04-14 16:02:17,532 episode=280 score=22.0 avgScore=20.28 bestScore=20.41 epsilon=0.09999000000191018 step=575704
+2022-04-14 16:03:25,488 episode=281 score=19.0 avgScore=20.25 bestScore=20.41 epsilon=0.09999000000191018 step=577753
+2022-04-14 16:04:33,454 episode=282 score=20.0 avgScore=20.27 bestScore=20.41 epsilon=0.09999000000191018 step=579802
+2022-04-14 16:05:41,322 episode=283 score=20.0 avgScore=20.25 bestScore=20.41 epsilon=0.09999000000191018 step=581851
+2022-04-14 16:06:49,507 episode=284 score=23.0 avgScore=20.26 bestScore=20.41 epsilon=0.09999000000191018 step=583900
+2022-04-14 16:07:57,552 episode=285 score=20.0 avgScore=20.27 bestScore=20.41 epsilon=0.09999000000191018 step=585949
+2022-04-14 16:09:05,772 episode=286 score=24.0 avgScore=20.28 bestScore=20.41 epsilon=0.09999000000191018 step=587997
+2022-04-14 16:10:13,853 episode=287 score=19.0 avgScore=20.27 bestScore=20.41 epsilon=0.09999000000191018 step=590046
+2022-04-14 16:11:21,986 episode=288 score=20.0 avgScore=20.25 bestScore=20.41 epsilon=0.09999000000191018 step=592095
+2022-04-14 16:12:30,045 episode=289 score=21.0 avgScore=20.23 bestScore=20.41 epsilon=0.09999000000191018 step=594143
+2022-04-14 16:13:38,221 episode=290 score=20.0 avgScore=20.25 bestScore=20.41 epsilon=0.09999000000191018 step=596192
+2022-04-14 16:14:46,381 episode=291 score=21.0 avgScore=20.28 bestScore=20.41 epsilon=0.09999000000191018 step=598241
+2022-04-14 16:15:54,348 episode=292 score=21.0 avgScore=20.28 bestScore=20.41 epsilon=0.09999000000191018 step=600290
+2022-04-14 16:17:02,508 episode=293 score=21.0 avgScore=20.32 bestScore=20.41 epsilon=0.09999000000191018 step=602339
+2022-04-14 16:18:10,831 episode=294 score=22.0 avgScore=20.35 bestScore=20.41 epsilon=0.09999000000191018 step=604388
+2022-04-14 16:19:19,039 episode=295 score=24.0 avgScore=20.39 bestScore=20.41 epsilon=0.09999000000191018 step=606437
+2022-04-14 16:20:27,226 episode=296 score=24.0 avgScore=20.44 bestScore=20.41 epsilon=0.09999000000191018 step=608486
+2022-04-14 16:21:35,156 episode=297 score=23.0 avgScore=20.44 bestScore=20.44 epsilon=0.09999000000191018 step=610535
+2022-04-14 16:22:43,359 episode=298 score=17.0 avgScore=20.41 bestScore=20.44 epsilon=0.09999000000191018 step=612584
+2022-04-14 16:23:51,271 episode=299 score=20.0 avgScore=20.39 bestScore=20.44 epsilon=0.09999000000191018 step=614633
+2022-04-14 16:24:59,232 episode=300 score=19.0 avgScore=20.38 bestScore=20.44 epsilon=0.09999000000191018 step=616682
+2022-04-14 16:26:07,217 episode=301 score=23.0 avgScore=20.41 bestScore=20.44 epsilon=0.09999000000191018 step=618731
+2022-04-14 16:27:15,317 episode=302 score=20.0 avgScore=20.43 bestScore=20.44 epsilon=0.09999000000191018 step=620780
+2022-04-14 16:28:23,281 episode=303 score=18.0 avgScore=20.41 bestScore=20.44 epsilon=0.09999000000191018 step=622829
+2022-04-14 16:29:31,192 episode=304 score=19.0 avgScore=20.41 bestScore=20.44 epsilon=0.09999000000191018 step=624878
+2022-04-14 16:30:39,237 episode=305 score=18.0 avgScore=20.37 bestScore=20.44 epsilon=0.09999000000191018 step=626927
+2022-04-14 16:31:47,301 episode=306 score=22.0 avgScore=20.4 bestScore=20.44 epsilon=0.09999000000191018 step=628976
+2022-04-14 16:32:55,274 episode=307 score=22.0 avgScore=20.4 bestScore=20.44 epsilon=0.09999000000191018 step=631025
+2022-04-14 16:34:03,296 episode=308 score=18.0 avgScore=20.38 bestScore=20.44 epsilon=0.09999000000191018 step=633074
+2022-04-14 16:35:11,260 episode=309 score=21.0 avgScore=20.38 bestScore=20.44 epsilon=0.09999000000191018 step=635122
+2022-04-14 16:36:19,365 episode=310 score=20.0 avgScore=20.36 bestScore=20.44 epsilon=0.09999000000191018 step=637171
+2022-04-14 16:37:27,341 episode=311 score=19.0 avgScore=20.34 bestScore=20.44 epsilon=0.09999000000191018 step=639220
+2022-04-14 16:38:35,651 episode=312 score=18.0 avgScore=20.33 bestScore=20.44 epsilon=0.09999000000191018 step=641269
+2022-04-14 16:39:43,730 episode=313 score=19.0 avgScore=20.34 bestScore=20.44 epsilon=0.09999000000191018 step=643318
+2022-04-14 16:40:52,000 episode=314 score=18.0 avgScore=20.33 bestScore=20.44 epsilon=0.09999000000191018 step=645367
+2022-04-14 16:41:59,884 episode=315 score=20.0 avgScore=20.32 bestScore=20.44 epsilon=0.09999000000191018 step=647416
+2022-04-14 16:43:07,992 episode=316 score=21.0 avgScore=20.32 bestScore=20.44 epsilon=0.09999000000191018 step=649465
+2022-04-14 16:44:15,944 episode=317 score=21.0 avgScore=20.31 bestScore=20.44 epsilon=0.09999000000191018 step=651514
+2022-04-14 16:45:24,000 episode=318 score=18.0 avgScore=20.31 bestScore=20.44 epsilon=0.09999000000191018 step=653562
+2022-04-14 16:46:32,136 episode=319 score=22.0 avgScore=20.33 bestScore=20.44 epsilon=0.09999000000191018 step=655611
+2022-04-14 16:47:40,270 episode=320 score=21.0 avgScore=20.35 bestScore=20.44 epsilon=0.09999000000191018 step=657659
+2022-04-14 16:48:48,301 episode=321 score=21.0 avgScore=20.37 bestScore=20.44 epsilon=0.09999000000191018 step=659707
+2022-04-14 16:49:56,493 episode=322 score=21.0 avgScore=20.39 bestScore=20.44 epsilon=0.09999000000191018 step=661756
+2022-04-14 16:51:04,779 episode=323 score=20.0 avgScore=20.38 bestScore=20.44 epsilon=0.09999000000191018 step=663805
+2022-04-14 16:52:12,915 episode=324 score=20.0 avgScore=20.37 bestScore=20.44 epsilon=0.09999000000191018 step=665853
+2022-04-14 16:53:21,161 episode=325 score=19.0 avgScore=20.37 bestScore=20.44 epsilon=0.09999000000191018 step=667902
+2022-04-14 16:54:29,462 episode=326 score=20.0 avgScore=20.35 bestScore=20.44 epsilon=0.09999000000191018 step=669951
+2022-04-14 16:55:37,521 episode=327 score=22.0 avgScore=20.38 bestScore=20.44 epsilon=0.09999000000191018 step=671999
+2022-04-14 16:56:45,897 episode=328 score=20.0 avgScore=20.4 bestScore=20.44 epsilon=0.09999000000191018 step=674048
+2022-04-14 16:57:54,061 episode=329 score=21.0 avgScore=20.42 bestScore=20.44 epsilon=0.09999000000191018 step=676097
+2022-04-14 16:59:02,506 episode=330 score=23.0 avgScore=20.45 bestScore=20.44 epsilon=0.09999000000191018 step=678146
+2022-04-14 17:00:10,644 episode=331 score=21.0 avgScore=20.45 bestScore=20.45 epsilon=0.09999000000191018 step=680194
+2022-04-14 17:01:18,812 episode=332 score=23.0 avgScore=20.46 bestScore=20.45 epsilon=0.09999000000191018 step=682243
+2022-04-14 17:02:27,049 episode=333 score=22.0 avgScore=20.45 bestScore=20.46 epsilon=0.09999000000191018 step=684292
+2022-04-14 17:03:35,366 episode=334 score=19.0 avgScore=20.46 bestScore=20.46 epsilon=0.09999000000191018 step=686341
+2022-04-14 17:04:43,302 episode=335 score=20.0 avgScore=20.46 bestScore=20.46 epsilon=0.09999000000191018 step=688390
+2022-04-14 17:05:51,423 episode=336 score=22.0 avgScore=20.47 bestScore=20.46 epsilon=0.09999000000191018 step=690438
+2022-04-14 17:06:59,528 episode=337 score=16.0 avgScore=20.45 bestScore=20.47 epsilon=0.09999000000191018 step=692487
+2022-04-14 17:08:07,750 episode=338 score=19.0 avgScore=20.45 bestScore=20.47 epsilon=0.09999000000191018 step=694536
+2022-04-14 17:09:15,666 episode=339 score=21.0 avgScore=20.45 bestScore=20.47 epsilon=0.09999000000191018 step=696585
+2022-04-14 17:10:23,675 episode=340 score=21.0 avgScore=20.47 bestScore=20.47 epsilon=0.09999000000191018 step=698634
+2022-04-14 17:11:31,735 episode=341 score=22.0 avgScore=20.49 bestScore=20.47 epsilon=0.09999000000191018 step=700683
+2022-04-14 17:12:39,854 episode=342 score=24.0 avgScore=20.55 bestScore=20.49 epsilon=0.09999000000191018 step=702732
+2022-04-14 17:13:47,822 episode=343 score=22.0 avgScore=20.55 bestScore=20.55 epsilon=0.09999000000191018 step=704780
+2022-04-14 17:14:55,895 episode=344 score=17.0 avgScore=20.52 bestScore=20.55 epsilon=0.09999000000191018 step=706829
+2022-04-14 17:16:03,856 episode=345 score=19.0 avgScore=20.52 bestScore=20.55 epsilon=0.09999000000191018 step=708877
+2022-04-14 17:17:11,863 episode=346 score=21.0 avgScore=20.54 bestScore=20.55 epsilon=0.09999000000191018 step=710926
+2022-04-14 17:18:19,861 episode=347 score=22.0 avgScore=20.57 bestScore=20.55 epsilon=0.09999000000191018 step=712975
+2022-04-14 17:19:28,074 episode=348 score=20.0 avgScore=20.56 bestScore=20.57 epsilon=0.09999000000191018 step=715024
+2022-04-14 17:20:35,974 episode=349 score=20.0 avgScore=20.56 bestScore=20.57 epsilon=0.09999000000191018 step=717073
+2022-04-14 17:21:44,046 episode=350 score=23.0 avgScore=20.57 bestScore=20.57 epsilon=0.09999000000191018 step=719122
+2022-04-14 17:22:51,978 episode=351 score=21.0 avgScore=20.58 bestScore=20.57 epsilon=0.09999000000191018 step=721171
+2022-04-14 17:23:59,973 episode=352 score=19.0 avgScore=20.51 bestScore=20.58 epsilon=0.09999000000191018 step=723220
+2022-04-14 17:25:07,895 episode=353 score=22.0 avgScore=20.54 bestScore=20.58 epsilon=0.09999000000191018 step=725269
+2022-04-14 17:26:15,930 episode=354 score=19.0 avgScore=20.52 bestScore=20.58 epsilon=0.09999000000191018 step=727318
+2022-04-14 17:27:23,906 episode=355 score=21.0 avgScore=20.54 bestScore=20.58 epsilon=0.09999000000191018 step=729367
+2022-04-14 17:28:31,887 episode=356 score=22.0 avgScore=20.54 bestScore=20.58 epsilon=0.09999000000191018 step=731416
+2022-04-14 17:29:39,747 episode=357 score=21.0 avgScore=20.54 bestScore=20.58 epsilon=0.09999000000191018 step=733465
+2022-04-14 17:30:47,874 episode=358 score=20.0 avgScore=20.51 bestScore=20.58 epsilon=0.09999000000191018 step=735514
+2022-04-14 17:31:55,864 episode=359 score=18.0 avgScore=20.46 bestScore=20.58 epsilon=0.09999000000191018 step=737563
+2022-04-14 17:33:04,105 episode=360 score=21.0 avgScore=20.48 bestScore=20.58 epsilon=0.09999000000191018 step=739612
+2022-04-14 17:34:12,142 episode=361 score=23.0 avgScore=20.5 bestScore=20.58 epsilon=0.09999000000191018 step=741661
+2022-04-14 17:35:20,357 episode=362 score=22.0 avgScore=20.5 bestScore=20.58 epsilon=0.09999000000191018 step=743710
+2022-04-14 17:36:28,403 episode=363 score=23.0 avgScore=20.54 bestScore=20.58 epsilon=0.09999000000191018 step=745759
+2022-04-14 17:37:36,595 episode=364 score=21.0 avgScore=20.53 bestScore=20.58 epsilon=0.09999000000191018 step=747808
+2022-04-14 17:38:44,683 episode=365 score=21.0 avgScore=20.54 bestScore=20.58 epsilon=0.09999000000191018 step=749857
+2022-04-14 17:39:52,785 episode=366 score=20.0 avgScore=20.55 bestScore=20.58 epsilon=0.09999000000191018 step=751906
+2022-04-14 17:41:00,753 episode=367 score=19.0 avgScore=20.52 bestScore=20.58 epsilon=0.09999000000191018 step=753955
+2022-04-14 17:42:08,951 episode=368 score=21.0 avgScore=20.53 bestScore=20.58 epsilon=0.09999000000191018 step=756004
+2022-04-14 17:43:17,087 episode=369 score=18.0 avgScore=20.52 bestScore=20.58 epsilon=0.09999000000191018 step=758053
+2022-04-14 17:44:25,031 episode=370 score=21.0 avgScore=20.53 bestScore=20.58 epsilon=0.09999000000191018 step=760101
+2022-04-14 17:45:32,880 episode=371 score=20.0 avgScore=20.53 bestScore=20.58 epsilon=0.09999000000191018 step=762150
+2022-04-14 17:46:41,113 episode=372 score=21.0 avgScore=20.54 bestScore=20.58 epsilon=0.09999000000191018 step=764199
+2022-04-14 17:47:49,262 episode=373 score=22.0 avgScore=20.58 bestScore=20.58 epsilon=0.09999000000191018 step=766247
+2022-04-14 17:48:57,594 episode=374 score=23.0 avgScore=20.62 bestScore=20.58 epsilon=0.09999000000191018 step=768296
+2022-04-14 17:50:05,599 episode=375 score=19.0 avgScore=20.61 bestScore=20.62 epsilon=0.09999000000191018 step=770344
+2022-04-14 17:51:13,591 episode=376 score=20.0 avgScore=20.62 bestScore=20.62 epsilon=0.09999000000191018 step=772393
+2022-04-14 17:52:21,616 episode=377 score=20.0 avgScore=20.6 bestScore=20.62 epsilon=0.09999000000191018 step=774442
+2022-04-14 17:53:29,721 episode=378 score=22.0 avgScore=20.61 bestScore=20.62 epsilon=0.09999000000191018 step=776491
+2022-04-14 17:54:37,774 episode=379 score=22.0 avgScore=20.61 bestScore=20.62 epsilon=0.09999000000191018 step=778540
+2022-04-14 17:55:46,044 episode=380 score=21.0 avgScore=20.6 bestScore=20.62 epsilon=0.09999000000191018 step=780589
+2022-04-14 17:56:54,144 episode=381 score=21.0 avgScore=20.62 bestScore=20.62 epsilon=0.09999000000191018 step=782638
+2022-04-14 17:58:02,351 episode=382 score=21.0 avgScore=20.63 bestScore=20.62 epsilon=0.09999000000191018 step=784687
+2022-04-14 17:59:10,360 episode=383 score=21.0 avgScore=20.64 bestScore=20.63 epsilon=0.09999000000191018 step=786735
+2022-04-14 18:00:18,505 episode=384 score=21.0 avgScore=20.62 bestScore=20.64 epsilon=0.09999000000191018 step=788784
+2022-04-14 18:01:26,369 episode=385 score=23.0 avgScore=20.65 bestScore=20.64 epsilon=0.09999000000191018 step=790833
+2022-04-14 18:02:34,452 episode=386 score=21.0 avgScore=20.62 bestScore=20.65 epsilon=0.09999000000191018 step=792882
+2022-04-14 18:03:42,374 episode=387 score=19.0 avgScore=20.62 bestScore=20.65 epsilon=0.09999000000191018 step=794931
+2022-04-14 18:04:50,421 episode=388 score=21.0 avgScore=20.63 bestScore=20.65 epsilon=0.09999000000191018 step=796980
+2022-04-14 18:05:58,485 episode=389 score=22.0 avgScore=20.64 bestScore=20.65 epsilon=0.09999000000191018 step=799029
+2022-04-14 18:07:06,713 episode=390 score=21.0 avgScore=20.65 bestScore=20.65 epsilon=0.09999000000191018 step=801078
+2022-04-14 18:08:14,805 episode=391 score=22.0 avgScore=20.66 bestScore=20.65 epsilon=0.09999000000191018 step=803127
+2022-04-14 18:09:22,887 episode=392 score=19.0 avgScore=20.64 bestScore=20.66 epsilon=0.09999000000191018 step=805175
+2022-04-14 18:10:31,089 episode=393 score=22.0 avgScore=20.65 bestScore=20.66 epsilon=0.09999000000191018 step=807224
+2022-04-14 18:11:39,341 episode=394 score=23.0 avgScore=20.66 bestScore=20.66 epsilon=0.09999000000191018 step=809273
+2022-04-14 18:12:47,570 episode=395 score=20.0 avgScore=20.62 bestScore=20.66 epsilon=0.09999000000191018 step=811322
+2022-04-14 18:13:55,892 episode=396 score=21.0 avgScore=20.59 bestScore=20.66 epsilon=0.09999000000191018 step=813370
+2022-04-14 18:15:04,188 episode=397 score=23.0 avgScore=20.59 bestScore=20.66 epsilon=0.09999000000191018 step=815419
+2022-04-14 18:16:12,448 episode=398 score=22.0 avgScore=20.64 bestScore=20.66 epsilon=0.09999000000191018 step=817468
+2022-04-14 18:17:20,610 episode=399 score=21.0 avgScore=20.65 bestScore=20.66 epsilon=0.09999000000191018 step=819517
+2022-04-14 18:18:28,819 episode=400 score=21.0 avgScore=20.67 bestScore=20.66 epsilon=0.09999000000191018 step=821566
+2022-04-14 18:19:36,960 episode=401 score=20.0 avgScore=20.64 bestScore=20.67 epsilon=0.09999000000191018 step=823615
+2022-04-14 18:20:45,047 episode=402 score=20.0 avgScore=20.64 bestScore=20.67 epsilon=0.09999000000191018 step=825664
+2022-04-14 18:21:53,080 episode=403 score=20.0 avgScore=20.66 bestScore=20.67 epsilon=0.09999000000191018 step=827713
+2022-04-14 18:23:01,194 episode=404 score=19.0 avgScore=20.66 bestScore=20.67 epsilon=0.09999000000191018 step=829762
+2022-04-14 18:24:09,236 episode=405 score=21.0 avgScore=20.69 bestScore=20.67 epsilon=0.09999000000191018 step=831811
+2022-04-14 18:25:17,484 episode=406 score=23.0 avgScore=20.7 bestScore=20.69 epsilon=0.09999000000191018 step=833860
+2022-04-14 18:26:25,527 episode=407 score=21.0 avgScore=20.69 bestScore=20.7 epsilon=0.09999000000191018 step=835908
+2022-04-14 18:27:33,650 episode=408 score=21.0 avgScore=20.72 bestScore=20.7 epsilon=0.09999000000191018 step=837957
+2022-04-14 18:28:41,713 episode=409 score=21.0 avgScore=20.72 bestScore=20.72 epsilon=0.09999000000191018 step=840005
+2022-04-14 18:29:49,703 episode=410 score=19.0 avgScore=20.71 bestScore=20.72 epsilon=0.09999000000191018 step=842054
+2022-04-14 18:30:57,705 episode=411 score=24.0 avgScore=20.76 bestScore=20.72 epsilon=0.09999000000191018 step=844103
+2022-04-14 18:32:05,700 episode=412 score=21.0 avgScore=20.79 bestScore=20.76 epsilon=0.09999000000191018 step=846152
+2022-04-14 18:33:13,698 episode=413 score=20.0 avgScore=20.8 bestScore=20.79 epsilon=0.09999000000191018 step=848201
+2022-04-14 18:34:21,971 episode=414 score=20.0 avgScore=20.82 bestScore=20.8 epsilon=0.09999000000191018 step=850249
+2022-04-14 18:35:29,978 episode=415 score=22.0 avgScore=20.84 bestScore=20.82 epsilon=0.09999000000191018 step=852297
+2022-04-14 18:36:38,092 episode=416 score=19.0 avgScore=20.82 bestScore=20.84 epsilon=0.09999000000191018 step=854345
+2022-04-14 18:37:46,241 episode=417 score=20.0 avgScore=20.81 bestScore=20.84 epsilon=0.09999000000191018 step=856394
+2022-04-14 18:38:54,601 episode=418 score=22.0 avgScore=20.85 bestScore=20.84 epsilon=0.09999000000191018 step=858443
+2022-04-14 18:39:54,916 episode=419 score=20.0 avgScore=20.83 bestScore=20.85 epsilon=0.09999000000191018 step=860492
+2022-04-14 18:40:55,004 episode=420 score=23.0 avgScore=20.85 bestScore=20.85 epsilon=0.09999000000191018 step=862541
+2022-04-14 18:41:55,212 episode=421 score=20.0 avgScore=20.84 bestScore=20.85 epsilon=0.09999000000191018 step=864590
+2022-04-14 18:42:55,463 episode=422 score=20.0 avgScore=20.83 bestScore=20.85 epsilon=0.09999000000191018 step=866639
+2022-04-14 18:43:55,653 episode=423 score=21.0 avgScore=20.84 bestScore=20.85 epsilon=0.09999000000191018 step=868687
+2022-04-14 18:44:55,831 episode=424 score=21.0 avgScore=20.85 bestScore=20.85 epsilon=0.09999000000191018 step=870736
+2022-04-14 18:45:56,082 episode=425 score=22.0 avgScore=20.88 bestScore=20.85 epsilon=0.09999000000191018 step=872785
+2022-04-14 18:47:04,432 episode=426 score=24.0 avgScore=20.92 bestScore=20.88 epsilon=0.09999000000191018 step=874833
+2022-04-14 18:48:12,551 episode=427 score=19.0 avgScore=20.89 bestScore=20.92 epsilon=0.09999000000191018 step=876881
+2022-04-14 18:49:20,771 episode=428 score=21.0 avgScore=20.9 bestScore=20.92 epsilon=0.09999000000191018 step=878930
+2022-04-14 18:50:28,817 episode=429 score=21.0 avgScore=20.9 bestScore=20.92 epsilon=0.09999000000191018 step=880978
+2022-04-14 18:51:36,961 episode=430 score=20.0 avgScore=20.87 bestScore=20.92 epsilon=0.09999000000191018 step=883027
+2022-04-14 18:52:44,993 episode=431 score=22.0 avgScore=20.88 bestScore=20.92 epsilon=0.09999000000191018 step=885076
+2022-04-14 18:53:53,010 episode=432 score=19.0 avgScore=20.84 bestScore=20.92 epsilon=0.09999000000191018 step=887125
+2022-04-14 18:55:01,115 episode=433 score=21.0 avgScore=20.83 bestScore=20.92 epsilon=0.09999000000191018 step=889174
+2022-04-14 18:56:09,152 episode=434 score=21.0 avgScore=20.85 bestScore=20.92 epsilon=0.09999000000191018 step=891222
+2022-04-14 18:57:17,113 episode=435 score=20.0 avgScore=20.85 bestScore=20.92 epsilon=0.09999000000191018 step=893271
+2022-04-14 18:58:25,338 episode=436 score=21.0 avgScore=20.84 bestScore=20.92 epsilon=0.09999000000191018 step=895319
+2022-04-14 18:59:33,350 episode=437 score=20.0 avgScore=20.88 bestScore=20.92 epsilon=0.09999000000191018 step=897368
+2022-04-14 19:00:41,561 episode=438 score=22.0 avgScore=20.91 bestScore=20.92 epsilon=0.09999000000191018 step=899417
+2022-04-14 19:01:49,592 episode=439 score=22.0 avgScore=20.92 bestScore=20.92 epsilon=0.09999000000191018 step=901466
+2022-04-14 19:02:57,841 episode=440 score=20.0 avgScore=20.91 bestScore=20.92 epsilon=0.09999000000191018 step=903515
+2022-04-14 19:04:05,973 episode=441 score=21.0 avgScore=20.9 bestScore=20.92 epsilon=0.09999000000191018 step=905564
+2022-04-14 19:05:14,096 episode=442 score=18.0 avgScore=20.84 bestScore=20.92 epsilon=0.09999000000191018 step=907613
+2022-04-14 19:06:22,126 episode=443 score=22.0 avgScore=20.84 bestScore=20.92 epsilon=0.09999000000191018 step=909662
+2022-04-14 19:07:30,463 episode=444 score=22.0 avgScore=20.89 bestScore=20.92 epsilon=0.09999000000191018 step=911711
+2022-04-14 19:08:38,517 episode=445 score=22.0 avgScore=20.92 bestScore=20.92 epsilon=0.09999000000191018 step=913760
+2022-04-14 19:09:46,538 episode=446 score=20.0 avgScore=20.91 bestScore=20.92 epsilon=0.09999000000191018 step=915808
+2022-04-14 19:10:54,666 episode=447 score=19.0 avgScore=20.88 bestScore=20.92 epsilon=0.09999000000191018 step=917857
+2022-04-14 19:12:02,828 episode=448 score=19.0 avgScore=20.87 bestScore=20.92 epsilon=0.09999000000191018 step=919906
+2022-04-14 19:13:10,887 episode=449 score=20.0 avgScore=20.87 bestScore=20.92 epsilon=0.09999000000191018 step=921955
+2022-04-14 19:14:19,174 episode=450 score=19.0 avgScore=20.83 bestScore=20.92 epsilon=0.09999000000191018 step=924004
+2022-04-14 19:15:27,495 episode=451 score=20.0 avgScore=20.82 bestScore=20.92 epsilon=0.09999000000191018 step=926053
+2022-04-14 19:16:35,763 episode=452 score=17.0 avgScore=20.8 bestScore=20.92 epsilon=0.09999000000191018 step=928102
+2022-04-14 19:17:43,836 episode=453 score=21.0 avgScore=20.79 bestScore=20.92 epsilon=0.09999000000191018 step=930151
+2022-04-14 19:18:52,125 episode=454 score=24.0 avgScore=20.84 bestScore=20.92 epsilon=0.09999000000191018 step=932200
+2022-04-14 19:20:00,344 episode=455 score=21.0 avgScore=20.84 bestScore=20.92 epsilon=0.09999000000191018 step=934249
+2022-04-14 19:21:08,602 episode=456 score=19.0 avgScore=20.81 bestScore=20.92 epsilon=0.09999000000191018 step=936298
+2022-04-14 19:22:16,842 episode=457 score=22.0 avgScore=20.82 bestScore=20.92 epsilon=0.09999000000191018 step=938347
+2022-04-14 19:23:25,414 episode=458 score=19.0 avgScore=20.81 bestScore=20.92 epsilon=0.09999000000191018 step=940396
+2022-04-14 19:24:33,769 episode=459 score=19.0 avgScore=20.82 bestScore=20.92 epsilon=0.09999000000191018 step=942444
+2022-04-14 19:25:42,194 episode=460 score=20.0 avgScore=20.81 bestScore=20.92 epsilon=0.09999000000191018 step=944493
+2022-04-14 19:26:50,577 episode=461 score=18.0 avgScore=20.76 bestScore=20.92 epsilon=0.09999000000191018 step=946542
+2022-04-14 19:27:58,911 episode=462 score=20.0 avgScore=20.74 bestScore=20.92 epsilon=0.09999000000191018 step=948591
+2022-04-14 19:29:07,242 episode=463 score=20.0 avgScore=20.71 bestScore=20.92 epsilon=0.09999000000191018 step=950639
+2022-04-14 19:30:15,560 episode=464 score=21.0 avgScore=20.71 bestScore=20.92 epsilon=0.09999000000191018 step=952687
+2022-04-14 19:31:23,898 episode=465 score=20.0 avgScore=20.7 bestScore=20.92 epsilon=0.09999000000191018 step=954736
+2022-04-14 19:32:32,334 episode=466 score=22.0 avgScore=20.72 bestScore=20.92 epsilon=0.09999000000191018 step=956785
+2022-04-14 19:33:40,718 episode=467 score=22.0 avgScore=20.75 bestScore=20.92 epsilon=0.09999000000191018 step=958834
+2022-04-14 19:34:49,306 episode=468 score=24.0 avgScore=20.78 bestScore=20.92 epsilon=0.09999000000191018 step=960883
+2022-04-14 19:35:57,559 episode=469 score=20.0 avgScore=20.8 bestScore=20.92 epsilon=0.09999000000191018 step=962931
+2022-04-14 19:37:06,102 episode=470 score=20.0 avgScore=20.79 bestScore=20.92 epsilon=0.09999000000191018 step=964980
+2022-04-14 19:38:14,474 episode=471 score=18.0 avgScore=20.77 bestScore=20.92 epsilon=0.09999000000191018 step=967028
+2022-04-14 19:39:23,125 episode=472 score=21.0 avgScore=20.77 bestScore=20.92 epsilon=0.09999000000191018 step=969077
+2022-04-14 19:40:31,525 episode=473 score=21.0 avgScore=20.76 bestScore=20.92 epsilon=0.09999000000191018 step=971126
+2022-04-14 19:41:40,027 episode=474 score=19.0 avgScore=20.72 bestScore=20.92 epsilon=0.09999000000191018 step=973174
+2022-04-14 19:42:48,503 episode=475 score=18.0 avgScore=20.71 bestScore=20.92 epsilon=0.09999000000191018 step=975223
+2022-04-14 19:43:57,030 episode=476 score=21.0 avgScore=20.72 bestScore=20.92 epsilon=0.09999000000191018 step=977272
+2022-04-14 19:45:05,415 episode=477 score=22.0 avgScore=20.74 bestScore=20.92 epsilon=0.09999000000191018 step=979321
+2022-04-14 19:46:13,865 episode=478 score=22.0 avgScore=20.74 bestScore=20.92 epsilon=0.09999000000191018 step=981370
+2022-04-14 19:47:22,245 episode=479 score=24.0 avgScore=20.76 bestScore=20.92 epsilon=0.09999000000191018 step=983419
+2022-04-14 19:48:30,786 episode=480 score=21.0 avgScore=20.76 bestScore=20.92 epsilon=0.09999000000191018 step=985468
+2022-04-14 19:49:39,205 episode=481 score=19.0 avgScore=20.74 bestScore=20.92 epsilon=0.09999000000191018 step=987516
+2022-04-14 19:50:47,688 episode=482 score=20.0 avgScore=20.73 bestScore=20.92 epsilon=0.09999000000191018 step=989565
+2022-04-14 19:51:56,019 episode=483 score=21.0 avgScore=20.73 bestScore=20.92 epsilon=0.09999000000191018 step=991614
+2022-04-14 19:53:04,435 episode=484 score=21.0 avgScore=20.73 bestScore=20.92 epsilon=0.09999000000191018 step=993663
+2022-04-14 19:54:12,683 episode=485 score=19.0 avgScore=20.69 bestScore=20.92 epsilon=0.09999000000191018 step=995712
+2022-04-14 19:55:21,093 episode=486 score=22.0 avgScore=20.7 bestScore=20.92 epsilon=0.09999000000191018 step=997761
+2022-04-14 19:56:29,444 episode=487 score=19.0 avgScore=20.7 bestScore=20.92 epsilon=0.09999000000191018 step=999810
+2022-04-14 19:57:37,979 episode=488 score=19.0 avgScore=20.68 bestScore=20.92 epsilon=0.09999000000191018 step=1001859
+2022-04-14 19:58:46,470 episode=489 score=21.0 avgScore=20.67 bestScore=20.92 epsilon=0.09999000000191018 step=1003908
+2022-04-14 19:59:54,893 episode=490 score=19.0 avgScore=20.65 bestScore=20.92 epsilon=0.09999000000191018 step=1005957
+2022-04-14 20:01:03,246 episode=491 score=22.0 avgScore=20.65 bestScore=20.92 epsilon=0.09999000000191018 step=1008006
+2022-04-14 20:02:11,675 episode=492 score=21.0 avgScore=20.67 bestScore=20.92 epsilon=0.09999000000191018 step=1010054
+2022-04-14 20:03:20,020 episode=493 score=19.0 avgScore=20.64 bestScore=20.92 epsilon=0.09999000000191018 step=1012103
+2022-04-14 20:04:28,388 episode=494 score=22.0 avgScore=20.63 bestScore=20.92 epsilon=0.09999000000191018 step=1014152
+2022-04-14 20:05:36,678 episode=495 score=22.0 avgScore=20.65 bestScore=20.92 epsilon=0.09999000000191018 step=1016201
+2022-04-14 20:06:45,161 episode=496 score=20.0 avgScore=20.64 bestScore=20.92 epsilon=0.09999000000191018 step=1018250
+2022-04-14 20:07:53,568 episode=497 score=22.0 avgScore=20.63 bestScore=20.92 epsilon=0.09999000000191018 step=1020299
+2022-04-14 20:09:01,996 episode=498 score=21.0 avgScore=20.62 bestScore=20.92 epsilon=0.09999000000191018 step=1022348
+2022-04-14 20:10:10,316 episode=499 score=21.0 avgScore=20.62 bestScore=20.92 epsilon=0.09999000000191018 step=1024396
+2022-04-14 20:11:18,708 episode=500 score=20.0 avgScore=20.61 bestScore=20.92 epsilon=0.09999000000191018 step=1026444
+2022-04-14 20:12:27,159 episode=501 score=19.0 avgScore=20.6 bestScore=20.92 epsilon=0.09999000000191018 step=1028493
+2022-04-14 20:13:35,634 episode=502 score=22.0 avgScore=20.62 bestScore=20.92 epsilon=0.09999000000191018 step=1030542
+2022-04-14 20:14:44,071 episode=503 score=18.0 avgScore=20.6 bestScore=20.92 epsilon=0.09999000000191018 step=1032591
+2022-04-14 20:15:52,507 episode=504 score=20.0 avgScore=20.61 bestScore=20.92 epsilon=0.09999000000191018 step=1034639
+2022-04-14 20:17:00,859 episode=505 score=16.0 avgScore=20.56 bestScore=20.92 epsilon=0.09999000000191018 step=1036688
+2022-04-14 20:18:09,447 episode=506 score=18.0 avgScore=20.51 bestScore=20.92 epsilon=0.09999000000191018 step=1038737
+2022-04-14 20:19:17,774 episode=507 score=21.0 avgScore=20.51 bestScore=20.92 epsilon=0.09999000000191018 step=1040786
+2022-04-14 20:20:26,257 episode=508 score=18.0 avgScore=20.48 bestScore=20.92 epsilon=0.09999000000191018 step=1042835
+2022-04-14 20:21:34,664 episode=509 score=22.0 avgScore=20.49 bestScore=20.92 epsilon=0.09999000000191018 step=1044883
+2022-04-14 20:22:43,160 episode=510 score=18.0 avgScore=20.48 bestScore=20.92 epsilon=0.09999000000191018 step=1046932
+2022-04-14 20:23:51,528 episode=511 score=20.0 avgScore=20.44 bestScore=20.92 epsilon=0.09999000000191018 step=1048981
+2022-04-14 20:24:59,953 episode=512 score=20.0 avgScore=20.43 bestScore=20.92 epsilon=0.09999000000191018 step=1051030
+2022-04-14 20:26:08,350 episode=513 score=22.0 avgScore=20.45 bestScore=20.92 epsilon=0.09999000000191018 step=1053079
+2022-04-14 20:27:16,814 episode=514 score=21.0 avgScore=20.46 bestScore=20.92 epsilon=0.09999000000191018 step=1055128
+2022-04-14 20:28:25,214 episode=515 score=19.0 avgScore=20.43 bestScore=20.92 epsilon=0.09999000000191018 step=1057177
+2022-04-14 20:29:33,647 episode=516 score=21.0 avgScore=20.45 bestScore=20.92 epsilon=0.09999000000191018 step=1059226
+2022-04-14 20:30:42,021 episode=517 score=18.0 avgScore=20.43 bestScore=20.92 epsilon=0.09999000000191018 step=1061275
+2022-04-14 20:31:50,497 episode=518 score=18.0 avgScore=20.39 bestScore=20.92 epsilon=0.09999000000191018 step=1063324
+2022-04-14 20:32:58,989 episode=519 score=22.0 avgScore=20.41 bestScore=20.92 epsilon=0.09999000000191018 step=1065373
+2022-04-14 20:34:07,480 episode=520 score=20.0 avgScore=20.38 bestScore=20.92 epsilon=0.09999000000191018 step=1067422
+2022-04-14 20:35:15,618 episode=521 score=19.0 avgScore=20.37 bestScore=20.92 epsilon=0.09999000000191018 step=1069471
+2022-04-14 20:36:24,046 episode=522 score=19.0 avgScore=20.36 bestScore=20.92 epsilon=0.09999000000191018 step=1071520
+2022-04-14 20:37:32,432 episode=523 score=19.0 avgScore=20.34 bestScore=20.92 epsilon=0.09999000000191018 step=1073569
+2022-04-14 20:38:41,090 episode=524 score=20.0 avgScore=20.33 bestScore=20.92 epsilon=0.09999000000191018 step=1075618
+2022-04-14 20:39:49,515 episode=525 score=20.0 avgScore=20.31 bestScore=20.92 epsilon=0.09999000000191018 step=1077666
+2022-04-14 20:40:58,138 episode=526 score=18.0 avgScore=20.25 bestScore=20.92 epsilon=0.09999000000191018 step=1079715
+2022-04-14 20:42:06,577 episode=527 score=19.0 avgScore=20.25 bestScore=20.92 epsilon=0.09999000000191018 step=1081764
+2022-04-14 20:43:15,140 episode=528 score=21.0 avgScore=20.25 bestScore=20.92 epsilon=0.09999000000191018 step=1083813
+2022-04-14 20:44:23,654 episode=529 score=20.0 avgScore=20.24 bestScore=20.92 epsilon=0.09999000000191018 step=1085862
+2022-04-14 20:45:32,254 episode=530 score=20.0 avgScore=20.24 bestScore=20.92 epsilon=0.09999000000191018 step=1087910
+2022-04-14 20:46:40,793 episode=531 score=22.0 avgScore=20.24 bestScore=20.92 epsilon=0.09999000000191018 step=1089959
+2022-04-14 20:47:49,537 episode=532 score=21.0 avgScore=20.26 bestScore=20.92 epsilon=0.09999000000191018 step=1092008
+2022-04-14 20:48:57,870 episode=533 score=23.0 avgScore=20.28 bestScore=20.92 epsilon=0.09999000000191018 step=1094057
+2022-04-14 20:50:06,268 episode=534 score=23.0 avgScore=20.3 bestScore=20.92 epsilon=0.09999000000191018 step=1096106
+2022-04-14 20:51:14,522 episode=535 score=18.0 avgScore=20.28 bestScore=20.92 epsilon=0.09999000000191018 step=1098155
+2022-04-14 20:52:23,142 episode=536 score=20.0 avgScore=20.27 bestScore=20.92 epsilon=0.09999000000191018 step=1100204
+2022-04-14 20:53:31,721 episode=537 score=20.0 avgScore=20.27 bestScore=20.92 epsilon=0.09999000000191018 step=1102253
+2022-04-14 20:54:40,324 episode=538 score=20.0 avgScore=20.25 bestScore=20.92 epsilon=0.09999000000191018 step=1104302
+2022-04-14 20:55:48,820 episode=539 score=23.0 avgScore=20.26 bestScore=20.92 epsilon=0.09999000000191018 step=1106350
+2022-04-14 20:56:57,272 episode=540 score=20.0 avgScore=20.26 bestScore=20.92 epsilon=0.09999000000191018 step=1108399
+2022-04-14 20:58:05,746 episode=541 score=21.0 avgScore=20.26 bestScore=20.92 epsilon=0.09999000000191018 step=1110447
+2022-04-14 20:59:14,041 episode=542 score=20.0 avgScore=20.28 bestScore=20.92 epsilon=0.09999000000191018 step=1112495
+2022-04-14 21:00:22,445 episode=543 score=16.0 avgScore=20.22 bestScore=20.92 epsilon=0.09999000000191018 step=1114544
+2022-04-14 21:01:31,009 episode=544 score=23.0 avgScore=20.23 bestScore=20.92 epsilon=0.09999000000191018 step=1116593
+2022-04-14 21:02:39,496 episode=545 score=17.0 avgScore=20.18 bestScore=20.92 epsilon=0.09999000000191018 step=1118642
+2022-04-14 21:03:47,903 episode=546 score=18.0 avgScore=20.16 bestScore=20.92 epsilon=0.09999000000191018 step=1120691
+2022-04-14 21:04:56,335 episode=547 score=20.0 avgScore=20.17 bestScore=20.92 epsilon=0.09999000000191018 step=1122740
+2022-04-14 21:06:04,866 episode=548 score=20.0 avgScore=20.18 bestScore=20.92 epsilon=0.09999000000191018 step=1124789
+2022-04-14 21:07:13,289 episode=549 score=20.0 avgScore=20.18 bestScore=20.92 epsilon=0.09999000000191018 step=1126838
+2022-04-14 21:08:21,938 episode=550 score=20.0 avgScore=20.19 bestScore=20.92 epsilon=0.09999000000191018 step=1128887
+2022-04-14 21:09:30,395 episode=551 score=19.0 avgScore=20.18 bestScore=20.92 epsilon=0.09999000000191018 step=1130936
+2022-04-14 21:10:38,999 episode=552 score=18.0 avgScore=20.19 bestScore=20.92 epsilon=0.09999000000191018 step=1132985
+2022-04-14 21:11:47,473 episode=553 score=18.0 avgScore=20.16 bestScore=20.92 epsilon=0.09999000000191018 step=1135034
+2022-04-14 21:12:55,977 episode=554 score=20.0 avgScore=20.12 bestScore=20.92 epsilon=0.09999000000191018 step=1137083
+2022-04-14 21:14:04,415 episode=555 score=20.0 avgScore=20.11 bestScore=20.92 epsilon=0.09999000000191018 step=1139132
+2022-04-14 21:15:12,775 episode=556 score=19.0 avgScore=20.11 bestScore=20.92 epsilon=0.09999000000191018 step=1141181
+2022-04-14 21:16:20,419 episode=557 score=21.0 avgScore=20.1 bestScore=20.92 epsilon=0.09999000000191018 step=1143229
+2022-04-14 21:17:28,859 episode=558 score=19.0 avgScore=20.1 bestScore=20.92 epsilon=0.09999000000191018 step=1145277
+2022-04-14 21:18:37,382 episode=559 score=21.0 avgScore=20.12 bestScore=20.92 epsilon=0.09999000000191018 step=1147326
+2022-04-14 21:19:45,991 episode=560 score=19.0 avgScore=20.11 bestScore=20.92 epsilon=0.09999000000191018 step=1149375
+2022-04-14 21:20:54,421 episode=561 score=16.0 avgScore=20.09 bestScore=20.92 epsilon=0.09999000000191018 step=1151423
+2022-04-14 21:22:02,873 episode=562 score=21.0 avgScore=20.1 bestScore=20.92 epsilon=0.09999000000191018 step=1153471
+2022-04-14 21:23:11,239 episode=563 score=20.0 avgScore=20.1 bestScore=20.92 epsilon=0.09999000000191018 step=1155520
+2022-04-14 21:24:19,779 episode=564 score=20.0 avgScore=20.09 bestScore=20.92 epsilon=0.09999000000191018 step=1157568
+2022-04-14 21:25:28,194 episode=565 score=22.0 avgScore=20.11 bestScore=20.92 epsilon=0.09999000000191018 step=1159617
+2022-04-14 21:26:36,898 episode=566 score=22.0 avgScore=20.11 bestScore=20.92 epsilon=0.09999000000191018 step=1161666
+2022-04-14 21:27:45,283 episode=567 score=19.0 avgScore=20.08 bestScore=20.92 epsilon=0.09999000000191018 step=1163714
+2022-04-14 21:28:53,745 episode=568 score=18.0 avgScore=20.02 bestScore=20.92 epsilon=0.09999000000191018 step=1165763
+2022-04-14 21:30:02,119 episode=569 score=17.0 avgScore=19.99 bestScore=20.92 epsilon=0.09999000000191018 step=1167812
+2022-04-14 21:31:10,593 episode=570 score=20.0 avgScore=19.99 bestScore=20.92 epsilon=0.09999000000191018 step=1169861
+2022-04-14 21:32:19,144 episode=571 score=20.0 avgScore=20.01 bestScore=20.92 epsilon=0.09999000000191018 step=1171910
+2022-04-14 21:33:27,742 episode=572 score=22.0 avgScore=20.02 bestScore=20.92 epsilon=0.09999000000191018 step=1173959
+2022-04-14 21:34:36,129 episode=573 score=19.0 avgScore=20.0 bestScore=20.92 epsilon=0.09999000000191018 step=1176008
+2022-04-14 21:35:44,565 episode=574 score=19.0 avgScore=20.0 bestScore=20.92 epsilon=0.09999000000191018 step=1178057
+2022-04-14 21:36:52,749 episode=575 score=18.0 avgScore=20.0 bestScore=20.92 epsilon=0.09999000000191018 step=1180106
+2022-04-14 21:38:01,211 episode=576 score=15.0 avgScore=19.94 bestScore=20.92 epsilon=0.09999000000191018 step=1182155
+2022-04-14 21:39:09,554 episode=577 score=20.0 avgScore=19.92 bestScore=20.92 epsilon=0.09999000000191018 step=1184204
+2022-04-14 21:40:18,006 episode=578 score=17.0 avgScore=19.87 bestScore=20.92 epsilon=0.09999000000191018 step=1186253
+2022-04-14 21:41:26,357 episode=579 score=18.0 avgScore=19.81 bestScore=20.92 epsilon=0.09999000000191018 step=1188302
+2022-04-14 21:42:34,823 episode=580 score=21.0 avgScore=19.81 bestScore=20.92 epsilon=0.09999000000191018 step=1190351
+2022-04-14 21:43:43,145 episode=581 score=19.0 avgScore=19.81 bestScore=20.92 epsilon=0.09999000000191018 step=1192400
+2022-04-14 21:44:51,456 episode=582 score=18.0 avgScore=19.79 bestScore=20.92 epsilon=0.09999000000191018 step=1194448
+2022-04-14 21:45:59,968 episode=583 score=20.0 avgScore=19.78 bestScore=20.92 epsilon=0.09999000000191018 step=1196497
+2022-04-14 21:47:08,188 episode=584 score=17.0 avgScore=19.74 bestScore=20.92 epsilon=0.09999000000191018 step=1198545
+2022-04-14 21:48:16,276 episode=585 score=21.0 avgScore=19.76 bestScore=20.92 epsilon=0.09999000000191018 step=1200594
+2022-04-14 21:49:24,652 episode=586 score=21.0 avgScore=19.75 bestScore=20.92 epsilon=0.09999000000191018 step=1202642
+2022-04-14 21:50:32,853 episode=587 score=19.0 avgScore=19.75 bestScore=20.92 epsilon=0.09999000000191018 step=1204691
+2022-04-14 21:51:41,189 episode=588 score=22.0 avgScore=19.78 bestScore=20.92 epsilon=0.09999000000191018 step=1206740
+2022-04-14 21:52:49,398 episode=589 score=18.0 avgScore=19.75 bestScore=20.92 epsilon=0.09999000000191018 step=1208789
+2022-04-14 21:53:57,645 episode=590 score=23.0 avgScore=19.79 bestScore=20.92 epsilon=0.09999000000191018 step=1210838
+2022-04-14 21:55:05,685 episode=591 score=22.0 avgScore=19.79 bestScore=20.92 epsilon=0.09999000000191018 step=1212886
+2022-04-14 21:56:14,069 episode=592 score=21.0 avgScore=19.79 bestScore=20.92 epsilon=0.09999000000191018 step=1214935
+2022-04-14 21:57:22,181 episode=593 score=19.0 avgScore=19.79 bestScore=20.92 epsilon=0.09999000000191018 step=1216983
+2022-04-14 21:58:30,401 episode=594 score=22.0 avgScore=19.79 bestScore=20.92 epsilon=0.09999000000191018 step=1219031
+2022-04-14 21:59:38,408 episode=595 score=19.0 avgScore=19.76 bestScore=20.92 epsilon=0.09999000000191018 step=1221079
+2022-04-14 22:00:46,509 episode=596 score=23.0 avgScore=19.79 bestScore=20.92 epsilon=0.09999000000191018 step=1223128
+2022-04-14 22:01:54,505 episode=597 score=21.0 avgScore=19.78 bestScore=20.92 epsilon=0.09999000000191018 step=1225177
+2022-04-14 22:03:02,677 episode=598 score=19.0 avgScore=19.76 bestScore=20.92 epsilon=0.09999000000191018 step=1227226
+2022-04-14 22:04:10,636 episode=599 score=19.0 avgScore=19.74 bestScore=20.92 epsilon=0.09999000000191018 step=1229275
+2022-04-14 22:05:18,636 episode=600 score=18.0 avgScore=19.72 bestScore=20.92 epsilon=0.09999000000191018 step=1231324
+2022-04-14 22:06:26,570 episode=601 score=17.0 avgScore=19.7 bestScore=20.92 epsilon=0.09999000000191018 step=1233373
+2022-04-14 22:07:34,575 episode=602 score=20.0 avgScore=19.68 bestScore=20.92 epsilon=0.09999000000191018 step=1235422
+2022-04-14 22:08:42,594 episode=603 score=20.0 avgScore=19.7 bestScore=20.92 epsilon=0.09999000000191018 step=1237471
+2022-04-14 22:09:50,825 episode=604 score=24.0 avgScore=19.74 bestScore=20.92 epsilon=0.09999000000191018 step=1239519
+2022-04-14 22:10:59,234 episode=605 score=20.0 avgScore=19.78 bestScore=20.92 epsilon=0.09999000000191018 step=1241568
+2022-04-14 22:12:07,478 episode=606 score=21.0 avgScore=19.81 bestScore=20.92 epsilon=0.09999000000191018 step=1243617
+2022-04-14 22:13:15,715 episode=607 score=22.0 avgScore=19.82 bestScore=20.92 epsilon=0.09999000000191018 step=1245666
+2022-04-14 22:14:24,059 episode=608 score=21.0 avgScore=19.85 bestScore=20.92 epsilon=0.09999000000191018 step=1247715
+2022-04-14 22:15:32,014 episode=609 score=22.0 avgScore=19.85 bestScore=20.92 epsilon=0.09999000000191018 step=1249764
+2022-04-14 22:16:40,028 episode=610 score=22.0 avgScore=19.89 bestScore=20.92 epsilon=0.09999000000191018 step=1251813
+2022-04-14 22:17:48,054 episode=611 score=19.0 avgScore=19.88 bestScore=20.92 epsilon=0.09999000000191018 step=1253862
+2022-04-14 22:18:56,281 episode=612 score=18.0 avgScore=19.86 bestScore=20.92 epsilon=0.09999000000191018 step=1255911
+2022-04-14 22:20:04,323 episode=613 score=19.0 avgScore=19.83 bestScore=20.92 epsilon=0.09999000000191018 step=1257960
+2022-04-14 22:21:12,371 episode=614 score=21.0 avgScore=19.83 bestScore=20.92 epsilon=0.09999000000191018 step=1260008
+2022-04-14 22:22:20,562 episode=615 score=20.0 avgScore=19.84 bestScore=20.92 epsilon=0.09999000000191018 step=1262057
+2022-04-14 22:23:29,114 episode=616 score=19.0 avgScore=19.82 bestScore=20.92 epsilon=0.09999000000191018 step=1264106
+2022-04-14 22:24:37,442 episode=617 score=20.0 avgScore=19.84 bestScore=20.92 epsilon=0.09999000000191018 step=1266155
+2022-04-14 22:25:45,908 episode=618 score=19.0 avgScore=19.85 bestScore=20.92 epsilon=0.09999000000191018 step=1268204
+2022-04-14 22:26:54,038 episode=619 score=19.0 avgScore=19.82 bestScore=20.92 epsilon=0.09999000000191018 step=1270252
+2022-04-14 22:28:02,088 episode=620 score=20.0 avgScore=19.82 bestScore=20.92 epsilon=0.09999000000191018 step=1272301
+2022-04-14 22:29:10,105 episode=621 score=21.0 avgScore=19.84 bestScore=20.92 epsilon=0.09999000000191018 step=1274350
+2022-04-14 22:30:18,290 episode=622 score=19.0 avgScore=19.84 bestScore=20.92 epsilon=0.09999000000191018 step=1276399
+2022-04-14 22:31:26,313 episode=623 score=17.0 avgScore=19.82 bestScore=20.92 epsilon=0.09999000000191018 step=1278448
+2022-04-14 22:32:34,677 episode=624 score=19.0 avgScore=19.81 bestScore=20.92 epsilon=0.09999000000191018 step=1280497
+2022-04-14 22:33:43,082 episode=625 score=18.0 avgScore=19.79 bestScore=20.92 epsilon=0.09999000000191018 step=1282546
+2022-04-14 22:34:51,586 episode=626 score=19.0 avgScore=19.8 bestScore=20.92 epsilon=0.09999000000191018 step=1284595
+2022-04-14 22:35:59,644 episode=627 score=19.0 avgScore=19.8 bestScore=20.92 epsilon=0.09999000000191018 step=1286644
+2022-04-14 22:37:07,813 episode=628 score=21.0 avgScore=19.8 bestScore=20.92 epsilon=0.09999000000191018 step=1288692
+2022-04-14 22:38:16,036 episode=629 score=17.0 avgScore=19.77 bestScore=20.92 epsilon=0.09999000000191018 step=1290741
+2022-04-14 22:39:24,215 episode=630 score=21.0 avgScore=19.78 bestScore=20.92 epsilon=0.09999000000191018 step=1292790
+2022-04-14 22:40:32,423 episode=631 score=22.0 avgScore=19.78 bestScore=20.92 epsilon=0.09999000000191018 step=1294839
+2022-04-14 22:41:40,664 episode=632 score=22.0 avgScore=19.79 bestScore=20.92 epsilon=0.09999000000191018 step=1296888
+2022-04-14 22:42:49,189 episode=633 score=22.0 avgScore=19.78 bestScore=20.92 epsilon=0.09999000000191018 step=1298937
+2022-04-14 22:43:57,588 episode=634 score=19.0 avgScore=19.74 bestScore=20.92 epsilon=0.09999000000191018 step=1300986
+2022-04-14 22:45:05,785 episode=635 score=21.0 avgScore=19.77 bestScore=20.92 epsilon=0.09999000000191018 step=1303035
+2022-04-14 22:46:14,046 episode=636 score=21.0 avgScore=19.78 bestScore=20.92 epsilon=0.09999000000191018 step=1305084
+2022-04-14 22:47:22,273 episode=637 score=19.0 avgScore=19.77 bestScore=20.92 epsilon=0.09999000000191018 step=1307133
+2022-04-14 22:48:30,612 episode=638 score=20.0 avgScore=19.77 bestScore=20.92 epsilon=0.09999000000191018 step=1309182
+2022-04-14 22:49:38,672 episode=639 score=18.0 avgScore=19.72 bestScore=20.92 epsilon=0.09999000000191018 step=1311231
+2022-04-14 22:50:46,896 episode=640 score=20.0 avgScore=19.72 bestScore=20.92 epsilon=0.09999000000191018 step=1313280
+2022-04-14 22:51:54,980 episode=641 score=18.0 avgScore=19.69 bestScore=20.92 epsilon=0.09999000000191018 step=1315328
+2022-04-14 22:53:03,519 episode=642 score=18.0 avgScore=19.67 bestScore=20.92 epsilon=0.09999000000191018 step=1317377
+2022-04-14 22:54:11,919 episode=643 score=22.0 avgScore=19.73 bestScore=20.92 epsilon=0.09999000000191018 step=1319426
+2022-04-14 22:55:20,337 episode=644 score=19.0 avgScore=19.69 bestScore=20.92 epsilon=0.09999000000191018 step=1321474
+2022-04-14 22:56:28,353 episode=645 score=21.0 avgScore=19.73 bestScore=20.92 epsilon=0.09999000000191018 step=1323522
+2022-04-14 22:57:36,534 episode=646 score=22.0 avgScore=19.77 bestScore=20.92 epsilon=0.09999000000191018 step=1325571
+2022-04-14 22:58:44,647 episode=647 score=21.0 avgScore=19.78 bestScore=20.92 epsilon=0.09999000000191018 step=1327619
+2022-04-14 22:59:52,758 episode=648 score=20.0 avgScore=19.78 bestScore=20.92 epsilon=0.09999000000191018 step=1329668
+2022-04-14 23:01:00,867 episode=649 score=21.0 avgScore=19.79 bestScore=20.92 epsilon=0.09999000000191018 step=1331717
+2022-04-14 23:02:08,949 episode=650 score=18.0 avgScore=19.77 bestScore=20.92 epsilon=0.09999000000191018 step=1333765
+2022-04-14 23:03:17,117 episode=651 score=21.0 avgScore=19.79 bestScore=20.92 epsilon=0.09999000000191018 step=1335813
+2022-04-14 23:04:25,316 episode=652 score=21.0 avgScore=19.82 bestScore=20.92 epsilon=0.09999000000191018 step=1337861
+2022-04-14 23:05:33,735 episode=653 score=18.0 avgScore=19.82 bestScore=20.92 epsilon=0.09999000000191018 step=1339909
+2022-04-14 23:06:42,141 episode=654 score=19.0 avgScore=19.81 bestScore=20.92 epsilon=0.09999000000191018 step=1341957
+2022-04-14 23:07:50,496 episode=655 score=22.0 avgScore=19.83 bestScore=20.92 epsilon=0.09999000000191018 step=1344006
+2022-04-14 23:08:58,822 episode=656 score=21.0 avgScore=19.85 bestScore=20.92 epsilon=0.09999000000191018 step=1346055
+2022-04-14 23:10:06,751 episode=657 score=22.0 avgScore=19.86 bestScore=20.92 epsilon=0.09999000000191018 step=1348103
+2022-04-14 23:11:14,934 episode=658 score=20.0 avgScore=19.87 bestScore=20.92 epsilon=0.09999000000191018 step=1350152
+2022-04-14 23:12:23,035 episode=659 score=20.0 avgScore=19.86 bestScore=20.92 epsilon=0.09999000000191018 step=1352201
+2022-04-14 23:13:31,249 episode=660 score=19.0 avgScore=19.86 bestScore=20.92 epsilon=0.09999000000191018 step=1354250
+2022-04-14 23:14:39,740 episode=661 score=19.0 avgScore=19.89 bestScore=20.92 epsilon=0.09999000000191018 step=1356299
+2022-04-14 23:15:48,217 episode=662 score=21.0 avgScore=19.89 bestScore=20.92 epsilon=0.09999000000191018 step=1358347
+2022-04-14 23:16:56,334 episode=663 score=21.0 avgScore=19.9 bestScore=20.92 epsilon=0.09999000000191018 step=1360396
+2022-04-14 23:18:04,902 episode=664 score=23.0 avgScore=19.93 bestScore=20.92 epsilon=0.09999000000191018 step=1362444
+2022-04-14 23:19:13,335 episode=665 score=19.0 avgScore=19.9 bestScore=20.92 epsilon=0.09999000000191018 step=1364493
+2022-04-14 23:20:21,665 episode=666 score=16.0 avgScore=19.84 bestScore=20.92 epsilon=0.09999000000191018 step=1366542
+2022-04-14 23:21:29,607 episode=667 score=19.0 avgScore=19.84 bestScore=20.92 epsilon=0.09999000000191018 step=1368590
+2022-04-14 23:22:37,747 episode=668 score=19.0 avgScore=19.85 bestScore=20.92 epsilon=0.09999000000191018 step=1370639
+2022-04-14 23:23:45,798 episode=669 score=21.0 avgScore=19.89 bestScore=20.92 epsilon=0.09999000000191018 step=1372688
+2022-04-14 23:24:53,921 episode=670 score=20.0 avgScore=19.89 bestScore=20.92 epsilon=0.09999000000191018 step=1374736
+2022-04-14 23:26:02,256 episode=671 score=21.0 avgScore=19.9 bestScore=20.92 epsilon=0.09999000000191018 step=1376785
+2022-04-14 23:27:10,611 episode=672 score=21.0 avgScore=19.89 bestScore=20.92 epsilon=0.09999000000191018 step=1378833
+2022-04-14 23:28:19,053 episode=673 score=20.0 avgScore=19.9 bestScore=20.92 epsilon=0.09999000000191018 step=1380881
+2022-04-14 23:29:27,562 episode=674 score=20.0 avgScore=19.91 bestScore=20.92 epsilon=0.09999000000191018 step=1382930
+2022-04-14 23:30:36,022 episode=675 score=21.0 avgScore=19.94 bestScore=20.92 epsilon=0.09999000000191018 step=1384978
+2022-04-14 23:31:44,630 episode=676 score=19.0 avgScore=19.98 bestScore=20.92 epsilon=0.09999000000191018 step=1387027
+2022-04-14 23:32:52,813 episode=677 score=18.0 avgScore=19.96 bestScore=20.92 epsilon=0.09999000000191018 step=1389075
+2022-04-14 23:34:01,029 episode=678 score=18.0 avgScore=19.97 bestScore=20.92 epsilon=0.09999000000191018 step=1391124
+2022-04-14 23:35:09,086 episode=679 score=19.0 avgScore=19.98 bestScore=20.92 epsilon=0.09999000000191018 step=1393173
+2022-04-14 23:36:17,259 episode=680 score=19.0 avgScore=19.96 bestScore=20.92 epsilon=0.09999000000191018 step=1395221
+2022-04-14 23:37:24,588 episode=681 score=20.0 avgScore=19.97 bestScore=20.92 epsilon=0.09999000000191018 step=1397269
+2022-04-14 23:38:32,913 episode=682 score=20.0 avgScore=19.99 bestScore=20.92 epsilon=0.09999000000191018 step=1399318
+2022-04-14 23:39:41,439 episode=683 score=18.0 avgScore=19.97 bestScore=20.92 epsilon=0.09999000000191018 step=1401367
+2022-04-14 23:40:49,869 episode=684 score=21.0 avgScore=20.01 bestScore=20.92 epsilon=0.09999000000191018 step=1403416
+2022-04-14 23:41:58,125 episode=685 score=19.0 avgScore=19.99 bestScore=20.92 epsilon=0.09999000000191018 step=1405465
+2022-04-14 23:43:06,467 episode=686 score=22.0 avgScore=20.0 bestScore=20.92 epsilon=0.09999000000191018 step=1407514
+2022-04-14 23:44:14,500 episode=687 score=17.0 avgScore=19.98 bestScore=20.92 epsilon=0.09999000000191018 step=1409562
+2022-04-14 23:45:22,470 episode=688 score=17.0 avgScore=19.93 bestScore=20.92 epsilon=0.09999000000191018 step=1411611
+2022-04-14 23:46:30,321 episode=689 score=17.0 avgScore=19.92 bestScore=20.92 epsilon=0.09999000000191018 step=1413660
+2022-04-14 23:47:38,547 episode=690 score=22.0 avgScore=19.91 bestScore=20.92 epsilon=0.09999000000191018 step=1415708
+2022-04-14 23:48:46,797 episode=691 score=17.0 avgScore=19.86 bestScore=20.92 epsilon=0.09999000000191018 step=1417757
+2022-04-14 23:49:55,294 episode=692 score=16.0 avgScore=19.81 bestScore=20.92 epsilon=0.09999000000191018 step=1419806
+2022-04-14 23:51:03,466 episode=693 score=17.0 avgScore=19.79 bestScore=20.92 epsilon=0.09999000000191018 step=1421855
+2022-04-14 23:52:11,556 episode=694 score=18.0 avgScore=19.75 bestScore=20.92 epsilon=0.09999000000191018 step=1423904
+2022-04-14 23:53:19,528 episode=695 score=19.0 avgScore=19.75 bestScore=20.92 epsilon=0.09999000000191018 step=1425953
+2022-04-14 23:54:27,582 episode=696 score=22.0 avgScore=19.74 bestScore=20.92 epsilon=0.09999000000191018 step=1428002
+2022-04-14 23:55:35,657 episode=697 score=20.0 avgScore=19.73 bestScore=20.92 epsilon=0.09999000000191018 step=1430051
+2022-04-14 23:56:43,831 episode=698 score=23.0 avgScore=19.77 bestScore=20.92 epsilon=0.09999000000191018 step=1432099
+2022-04-14 23:57:52,335 episode=699 score=21.0 avgScore=19.79 bestScore=20.92 epsilon=0.09999000000191018 step=1434148
+2022-04-14 23:59:01,040 episode=700 score=18.0 avgScore=19.79 bestScore=20.92 epsilon=0.09999000000191018 step=1436197
+2022-04-15 00:00:09,390 episode=701 score=21.0 avgScore=19.83 bestScore=20.92 epsilon=0.09999000000191018 step=1438245
+2022-04-15 00:01:17,603 episode=702 score=21.0 avgScore=19.84 bestScore=20.92 epsilon=0.09999000000191018 step=1440294
+2022-04-15 00:02:25,649 episode=703 score=19.0 avgScore=19.83 bestScore=20.92 epsilon=0.09999000000191018 step=1442342
+2022-04-15 00:03:33,856 episode=704 score=21.0 avgScore=19.8 bestScore=20.92 epsilon=0.09999000000191018 step=1444391
+2022-04-15 00:04:42,018 episode=705 score=21.0 avgScore=19.81 bestScore=20.92 epsilon=0.09999000000191018 step=1446439
+2022-04-15 00:05:50,053 episode=706 score=22.0 avgScore=19.82 bestScore=20.92 epsilon=0.09999000000191018 step=1448488
+2022-04-15 00:06:58,286 episode=707 score=16.0 avgScore=19.76 bestScore=20.92 epsilon=0.09999000000191018 step=1450537
+2022-04-15 00:08:06,789 episode=708 score=17.0 avgScore=19.72 bestScore=20.92 epsilon=0.09999000000191018 step=1452586
+2022-04-15 00:09:14,758 episode=709 score=22.0 avgScore=19.72 bestScore=20.92 epsilon=0.09999000000191018 step=1454634
+2022-04-15 00:10:23,106 episode=710 score=21.0 avgScore=19.71 bestScore=20.92 epsilon=0.09999000000191018 step=1456683
+2022-04-15 00:11:31,135 episode=711 score=22.0 avgScore=19.74 bestScore=20.92 epsilon=0.09999000000191018 step=1458731
+2022-04-15 00:12:39,397 episode=712 score=19.0 avgScore=19.75 bestScore=20.92 epsilon=0.09999000000191018 step=1460780
+2022-04-15 00:13:47,424 episode=713 score=22.0 avgScore=19.78 bestScore=20.92 epsilon=0.09999000000191018 step=1462828
+2022-04-15 00:14:55,561 episode=714 score=20.0 avgScore=19.77 bestScore=20.92 epsilon=0.09999000000191018 step=1464877
+2022-04-15 00:16:03,626 episode=715 score=18.0 avgScore=19.75 bestScore=20.92 epsilon=0.09999000000191018 step=1466925
+2022-04-15 00:17:11,664 episode=716 score=21.0 avgScore=19.77 bestScore=20.92 epsilon=0.09999000000191018 step=1468974
+2022-04-15 00:18:20,024 episode=717 score=18.0 avgScore=19.75 bestScore=20.92 epsilon=0.09999000000191018 step=1471023
+2022-04-15 00:19:28,391 episode=718 score=21.0 avgScore=19.77 bestScore=20.92 epsilon=0.09999000000191018 step=1473071
+2022-04-15 00:20:36,932 episode=719 score=19.0 avgScore=19.77 bestScore=20.92 epsilon=0.09999000000191018 step=1475120
+2022-04-15 00:21:45,494 episode=720 score=18.0 avgScore=19.75 bestScore=20.92 epsilon=0.09999000000191018 step=1477169
+2022-04-15 00:22:53,747 episode=721 score=20.0 avgScore=19.74 bestScore=20.92 epsilon=0.09999000000191018 step=1479217
+2022-04-15 00:24:02,031 episode=722 score=20.0 avgScore=19.75 bestScore=20.92 epsilon=0.09999000000191018 step=1481266
+2022-04-15 00:25:10,299 episode=723 score=20.0 avgScore=19.78 bestScore=20.92 epsilon=0.09999000000191018 step=1483315
+2022-04-15 00:26:18,733 episode=724 score=19.0 avgScore=19.78 bestScore=20.92 epsilon=0.09999000000191018 step=1485364
+2022-04-15 00:27:27,106 episode=725 score=21.0 avgScore=19.81 bestScore=20.92 epsilon=0.09999000000191018 step=1487413
+2022-04-15 00:28:35,883 episode=726 score=21.0 avgScore=19.83 bestScore=20.92 epsilon=0.09999000000191018 step=1489462
+2022-04-15 00:29:44,536 episode=727 score=19.0 avgScore=19.83 bestScore=20.92 epsilon=0.09999000000191018 step=1491511
+2022-04-15 00:30:53,025 episode=728 score=22.0 avgScore=19.84 bestScore=20.92 epsilon=0.09999000000191018 step=1493560
+2022-04-15 00:32:01,401 episode=729 score=21.0 avgScore=19.88 bestScore=20.92 epsilon=0.09999000000191018 step=1495609
+2022-04-15 00:33:09,963 episode=730 score=22.0 avgScore=19.89 bestScore=20.92 epsilon=0.09999000000191018 step=1497657
+2022-04-15 00:34:18,462 episode=731 score=22.0 avgScore=19.89 bestScore=20.92 epsilon=0.09999000000191018 step=1499706
+2022-04-15 00:35:26,962 episode=732 score=21.0 avgScore=19.88 bestScore=20.92 epsilon=0.09999000000191018 step=1501755
+2022-04-15 00:36:35,375 episode=733 score=19.0 avgScore=19.85 bestScore=20.92 epsilon=0.09999000000191018 step=1503803
+2022-04-15 00:37:43,929 episode=734 score=21.0 avgScore=19.87 bestScore=20.92 epsilon=0.09999000000191018 step=1505851
+2022-04-15 00:38:52,504 episode=735 score=20.0 avgScore=19.86 bestScore=20.92 epsilon=0.09999000000191018 step=1507900
+2022-04-15 00:40:00,986 episode=736 score=18.0 avgScore=19.83 bestScore=20.92 epsilon=0.09999000000191018 step=1509949
+2022-04-15 00:41:09,389 episode=737 score=21.0 avgScore=19.85 bestScore=20.92 epsilon=0.09999000000191018 step=1511998
+2022-04-15 00:42:17,873 episode=738 score=21.0 avgScore=19.86 bestScore=20.92 epsilon=0.09999000000191018 step=1514046
+2022-04-15 00:43:26,002 episode=739 score=20.0 avgScore=19.88 bestScore=20.92 epsilon=0.09999000000191018 step=1516095
+2022-04-15 00:44:34,172 episode=740 score=20.0 avgScore=19.88 bestScore=20.92 epsilon=0.09999000000191018 step=1518143
+2022-04-15 00:45:42,445 episode=741 score=21.0 avgScore=19.91 bestScore=20.92 epsilon=0.09999000000191018 step=1520192
+2022-04-15 00:46:50,910 episode=742 score=20.0 avgScore=19.93 bestScore=20.92 epsilon=0.09999000000191018 step=1522240
+2022-04-15 00:47:59,251 episode=743 score=21.0 avgScore=19.92 bestScore=20.92 epsilon=0.09999000000191018 step=1524289
+2022-04-15 00:49:07,966 episode=744 score=20.0 avgScore=19.93 bestScore=20.92 epsilon=0.09999000000191018 step=1526338
+2022-04-15 00:50:16,497 episode=745 score=21.0 avgScore=19.93 bestScore=20.92 epsilon=0.09999000000191018 step=1528387
+2022-04-15 00:51:25,142 episode=746 score=20.0 avgScore=19.91 bestScore=20.92 epsilon=0.09999000000191018 step=1530436
+2022-04-15 00:52:33,642 episode=747 score=20.0 avgScore=19.9 bestScore=20.92 epsilon=0.09999000000191018 step=1532485
+2022-04-15 00:53:42,354 episode=748 score=17.0 avgScore=19.87 bestScore=20.92 epsilon=0.09999000000191018 step=1534534
+2022-04-15 00:54:51,004 episode=749 score=21.0 avgScore=19.87 bestScore=20.92 epsilon=0.09999000000191018 step=1536583
+2022-04-15 00:55:59,563 episode=750 score=19.0 avgScore=19.88 bestScore=20.92 epsilon=0.09999000000191018 step=1538632
+2022-04-15 00:57:07,826 episode=751 score=21.0 avgScore=19.88 bestScore=20.92 epsilon=0.09999000000191018 step=1540681
+2022-04-15 00:58:16,106 episode=752 score=19.0 avgScore=19.86 bestScore=20.92 epsilon=0.09999000000191018 step=1542730
+2022-04-15 00:59:24,139 episode=753 score=20.0 avgScore=19.88 bestScore=20.92 epsilon=0.09999000000191018 step=1544778
+2022-04-15 01:00:32,281 episode=754 score=19.0 avgScore=19.88 bestScore=20.92 epsilon=0.09999000000191018 step=1546826
+2022-04-15 01:01:40,647 episode=755 score=19.0 avgScore=19.85 bestScore=20.92 epsilon=0.09999000000191018 step=1548875
+2022-04-15 01:02:49,001 episode=756 score=23.0 avgScore=19.87 bestScore=20.92 epsilon=0.09999000000191018 step=1550923
+2022-04-15 01:03:56,991 episode=757 score=19.0 avgScore=19.84 bestScore=20.92 epsilon=0.09999000000191018 step=1552972
+2022-04-15 01:05:05,044 episode=758 score=19.0 avgScore=19.83 bestScore=20.92 epsilon=0.09999000000191018 step=1555021
+2022-04-15 01:06:12,833 episode=759 score=19.0 avgScore=19.82 bestScore=20.92 epsilon=0.09999000000191018 step=1557069
+2022-04-15 01:07:20,684 episode=760 score=23.0 avgScore=19.86 bestScore=20.92 epsilon=0.09999000000191018 step=1559118
+2022-04-15 01:08:28,418 episode=761 score=20.0 avgScore=19.87 bestScore=20.92 epsilon=0.09999000000191018 step=1561166
+2022-04-15 01:09:36,423 episode=762 score=21.0 avgScore=19.87 bestScore=20.92 epsilon=0.09999000000191018 step=1563215
+2022-04-15 01:10:44,498 episode=763 score=21.0 avgScore=19.87 bestScore=20.92 epsilon=0.09999000000191018 step=1565263
+2022-04-15 01:11:52,601 episode=764 score=18.0 avgScore=19.82 bestScore=20.92 epsilon=0.09999000000191018 step=1567311
+2022-04-15 01:13:00,431 episode=765 score=19.0 avgScore=19.82 bestScore=20.92 epsilon=0.09999000000191018 step=1569360
+2022-04-15 01:14:08,285 episode=766 score=21.0 avgScore=19.87 bestScore=20.92 epsilon=0.09999000000191018 step=1571409
+2022-04-15 01:15:15,931 episode=767 score=16.0 avgScore=19.84 bestScore=20.92 epsilon=0.09999000000191018 step=1573458
+2022-04-15 01:16:23,913 episode=768 score=19.0 avgScore=19.84 bestScore=20.92 epsilon=0.09999000000191018 step=1575507
+2022-04-15 01:17:31,768 episode=769 score=19.0 avgScore=19.82 bestScore=20.92 epsilon=0.09999000000191018 step=1577556
+2022-04-15 01:18:39,842 episode=770 score=20.0 avgScore=19.82 bestScore=20.92 epsilon=0.09999000000191018 step=1579604
+2022-04-15 01:19:47,976 episode=771 score=20.0 avgScore=19.81 bestScore=20.92 epsilon=0.09999000000191018 step=1581653
+2022-04-15 01:20:56,104 episode=772 score=21.0 avgScore=19.81 bestScore=20.92 epsilon=0.09999000000191018 step=1583702
+2022-04-15 01:22:04,100 episode=773 score=22.0 avgScore=19.83 bestScore=20.92 epsilon=0.09999000000191018 step=1585751
+2022-04-15 01:23:12,071 episode=774 score=19.0 avgScore=19.82 bestScore=20.92 epsilon=0.09999000000191018 step=1587799
+2022-04-15 01:24:19,991 episode=775 score=17.0 avgScore=19.78 bestScore=20.92 epsilon=0.09999000000191018 step=1589848
+2022-04-15 01:25:27,966 episode=776 score=22.0 avgScore=19.81 bestScore=20.92 epsilon=0.09999000000191018 step=1591897
+2022-04-15 01:26:35,842 episode=777 score=21.0 avgScore=19.84 bestScore=20.92 epsilon=0.09999000000191018 step=1593945
+2022-04-15 01:27:43,830 episode=778 score=20.0 avgScore=19.86 bestScore=20.92 epsilon=0.09999000000191018 step=1595993
+2022-04-15 01:28:52,031 episode=779 score=21.0 avgScore=19.88 bestScore=20.92 epsilon=0.09999000000191018 step=1598042
+2022-04-15 01:30:00,228 episode=780 score=19.0 avgScore=19.88 bestScore=20.92 epsilon=0.09999000000191018 step=1600090
+2022-04-15 01:31:08,295 episode=781 score=19.0 avgScore=19.87 bestScore=20.92 epsilon=0.09999000000191018 step=1602139
+2022-04-15 01:32:16,362 episode=782 score=19.0 avgScore=19.86 bestScore=20.92 epsilon=0.09999000000191018 step=1604187
+2022-04-15 01:33:24,024 episode=783 score=17.0 avgScore=19.85 bestScore=20.92 epsilon=0.09999000000191018 step=1606236
+2022-04-15 01:34:31,845 episode=784 score=21.0 avgScore=19.85 bestScore=20.92 epsilon=0.09999000000191018 step=1608285
+2022-04-15 01:35:39,679 episode=785 score=20.0 avgScore=19.86 bestScore=20.92 epsilon=0.09999000000191018 step=1610334
+2022-04-15 01:36:47,456 episode=786 score=19.0 avgScore=19.83 bestScore=20.92 epsilon=0.09999000000191018 step=1612383
+2022-04-15 01:37:55,158 episode=787 score=20.0 avgScore=19.86 bestScore=20.92 epsilon=0.09999000000191018 step=1614432
+2022-04-15 01:39:03,034 episode=788 score=21.0 avgScore=19.9 bestScore=20.92 epsilon=0.09999000000191018 step=1616480
+2022-04-15 01:40:11,221 episode=789 score=19.0 avgScore=19.92 bestScore=20.92 epsilon=0.09999000000191018 step=1618529
+2022-04-15 01:41:19,475 episode=790 score=21.0 avgScore=19.91 bestScore=20.92 epsilon=0.09999000000191018 step=1620578
+2022-04-15 01:42:28,170 episode=791 score=21.0 avgScore=19.95 bestScore=20.92 epsilon=0.09999000000191018 step=1622627
+2022-04-15 01:43:37,052 episode=792 score=24.0 avgScore=20.03 bestScore=20.92 epsilon=0.09999000000191018 step=1624676
+2022-04-15 01:44:46,158 episode=793 score=21.0 avgScore=20.07 bestScore=20.92 epsilon=0.09999000000191018 step=1626725
+2022-04-15 01:45:54,907 episode=794 score=22.0 avgScore=20.11 bestScore=20.92 epsilon=0.09999000000191018 step=1628773
+2022-04-15 01:47:03,137 episode=795 score=21.0 avgScore=20.13 bestScore=20.92 epsilon=0.09999000000191018 step=1630822
+2022-04-15 01:48:11,929 episode=796 score=20.0 avgScore=20.11 bestScore=20.92 epsilon=0.09999000000191018 step=1632871
+2022-04-15 01:49:20,519 episode=797 score=20.0 avgScore=20.11 bestScore=20.92 epsilon=0.09999000000191018 step=1634920
+2022-04-15 01:50:29,019 episode=798 score=23.0 avgScore=20.11 bestScore=20.92 epsilon=0.09999000000191018 step=1636969
+2022-04-15 01:51:37,288 episode=799 score=21.0 avgScore=20.11 bestScore=20.92 epsilon=0.09999000000191018 step=1639018
+2022-04-15 01:52:45,824 episode=800 score=22.0 avgScore=20.15 bestScore=20.92 epsilon=0.09999000000191018 step=1641066
+2022-04-15 01:53:54,954 episode=801 score=22.0 avgScore=20.16 bestScore=20.92 epsilon=0.09999000000191018 step=1643114
+2022-04-15 01:55:03,913 episode=802 score=19.0 avgScore=20.14 bestScore=20.92 epsilon=0.09999000000191018 step=1645162
+2022-04-15 01:56:12,004 episode=803 score=20.0 avgScore=20.15 bestScore=20.92 epsilon=0.09999000000191018 step=1647211
+2022-04-15 01:57:20,875 episode=804 score=20.0 avgScore=20.14 bestScore=20.92 epsilon=0.09999000000191018 step=1649260
+2022-04-15 01:58:29,744 episode=805 score=21.0 avgScore=20.14 bestScore=20.92 epsilon=0.09999000000191018 step=1651309
+2022-04-15 01:59:37,572 episode=806 score=19.0 avgScore=20.11 bestScore=20.92 epsilon=0.09999000000191018 step=1653358
+2022-04-15 02:00:45,516 episode=807 score=22.0 avgScore=20.17 bestScore=20.92 epsilon=0.09999000000191018 step=1655407
+2022-04-15 02:01:54,625 episode=808 score=22.0 avgScore=20.22 bestScore=20.92 epsilon=0.09999000000191018 step=1657456
+2022-04-15 02:03:03,603 episode=809 score=22.0 avgScore=20.22 bestScore=20.92 epsilon=0.09999000000191018 step=1659505
+2022-04-15 02:04:12,889 episode=810 score=21.0 avgScore=20.22 bestScore=20.92 epsilon=0.09999000000191018 step=1661554
+2022-04-15 02:05:21,413 episode=811 score=21.0 avgScore=20.21 bestScore=20.92 epsilon=0.09999000000191018 step=1663603
+2022-04-15 02:06:29,232 episode=812 score=22.0 avgScore=20.24 bestScore=20.92 epsilon=0.09999000000191018 step=1665652
+2022-04-15 02:07:36,941 episode=813 score=21.0 avgScore=20.23 bestScore=20.92 epsilon=0.09999000000191018 step=1667700
+2022-04-15 02:08:44,811 episode=814 score=20.0 avgScore=20.23 bestScore=20.92 epsilon=0.09999000000191018 step=1669749
+2022-04-15 02:09:52,455 episode=815 score=19.0 avgScore=20.24 bestScore=20.92 epsilon=0.09999000000191018 step=1671797
+2022-04-15 02:11:00,166 episode=816 score=20.0 avgScore=20.23 bestScore=20.92 epsilon=0.09999000000191018 step=1673846
+2022-04-15 02:12:08,251 episode=817 score=21.0 avgScore=20.26 bestScore=20.92 epsilon=0.09999000000191018 step=1675895
+2022-04-15 02:13:16,504 episode=818 score=21.0 avgScore=20.26 bestScore=20.92 epsilon=0.09999000000191018 step=1677943
+2022-04-15 02:14:24,703 episode=819 score=20.0 avgScore=20.27 bestScore=20.92 epsilon=0.09999000000191018 step=1679992
+2022-04-15 02:15:32,804 episode=820 score=19.0 avgScore=20.28 bestScore=20.92 epsilon=0.09999000000191018 step=1682041
+2022-04-15 02:16:40,539 episode=821 score=21.0 avgScore=20.29 bestScore=20.92 epsilon=0.09999000000191018 step=1684090
+2022-04-15 02:17:48,313 episode=822 score=21.0 avgScore=20.3 bestScore=20.92 epsilon=0.09999000000191018 step=1686138
+2022-04-15 02:18:55,922 episode=823 score=22.0 avgScore=20.32 bestScore=20.92 epsilon=0.09999000000191018 step=1688187
+2022-04-15 02:20:03,882 episode=824 score=22.0 avgScore=20.35 bestScore=20.92 epsilon=0.09999000000191018 step=1690236
+2022-04-15 02:21:11,562 episode=825 score=22.0 avgScore=20.36 bestScore=20.92 epsilon=0.09999000000191018 step=1692285
+2022-04-15 02:22:19,419 episode=826 score=20.0 avgScore=20.35 bestScore=20.92 epsilon=0.09999000000191018 step=1694333
+2022-04-15 02:23:27,568 episode=827 score=21.0 avgScore=20.37 bestScore=20.92 epsilon=0.09999000000191018 step=1696382
+2022-04-15 02:24:35,819 episode=828 score=19.0 avgScore=20.34 bestScore=20.92 epsilon=0.09999000000191018 step=1698431
+2022-04-15 02:25:43,755 episode=829 score=18.0 avgScore=20.31 bestScore=20.92 epsilon=0.09999000000191018 step=1700480
+2022-04-15 02:26:51,520 episode=830 score=19.0 avgScore=20.28 bestScore=20.92 epsilon=0.09999000000191018 step=1702528
+2022-04-15 02:27:59,241 episode=831 score=21.0 avgScore=20.27 bestScore=20.92 epsilon=0.09999000000191018 step=1704577
+2022-04-15 02:29:06,799 episode=832 score=18.0 avgScore=20.24 bestScore=20.92 epsilon=0.09999000000191018 step=1706626
+2022-04-15 02:30:14,393 episode=833 score=22.0 avgScore=20.27 bestScore=20.92 epsilon=0.09999000000191018 step=1708675
+2022-04-15 02:31:21,984 episode=834 score=19.0 avgScore=20.25 bestScore=20.92 epsilon=0.09999000000191018 step=1710723
+2022-04-15 02:32:29,631 episode=835 score=21.0 avgScore=20.26 bestScore=20.92 epsilon=0.09999000000191018 step=1712772
+2022-04-15 02:33:37,563 episode=836 score=21.0 avgScore=20.29 bestScore=20.92 epsilon=0.09999000000191018 step=1714821
+2022-04-15 02:34:45,520 episode=837 score=22.0 avgScore=20.3 bestScore=20.92 epsilon=0.09999000000191018 step=1716870
+2022-04-15 02:35:53,573 episode=838 score=20.0 avgScore=20.29 bestScore=20.92 epsilon=0.09999000000191018 step=1718919
+2022-04-15 02:37:01,978 episode=839 score=18.0 avgScore=20.27 bestScore=20.92 epsilon=0.09999000000191018 step=1720968
+2022-04-15 02:38:10,399 episode=840 score=20.0 avgScore=20.27 bestScore=20.92 epsilon=0.09999000000191018 step=1723016
+2022-04-15 02:39:18,825 episode=841 score=20.0 avgScore=20.26 bestScore=20.92 epsilon=0.09999000000191018 step=1725065
+2022-04-15 02:40:27,062 episode=842 score=20.0 avgScore=20.26 bestScore=20.92 epsilon=0.09999000000191018 step=1727113
+2022-04-15 02:41:35,766 episode=843 score=18.0 avgScore=20.23 bestScore=20.92 epsilon=0.09999000000191018 step=1729162
+2022-04-15 02:42:45,084 episode=844 score=23.0 avgScore=20.26 bestScore=20.92 epsilon=0.09999000000191018 step=1731211
+2022-04-15 02:43:54,003 episode=845 score=22.0 avgScore=20.27 bestScore=20.92 epsilon=0.09999000000191018 step=1733260
+2022-04-15 02:45:01,911 episode=846 score=20.0 avgScore=20.27 bestScore=20.92 epsilon=0.09999000000191018 step=1735308
+2022-04-15 02:46:09,699 episode=847 score=23.0 avgScore=20.3 bestScore=20.92 epsilon=0.09999000000191018 step=1737357
+2022-04-15 02:47:17,802 episode=848 score=18.0 avgScore=20.31 bestScore=20.92 epsilon=0.09999000000191018 step=1739406
+2022-04-15 02:48:25,910 episode=849 score=20.0 avgScore=20.3 bestScore=20.92 epsilon=0.09999000000191018 step=1741455
+2022-04-15 02:49:33,938 episode=850 score=19.0 avgScore=20.3 bestScore=20.92 epsilon=0.09999000000191018 step=1743504
+2022-04-15 02:50:41,848 episode=851 score=21.0 avgScore=20.3 bestScore=20.92 epsilon=0.09999000000191018 step=1745553
+2022-04-15 02:51:50,219 episode=852 score=19.0 avgScore=20.3 bestScore=20.92 epsilon=0.09999000000191018 step=1747602
+2022-04-15 02:52:58,254 episode=853 score=20.0 avgScore=20.3 bestScore=20.92 epsilon=0.09999000000191018 step=1749651
+2022-04-15 02:54:06,136 episode=854 score=18.0 avgScore=20.29 bestScore=20.92 epsilon=0.09999000000191018 step=1751700
+2022-04-15 02:55:14,039 episode=855 score=19.0 avgScore=20.29 bestScore=20.92 epsilon=0.09999000000191018 step=1753749
+2022-04-15 02:56:21,751 episode=856 score=21.0 avgScore=20.27 bestScore=20.92 epsilon=0.09999000000191018 step=1755798
+2022-04-15 02:57:29,584 episode=857 score=20.0 avgScore=20.28 bestScore=20.92 epsilon=0.09999000000191018 step=1757847
+2022-04-15 02:58:37,074 episode=858 score=18.0 avgScore=20.27 bestScore=20.92 epsilon=0.09999000000191018 step=1759896
+2022-04-15 02:59:45,224 episode=859 score=20.0 avgScore=20.28 bestScore=20.92 epsilon=0.09999000000191018 step=1761945
+2022-04-15 03:00:53,241 episode=860 score=22.0 avgScore=20.27 bestScore=20.92 epsilon=0.09999000000191018 step=1763994
+2022-04-15 03:02:01,548 episode=861 score=18.0 avgScore=20.25 bestScore=20.92 epsilon=0.09999000000191018 step=1766043
+2022-04-15 03:03:09,281 episode=862 score=18.0 avgScore=20.22 bestScore=20.92 epsilon=0.09999000000191018 step=1768092
+2022-04-15 03:04:17,041 episode=863 score=20.0 avgScore=20.21 bestScore=20.92 epsilon=0.09999000000191018 step=1770141
+2022-04-15 03:05:24,670 episode=864 score=21.0 avgScore=20.24 bestScore=20.92 epsilon=0.09999000000191018 step=1772190
+2022-04-15 03:06:32,282 episode=865 score=18.0 avgScore=20.23 bestScore=20.92 epsilon=0.09999000000191018 step=1774239
+2022-04-15 03:07:39,954 episode=866 score=23.0 avgScore=20.25 bestScore=20.92 epsilon=0.09999000000191018 step=1776288
+2022-04-15 03:08:47,662 episode=867 score=18.0 avgScore=20.27 bestScore=20.92 epsilon=0.09999000000191018 step=1778337
+2022-04-15 03:09:55,849 episode=868 score=16.0 avgScore=20.24 bestScore=20.92 epsilon=0.09999000000191018 step=1780386
+2022-04-15 03:11:03,978 episode=869 score=20.0 avgScore=20.25 bestScore=20.92 epsilon=0.09999000000191018 step=1782434
+2022-04-15 03:12:11,969 episode=870 score=19.0 avgScore=20.24 bestScore=20.92 epsilon=0.09999000000191018 step=1784483
+2022-04-15 03:13:19,894 episode=871 score=23.0 avgScore=20.27 bestScore=20.92 epsilon=0.09999000000191018 step=1786532
+2022-04-15 03:14:27,592 episode=872 score=18.0 avgScore=20.24 bestScore=20.92 epsilon=0.09999000000191018 step=1788580
+2022-04-15 03:15:35,384 episode=873 score=22.0 avgScore=20.24 bestScore=20.92 epsilon=0.09999000000191018 step=1790629
+2022-04-15 03:16:43,140 episode=874 score=22.0 avgScore=20.27 bestScore=20.92 epsilon=0.09999000000191018 step=1792678
+2022-04-15 03:17:50,914 episode=875 score=19.0 avgScore=20.29 bestScore=20.92 epsilon=0.09999000000191018 step=1794727
+2022-04-15 03:18:58,813 episode=876 score=19.0 avgScore=20.26 bestScore=20.92 epsilon=0.09999000000191018 step=1796776
+2022-04-15 03:20:07,015 episode=877 score=20.0 avgScore=20.25 bestScore=20.92 epsilon=0.09999000000191018 step=1798825
+2022-04-15 03:21:14,816 episode=878 score=19.0 avgScore=20.24 bestScore=20.92 epsilon=0.09999000000191018 step=1800874
+2022-04-15 03:22:22,417 episode=879 score=20.0 avgScore=20.23 bestScore=20.92 epsilon=0.09999000000191018 step=1802922
+2022-04-15 03:23:30,301 episode=880 score=20.0 avgScore=20.24 bestScore=20.92 epsilon=0.09999000000191018 step=1804971
+2022-04-15 03:24:38,173 episode=881 score=20.0 avgScore=20.25 bestScore=20.92 epsilon=0.09999000000191018 step=1807020
+2022-04-15 03:25:45,981 episode=882 score=20.0 avgScore=20.26 bestScore=20.92 epsilon=0.09999000000191018 step=1809069
+2022-04-15 03:26:53,816 episode=883 score=20.0 avgScore=20.29 bestScore=20.92 epsilon=0.09999000000191018 step=1811118
+2022-04-15 03:28:01,926 episode=884 score=21.0 avgScore=20.29 bestScore=20.92 epsilon=0.09999000000191018 step=1813167
+2022-04-15 03:29:09,849 episode=885 score=22.0 avgScore=20.31 bestScore=20.92 epsilon=0.09999000000191018 step=1815216
+2022-04-15 03:30:17,885 episode=886 score=17.0 avgScore=20.29 bestScore=20.92 epsilon=0.09999000000191018 step=1817265
+2022-04-15 03:31:25,792 episode=887 score=20.0 avgScore=20.29 bestScore=20.92 epsilon=0.09999000000191018 step=1819314
+2022-04-15 03:32:33,581 episode=888 score=19.0 avgScore=20.27 bestScore=20.92 epsilon=0.09999000000191018 step=1821363
+2022-04-15 03:33:41,542 episode=889 score=21.0 avgScore=20.29 bestScore=20.92 epsilon=0.09999000000191018 step=1823412
+2022-04-15 03:34:49,378 episode=890 score=22.0 avgScore=20.3 bestScore=20.92 epsilon=0.09999000000191018 step=1825461
+2022-04-15 03:35:57,304 episode=891 score=22.0 avgScore=20.31 bestScore=20.92 epsilon=0.09999000000191018 step=1827510
+2022-04-15 03:37:05,160 episode=892 score=20.0 avgScore=20.27 bestScore=20.92 epsilon=0.09999000000191018 step=1829559
+2022-04-15 03:38:13,186 episode=893 score=20.0 avgScore=20.26 bestScore=20.92 epsilon=0.09999000000191018 step=1831608
+2022-04-15 03:39:21,106 episode=894 score=21.0 avgScore=20.25 bestScore=20.92 epsilon=0.09999000000191018 step=1833657
+2022-04-15 03:40:29,257 episode=895 score=24.0 avgScore=20.28 bestScore=20.92 epsilon=0.09999000000191018 step=1835706
+2022-04-15 03:41:37,997 episode=896 score=20.0 avgScore=20.28 bestScore=20.92 epsilon=0.09999000000191018 step=1837755
+2022-04-15 03:42:46,060 episode=897 score=21.0 avgScore=20.29 bestScore=20.92 epsilon=0.09999000000191018 step=1839804
+2022-04-15 03:43:54,488 episode=898 score=20.0 avgScore=20.26 bestScore=20.92 epsilon=0.09999000000191018 step=1841853
+2022-04-15 03:45:03,208 episode=899 score=20.0 avgScore=20.25 bestScore=20.92 epsilon=0.09999000000191018 step=1843902
+2022-04-15 03:46:11,923 episode=900 score=18.0 avgScore=20.21 bestScore=20.92 epsilon=0.09999000000191018 step=1845951
+2022-04-15 03:47:20,867 episode=901 score=19.0 avgScore=20.18 bestScore=20.92 epsilon=0.09999000000191018 step=1848000
+2022-04-15 03:48:29,845 episode=902 score=23.0 avgScore=20.22 bestScore=20.92 epsilon=0.09999000000191018 step=1850049
+2022-04-15 03:49:38,874 episode=903 score=17.0 avgScore=20.19 bestScore=20.92 epsilon=0.09999000000191018 step=1852098
+2022-04-15 03:50:47,121 episode=904 score=20.0 avgScore=20.19 bestScore=20.92 epsilon=0.09999000000191018 step=1854147
+2022-04-15 03:51:54,989 episode=905 score=22.0 avgScore=20.2 bestScore=20.92 epsilon=0.09999000000191018 step=1856196
+2022-04-15 03:53:02,984 episode=906 score=23.0 avgScore=20.24 bestScore=20.92 epsilon=0.09999000000191018 step=1858244
+2022-04-15 03:54:11,630 episode=907 score=21.0 avgScore=20.23 bestScore=20.92 epsilon=0.09999000000191018 step=1860292
+2022-04-15 03:55:20,974 episode=908 score=22.0 avgScore=20.23 bestScore=20.92 epsilon=0.09999000000191018 step=1862340
+2022-04-15 03:56:29,974 episode=909 score=18.0 avgScore=20.19 bestScore=20.92 epsilon=0.09999000000191018 step=1864389
+2022-04-15 03:57:38,091 episode=910 score=19.0 avgScore=20.17 bestScore=20.92 epsilon=0.09999000000191018 step=1866438
+2022-04-15 03:58:46,219 episode=911 score=19.0 avgScore=20.15 bestScore=20.92 epsilon=0.09999000000191018 step=1868486
+2022-04-15 03:59:54,137 episode=912 score=21.0 avgScore=20.14 bestScore=20.92 epsilon=0.09999000000191018 step=1870534
+2022-04-15 04:01:01,970 episode=913 score=20.0 avgScore=20.13 bestScore=20.92 epsilon=0.09999000000191018 step=1872583
+2022-04-15 04:02:09,781 episode=914 score=20.0 avgScore=20.13 bestScore=20.92 epsilon=0.09999000000191018 step=1874632
+2022-04-15 04:03:17,761 episode=915 score=16.0 avgScore=20.1 bestScore=20.92 epsilon=0.09999000000191018 step=1876681
+2022-04-15 04:04:25,508 episode=916 score=22.0 avgScore=20.12 bestScore=20.92 epsilon=0.09999000000191018 step=1878730
+2022-04-15 04:05:33,475 episode=917 score=18.0 avgScore=20.09 bestScore=20.92 epsilon=0.09999000000191018 step=1880779
+2022-04-15 04:06:41,363 episode=918 score=22.0 avgScore=20.1 bestScore=20.92 epsilon=0.09999000000191018 step=1882827
+2022-04-15 04:07:49,183 episode=919 score=21.0 avgScore=20.11 bestScore=20.92 epsilon=0.09999000000191018 step=1884876
+2022-04-15 04:08:57,072 episode=920 score=22.0 avgScore=20.14 bestScore=20.92 epsilon=0.09999000000191018 step=1886925
+2022-04-15 04:10:04,998 episode=921 score=21.0 avgScore=20.14 bestScore=20.92 epsilon=0.09999000000191018 step=1888973
+2022-04-15 04:11:13,005 episode=922 score=22.0 avgScore=20.15 bestScore=20.92 epsilon=0.09999000000191018 step=1891022
+2022-04-15 04:12:20,961 episode=923 score=21.0 avgScore=20.14 bestScore=20.92 epsilon=0.09999000000191018 step=1893070
+2022-04-15 04:13:28,934 episode=924 score=19.0 avgScore=20.11 bestScore=20.92 epsilon=0.09999000000191018 step=1895119
+2022-04-15 04:14:36,878 episode=925 score=22.0 avgScore=20.11 bestScore=20.92 epsilon=0.09999000000191018 step=1897168
+2022-04-15 04:15:44,837 episode=926 score=19.0 avgScore=20.1 bestScore=20.92 epsilon=0.09999000000191018 step=1899216
+2022-04-15 04:16:52,785 episode=927 score=20.0 avgScore=20.09 bestScore=20.92 epsilon=0.09999000000191018 step=1901265
+2022-04-15 04:18:00,677 episode=928 score=20.0 avgScore=20.1 bestScore=20.92 epsilon=0.09999000000191018 step=1903313
+2022-04-15 04:19:08,766 episode=929 score=21.0 avgScore=20.13 bestScore=20.92 epsilon=0.09999000000191018 step=1905361
+2022-04-15 04:20:16,688 episode=930 score=21.0 avgScore=20.15 bestScore=20.92 epsilon=0.09999000000191018 step=1907409
+2022-04-15 04:21:24,653 episode=931 score=21.0 avgScore=20.15 bestScore=20.92 epsilon=0.09999000000191018 step=1909457
+2022-04-15 04:22:32,514 episode=932 score=19.0 avgScore=20.16 bestScore=20.92 epsilon=0.09999000000191018 step=1911506
+2022-04-15 04:23:40,435 episode=933 score=19.0 avgScore=20.13 bestScore=20.92 epsilon=0.09999000000191018 step=1913554
+2022-04-15 04:24:48,237 episode=934 score=21.0 avgScore=20.15 bestScore=20.92 epsilon=0.09999000000191018 step=1915602
+2022-04-15 04:25:55,978 episode=935 score=18.0 avgScore=20.12 bestScore=20.92 epsilon=0.09999000000191018 step=1917650
+2022-04-15 04:27:03,836 episode=936 score=23.0 avgScore=20.14 bestScore=20.92 epsilon=0.09999000000191018 step=1919699
+2022-04-15 04:28:11,737 episode=937 score=21.0 avgScore=20.13 bestScore=20.92 epsilon=0.09999000000191018 step=1921748
+2022-04-15 04:29:19,533 episode=938 score=21.0 avgScore=20.14 bestScore=20.92 epsilon=0.09999000000191018 step=1923796
+2022-04-15 04:30:27,699 episode=939 score=20.0 avgScore=20.16 bestScore=20.92 epsilon=0.09999000000191018 step=1925845
+2022-04-15 04:31:35,616 episode=940 score=21.0 avgScore=20.17 bestScore=20.92 epsilon=0.09999000000191018 step=1927894
+2022-04-15 04:32:43,633 episode=941 score=21.0 avgScore=20.18 bestScore=20.92 epsilon=0.09999000000191018 step=1929942
+2022-04-15 04:33:51,611 episode=942 score=23.0 avgScore=20.21 bestScore=20.92 epsilon=0.09999000000191018 step=1931990
+2022-04-15 04:34:59,656 episode=943 score=20.0 avgScore=20.23 bestScore=20.92 epsilon=0.09999000000191018 step=1934038
+2022-04-15 04:36:07,560 episode=944 score=20.0 avgScore=20.2 bestScore=20.92 epsilon=0.09999000000191018 step=1936087
+2022-04-15 04:37:15,461 episode=945 score=24.0 avgScore=20.22 bestScore=20.92 epsilon=0.09999000000191018 step=1938135
+2022-04-15 04:38:23,397 episode=946 score=20.0 avgScore=20.22 bestScore=20.92 epsilon=0.09999000000191018 step=1940184
+2022-04-15 04:39:31,801 episode=947 score=22.0 avgScore=20.21 bestScore=20.92 epsilon=0.09999000000191018 step=1942232
+2022-04-15 04:40:45,527 episode=948 score=21.0 avgScore=20.24 bestScore=20.92 epsilon=0.09999000000191018 step=1944281
+2022-04-15 04:41:59,344 episode=949 score=22.0 avgScore=20.26 bestScore=20.92 epsilon=0.09999000000191018 step=1946330
+2022-04-15 04:43:12,895 episode=950 score=22.0 avgScore=20.29 bestScore=20.92 epsilon=0.09999000000191018 step=1948379
+2022-04-15 04:44:26,561 episode=951 score=21.0 avgScore=20.29 bestScore=20.92 epsilon=0.09999000000191018 step=1950428
+2022-04-15 04:45:40,235 episode=952 score=20.0 avgScore=20.3 bestScore=20.92 epsilon=0.09999000000191018 step=1952476
+2022-04-15 04:46:54,141 episode=953 score=21.0 avgScore=20.31 bestScore=20.92 epsilon=0.09999000000191018 step=1954525
+2022-04-15 04:48:07,985 episode=954 score=20.0 avgScore=20.33 bestScore=20.92 epsilon=0.09999000000191018 step=1956574
+2022-04-15 04:49:22,071 episode=955 score=23.0 avgScore=20.37 bestScore=20.92 epsilon=0.09999000000191018 step=1958623
+2022-04-15 04:50:36,711 episode=956 score=20.0 avgScore=20.36 bestScore=20.92 epsilon=0.09999000000191018 step=1960671
+2022-04-15 04:51:50,901 episode=957 score=22.0 avgScore=20.38 bestScore=20.92 epsilon=0.09999000000191018 step=1962720
+2022-04-15 04:53:05,674 episode=958 score=18.0 avgScore=20.38 bestScore=20.92 epsilon=0.09999000000191018 step=1964768
+2022-04-15 04:54:20,345 episode=959 score=20.0 avgScore=20.38 bestScore=20.92 epsilon=0.09999000000191018 step=1966817
+2022-04-15 04:55:35,056 episode=960 score=21.0 avgScore=20.37 bestScore=20.92 epsilon=0.09999000000191018 step=1968866
+2022-04-15 04:56:49,584 episode=961 score=21.0 avgScore=20.4 bestScore=20.92 epsilon=0.09999000000191018 step=1970915
+2022-04-15 04:58:04,306 episode=962 score=23.0 avgScore=20.45 bestScore=20.92 epsilon=0.09999000000191018 step=1972964
+2022-04-15 04:59:18,941 episode=963 score=20.0 avgScore=20.45 bestScore=20.92 epsilon=0.09999000000191018 step=1975013
+2022-04-15 05:00:33,752 episode=964 score=21.0 avgScore=20.45 bestScore=20.92 epsilon=0.09999000000191018 step=1977062
+2022-04-15 05:01:48,246 episode=965 score=23.0 avgScore=20.5 bestScore=20.92 epsilon=0.09999000000191018 step=1979111
+2022-04-15 05:03:03,257 episode=966 score=20.0 avgScore=20.47 bestScore=20.92 epsilon=0.09999000000191018 step=1981160
+2022-04-15 05:04:18,114 episode=967 score=20.0 avgScore=20.49 bestScore=20.92 epsilon=0.09999000000191018 step=1983209
+2022-04-15 05:05:32,970 episode=968 score=21.0 avgScore=20.54 bestScore=20.92 epsilon=0.09999000000191018 step=1985258
+2022-04-15 05:06:46,891 episode=969 score=18.0 avgScore=20.52 bestScore=20.92 epsilon=0.09999000000191018 step=1987307
+2022-04-15 05:08:01,121 episode=970 score=19.0 avgScore=20.52 bestScore=20.92 epsilon=0.09999000000191018 step=1989355
+2022-04-15 05:09:14,851 episode=971 score=22.0 avgScore=20.51 bestScore=20.92 epsilon=0.09999000000191018 step=1991404
+2022-04-15 05:10:28,609 episode=972 score=18.0 avgScore=20.51 bestScore=20.92 epsilon=0.09999000000191018 step=1993453
+2022-04-15 05:11:42,557 episode=973 score=21.0 avgScore=20.5 bestScore=20.92 epsilon=0.09999000000191018 step=1995502
+2022-04-15 05:12:56,214 episode=974 score=20.0 avgScore=20.48 bestScore=20.92 epsilon=0.09999000000191018 step=1997550
+2022-04-15 05:14:09,955 episode=975 score=22.0 avgScore=20.51 bestScore=20.92 epsilon=0.09999000000191018 step=1999599
+2022-04-15 05:15:23,745 episode=976 score=20.0 avgScore=20.52 bestScore=20.92 epsilon=0.09999000000191018 step=2001647
+2022-04-15 05:16:37,526 episode=977 score=19.0 avgScore=20.51 bestScore=20.92 epsilon=0.09999000000191018 step=2003696
+2022-04-15 05:17:51,124 episode=978 score=19.0 avgScore=20.51 bestScore=20.92 epsilon=0.09999000000191018 step=2005745
+2022-04-15 05:19:04,835 episode=979 score=21.0 avgScore=20.52 bestScore=20.92 epsilon=0.09999000000191018 step=2007794
+2022-04-15 05:20:18,482 episode=980 score=21.0 avgScore=20.53 bestScore=20.92 epsilon=0.09999000000191018 step=2009842
+2022-04-15 05:21:31,830 episode=981 score=18.0 avgScore=20.51 bestScore=20.92 epsilon=0.09999000000191018 step=2011891
+2022-04-15 05:22:45,547 episode=982 score=21.0 avgScore=20.52 bestScore=20.92 epsilon=0.09999000000191018 step=2013940
+2022-04-15 05:23:59,153 episode=983 score=19.0 avgScore=20.51 bestScore=20.92 epsilon=0.09999000000191018 step=2015988
+2022-04-15 05:25:12,878 episode=984 score=24.0 avgScore=20.54 bestScore=20.92 epsilon=0.09999000000191018 step=2018036
+2022-04-15 05:26:26,544 episode=985 score=22.0 avgScore=20.54 bestScore=20.92 epsilon=0.09999000000191018 step=2020085
+2022-04-15 05:27:40,133 episode=986 score=18.0 avgScore=20.55 bestScore=20.92 epsilon=0.09999000000191018 step=2022134
+2022-04-15 05:28:53,746 episode=987 score=22.0 avgScore=20.57 bestScore=20.92 epsilon=0.09999000000191018 step=2024183
+2022-04-15 05:30:07,275 episode=988 score=22.0 avgScore=20.6 bestScore=20.92 epsilon=0.09999000000191018 step=2026232
+2022-04-15 05:31:20,458 episode=989 score=21.0 avgScore=20.6 bestScore=20.92 epsilon=0.09999000000191018 step=2028281
+2022-04-15 05:32:34,213 episode=990 score=20.0 avgScore=20.58 bestScore=20.92 epsilon=0.09999000000191018 step=2030330
+2022-04-15 05:33:48,039 episode=991 score=20.0 avgScore=20.56 bestScore=20.92 epsilon=0.09999000000191018 step=2032379
+2022-04-15 05:35:01,656 episode=992 score=19.0 avgScore=20.55 bestScore=20.92 epsilon=0.09999000000191018 step=2034428
+2022-04-15 05:36:15,414 episode=993 score=23.0 avgScore=20.58 bestScore=20.92 epsilon=0.09999000000191018 step=2036476
+2022-04-15 05:37:29,017 episode=994 score=21.0 avgScore=20.58 bestScore=20.92 epsilon=0.09999000000191018 step=2038525
+2022-04-15 05:38:42,843 episode=995 score=21.0 avgScore=20.55 bestScore=20.92 epsilon=0.09999000000191018 step=2040574
+2022-04-15 05:39:56,542 episode=996 score=21.0 avgScore=20.56 bestScore=20.92 epsilon=0.09999000000191018 step=2042623
+2022-04-15 05:41:10,165 episode=997 score=22.0 avgScore=20.57 bestScore=20.92 epsilon=0.09999000000191018 step=2044672
+2022-04-15 05:42:23,769 episode=998 score=22.0 avgScore=20.59 bestScore=20.92 epsilon=0.09999000000191018 step=2046721
+2022-04-15 05:43:37,409 episode=999 score=20.0 avgScore=20.59 bestScore=20.92 epsilon=0.09999000000191018 step=2048769
