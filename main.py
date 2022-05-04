@@ -91,8 +91,9 @@ if __name__ == "__main__":
             agent.loadModel()
             scoreList, epsilonList, stepList = trainAgent(agent, env, args.numEpisodes,
                                                           saveAgent=False, trainMode=False,log=args.logging)
-            print(f"avg score = {sum(scoreList) / len(scoreList)}")
-            plotActionHistogram(agent.actionHist, args.env)
+
+            if args.actionHist:
+                plotActionHistogram(agent.actionHist, args.env)
 
     if args.algo == "DDQN":
         if args.mode == "train":
@@ -140,8 +141,8 @@ if __name__ == "__main__":
             scoreList, epsilonList, stepList = trainAgent(agent, env, args.numEpisodes,
                                                           saveAgent=False, trainMode=False, log=args.logging)
 
-            print(f"avg score = {sum(scoreList) / len(scoreList)}")
-            plotActionHistogram(agent.actionHist, args.env)
+            if args.actionHist:
+                plotActionHistogram(agent.actionHist, args.env)
 
     # Random agent
     if args.algo == "RANDOM":
@@ -154,5 +155,4 @@ if __name__ == "__main__":
         scoreList, epsilonList, stepList = trainAgent(agent, env, args.numEpisodes,
                                                       saveAgent=False, trainMode=False, log=args.logging)
 
-        print(f"avg score = {sum(scoreList) / len(scoreList)}")
 
