@@ -1,15 +1,3 @@
-## Pong using Deep Reinforcement Learning
-### Info
-Deep Q Learning Agent trained on the Pong game. \
-Agent beats the best human player with just a few hours of \
-training using a personal computer.
-
-The project was developed for course: \
-`Artificial Intelligence (Master's degree, FRI 2022)`  
-
-### Requirements
-
-=======
 ## Atari, Deep Reinforcement Learning
 
 ### General
@@ -22,7 +10,6 @@ Note that main purpose of this project was evaluation & exploration of model per
 
 ### Requirements
 In order to run the code, reader must first install the following dependencies.
->>>>>>> 1152f6aa1aab1ab42f3b4e5df4ee6f3bbf8ba1d3
 `pip install torch` \
 `pip install torchvision` \
 `pip install numpy` \
@@ -44,8 +31,6 @@ Train DDQN Agent on freeway \
 ### Documentation
 Brief explanation of the project is available in `paper.pdf`.
 
-
-=======
 CLI arguments:
 ```    
   python main.py <args>
