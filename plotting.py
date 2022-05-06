@@ -39,12 +39,8 @@ def plotLearnCurveFromLogs(folder, fileName):
                     param = lineList[i].split("=")
                     name, value = param
                     if name == "step":
-<<<<<<< HEAD
-                        episodes.append(int(value))
-=======
                         _step = int(value)
                         episodes.append(_step + 2048769)
->>>>>>> 1152f6aa1aab1ab42f3b4e5df4ee6f3bbf8ba1d3
                     elif name == "score":
                         scores.append(float(value))
                     elif name == "epsilon":
@@ -113,8 +109,4 @@ def plotActionHistogram(actionHist, envName):
 
 
 if __name__ == "__main__":
-<<<<<<< HEAD
-    plotLearnCurveFromLogs(folder="./logs",fileName="freeway_dqn")
-=======
     plotLearnCurveFromLogs(folder="./logs",fileName="freeway_ddqn_4000eps")
->>>>>>> 1152f6aa1aab1ab42f3b4e5df4ee6f3bbf8ba1d3
