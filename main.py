@@ -91,7 +91,13 @@ if __name__ == "__main__":
             agent.loadModel()
             scoreList, epsilonList, stepList = trainAgent(agent, env, args.numEpisodes,
                                                           saveAgent=False, trainMode=False,log=args.logging)
+<<<<<<< HEAD
             plotActionHistogram(agent.actionHist, args.env)
+=======
+
+            if args.actionHist:
+                plotActionHistogram(agent.actionHist, args.env)
+>>>>>>> 1152f6aa1aab1ab42f3b4e5df4ee6f3bbf8ba1d3
 
     if args.algo == "DDQN":
         if args.mode == "train":
@@ -139,7 +145,12 @@ if __name__ == "__main__":
             scoreList, epsilonList, stepList = trainAgent(agent, env, args.numEpisodes,
                                                           saveAgent=False, trainMode=False, log=args.logging)
 
+<<<<<<< HEAD
             plotActionHistogram(agent.actionHist, args.env)
+=======
+            if args.actionHist:
+                plotActionHistogram(agent.actionHist, args.env)
+>>>>>>> 1152f6aa1aab1ab42f3b4e5df4ee6f3bbf8ba1d3
 
     # Random agent
     if args.algo == "RANDOM":

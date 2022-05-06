@@ -8,6 +8,10 @@ class RANDOMAgent:
         self.actionSpace = [i for i in range(numActions)]
         self.networkName = networkName
         self.computeActionHist = computeActionHist
+<<<<<<< HEAD
+=======
+        self.epsilon = 1.0
+>>>>>>> 1152f6aa1aab1ab42f3b4e5df4ee6f3bbf8ba1d3
 
         # Create action histogram
         if self.computeActionHist:
@@ -16,8 +20,13 @@ class RANDOMAgent:
                 self.actionHist[i] = 0
 
     def selectAction(self, observation):
+<<<<<<< HEAD
         action = random.choice(self.actionSpace)
 
+=======
+        #action = random.choice(self.actionSpace)
+        action = 1
+>>>>>>> 1152f6aa1aab1ab42f3b4e5df4ee6f3bbf8ba1d3
         if self.computeActionHist:
             self.actionHist[action] += 1
 
