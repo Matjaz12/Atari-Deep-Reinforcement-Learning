@@ -92,4 +92,3 @@ NAIVE denotes agent which always selects forward action in freeway.
 |---------|------|------|--------|--------|---------|
 | Pong    | 20.8 | 20.8 | /      | /      | -21.0   |
 | Freeway | todo | 31.5 | 32.5   | 21.2   | 0       |
->>>>>>> 1152f6aa1aab1ab42f3b4e5df4ee6f3bbf8ba1d3
