@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ## Pong using Deep Reinforcement Learning
 ### Info
 Deep Q Learning Agent trained on the Pong game. \
@@ -36,7 +35,6 @@ In order to run the code, reader must first install the following dependencies.
 `pip install ale-py`
 
 ### Usage
-<<<<<<< HEAD
 Evaluate pong agent & plot distribution of actions \
 `python -u main.py -memSize=50000 -mode=eval -loadModel=1 -path=models/ -actionHist=1 -numEpisodes=5 -env=PongNoFrameskip-v4` \
 Evaluate freeway agent & plot ditribution of actions \
