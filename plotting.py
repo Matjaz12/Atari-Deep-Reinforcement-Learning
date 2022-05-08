@@ -40,7 +40,7 @@ def plotLearnCurveFromLogs(folder, fileName):
                     name, value = param
                     if name == "step":
                         _step = int(value)
-                        episodes.append(_step + 2048769)
+                        episodes.append(_step)
                     elif name == "score":
                         scores.append(float(value))
                     elif name == "epsilon":
@@ -109,4 +109,4 @@ def plotActionHistogram(actionHist, envName):
 
 
 if __name__ == "__main__":
-    plotLearnCurveFromLogs(folder="./logs",fileName="freeway_ddqn_4000eps")
+    plotLearnCurveFromLogs(folder="./logs",fileName="freeway_dqn_new")
