@@ -25,7 +25,7 @@ In order to run the code, reader must first install the following dependencies.
 Evaluate pong agent & plot distribution of actions \
 `python -u main.py -memSize=50000 -mode=eval -loadModel=1 -path=models/ -actionHist=1 -numEpisodes=5 -env=PongNoFrameskip-v4` \
 Evaluate freeway agent & plot ditribution of actions \
-`python -u main.py -memSize=50000 -mode=eval -loadModel=1 -path=models/ -actionHist=1 -numEpisodes=5 -algo=DDQN -env=FreewayNoFrameskip-v4\
+`python -u main.py -memSize=50000 -mode=eval -loadModel=1 -path=models/ -actionHist=1 -numEpisodes=5 -algo=DDQN -env=FreewayNoFrameskip-v4`\
 Train DDQN Agent on freeway \
 `python -u main.py -memSize=50000 -path=models/ -algo=DDQN -env=FreewayNoFrameskip-v4`
 ### Documentation
