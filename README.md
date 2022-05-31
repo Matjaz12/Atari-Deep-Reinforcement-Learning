@@ -55,4 +55,4 @@ CLI arguments:
 ```
 
 ### Report
-Report of project is available: `report.pdf` \
+Report of project is available: `report.pdf` 
