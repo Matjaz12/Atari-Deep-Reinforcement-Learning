@@ -55,40 +55,4 @@ CLI arguments:
 ```
 
 ### Report
-Thorough report of project is available: `report/report.pdf` \
-
-### Results
-See report for detail
-#### Pong
-<figure>
-<img src="plots/pong_dqn.png" alt="my alt text" width="300"/>
-<figcaption>DQN Agent performance after 500 episodes.</figcaption>
-</figure>
-
-<figure>
-<img src="plots/pong_dqn.png" alt="my alt text" width="300"/>
-<figcaption>DDQN Agent performance after 500 episodes.</figcaption>
-</figure>
-
-#### Freeway
-<figure>
-<img src="plots/freeway_ddqn.png" alt="my alt text" width="300"/>
-<figcaption>DDQN Agent performance after 1000 episodes.</figcaption>
-</figure>
-
-<figure>
-<img src="plots/freeway_ddqn_4000eps.png" alt="my alt text" width="300"/>
-<figcaption>DDQN Agent performance after 8000 episodes.</figcaption>
-</figure>
-
-#### Evaluation
-Table 1. shows average score over 10 episodes for all agents (epsilon = 0.01). \
-DQN denotes a DQN agent trained for 1 million steps in case of pong \& 2 million steps in case of freeway. \
-DDQN denotes a DDQN agent trained for 2million steps in case of pong \& 2 million steps in case of freeway. \
-DDQN_8 denotes a DDQN agent trained for 8 million steps. \
-NAIVE denotes agent which always selects forward action in freeway.  
-
-| Game    | DQN  | DDQN | DDQN_8 | NAIVE | RANDOM |
-|---------|------|------|--------|--------|---------|
-| Pong    | 20.8 | 20.8 | /      | /      | -21.0   |
-| Freeway | todo | 31.5 | 32.5   | 21.2   | 0       |
+Report of project is available: `report.pdf` \
