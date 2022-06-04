@@ -1,12 +1,13 @@
 ## Atari, Deep Reinforcement Learning
 
+The project was developed for course: `Artificial Intelligence (Master's degree, FRI 2022)`.
+
 ### General
 Implementation of Deep Q Learning agent (DQN) & Double Deep Q Learning agent (DDQN). \
 The agents were trained on two distinct games, which both share a common action space,\
 but differ in complexity of environment. The agent was trained on Pong & Freeway.  
-
-The project was developed for course: `Artificial Intelligence (Master's degree, FRI 2022)`. \
-Note that main purpose of this project was evaluation & exploration of model performance, therefore some solutions are ad-hoc.
+Note that main purpose of this project was evaluation & exploration of model performance, \
+therefore some solutions are ad-hoc.
 
 ### Requirements
 In order to run the code, reader must first install the following dependencies.
@@ -28,8 +29,7 @@ Evaluate freeway agent & plot ditribution of actions \
 `python -u main.py -memSize=50000 -mode=eval -loadModel=1 -path=models/ -actionHist=1 -numEpisodes=5 -algo=DDQN -env=FreewayNoFrameskip-v4`\
 Train DDQN Agent on freeway \
 `python -u main.py -memSize=50000 -path=models/ -algo=DDQN -env=FreewayNoFrameskip-v4`
-### Documentation
-Brief explanation of the project is available in `paper.pdf`.
+
 
 CLI arguments:
 ```    
