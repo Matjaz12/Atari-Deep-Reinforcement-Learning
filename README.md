@@ -1,6 +1,6 @@
 ## Atari, Deep Reinforcement Learning
 
-The project was developed for course: [Artificial Intelligence] (https://fri.uni-lj.si/en/course/63545b)`.
+The project was developed for course: [Artificial Intelligence] (https://fri.uni-lj.si/en/course/63510).
 
 
 ### General
