@@ -1,6 +1,7 @@
 ## Atari, Deep Reinforcement Learning
 
-The project was developed for course: `Artificial Intelligence (Master's degree, FRI 2022)`.
+The project was developed for course: [Artificial Intelligence] (https://fri.uni-lj.si/en/course/63545b)`.
+
 
 ### General
 Implementation of Deep Q Learning agent (DQN) & Double Deep Q Learning agent (DDQN). \
